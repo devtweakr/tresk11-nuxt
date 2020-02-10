@@ -1,6 +1,6 @@
 # tresk11-nuxt
 
-> My splendiferous Nuxt.js project
+> The nuxt.js version
 
 ## Build Setup
 
