@@ -18,10 +18,6 @@ export default {
       { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:500&display=swap', rel: 'stylesheet' },
       { href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel: 'stylesheet', integrity: 'sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin: 'anonymous' }]
   },
-  server: {
-    port: 3001, // default: 3000
-    host: '192.168.79.10' // default: localhost
-  },
   /*
    ** Customize the progress-bar color
    */
