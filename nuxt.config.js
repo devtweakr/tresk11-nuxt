@@ -63,5 +63,8 @@ export default {
   pageTransition: {
     name: 'fade',
     mode: 'out-in'
+  },
+  router: {
+    base: '/tresk11-nuxt/dist/'
   }
 }
