@@ -1,0 +1,89 @@
+html, body {
+  min-height: 100%;
+}
+
+html {
+  background: rgb(86, 181, 133);
+  background: linear-gradient(
+    35deg,
+    rgba(0, 158, 226, 1) 0%,
+    rgba(86, 181, 133, 1) 100%
+  );
+  background-image: url(~assets/back_tresk11.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background: url(~assets/grain.png);
+  position: absolute;
+}
+
+svg {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.content-page {
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 1) 400px
+  );
+}
+/* nav */
+
+.btn-back {
+  color: white !important;
+}
+.btn-back:hover {
+  color: rgba(86, 181, 133, 1) !important;
+}
+
+/* sponzorji */
+
+.sponzorji > img {
+  max-height: 2rem;
+  max-width: 9rem;
+  margin: 0.5rem;
+}
+
+.sponzorji {
+  margin-bottom: 3rem;
+}
+
+/* transitions */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* @media screens */
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
