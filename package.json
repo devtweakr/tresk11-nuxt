@@ -5,7 +5,7 @@
   "author": "devtweakr",
   "private": true,
   "scripts": {
-    "dev": "nuxt --hostname 192.168.79.10 --port 3001",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

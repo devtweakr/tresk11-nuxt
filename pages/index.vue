@@ -77,6 +77,7 @@
 
 <script>
 export default {
+  transition: 'default',
   layout: 'home'
 }
 </script>
