@@ -19,11 +19,11 @@
         <br>
 
         <div class="sponzorji">
-          <img src="img/korpo/sof.svg">
-          <img src="img/korpo/drum.svg">
-          <img src="img/korpo/vaga.svg">
-          <img src="img/korpo/outsider.svg">
-          <img src="img/korpo/rs.svg">
+          <img src="~/assets/korpo/sof.svg">
+          <img src="~/assets/korpo/drum.svg">
+          <img src="~/assets/korpo/vaga.svg">
+          <img src="~/assets/korpo/outsider.svg">
+          <img src="~/assets/korpo/rs.svg">
         </div>
 
         <!-- <p><strong>NE SPREGLEJTE: fizični izvodi</strong></p>
