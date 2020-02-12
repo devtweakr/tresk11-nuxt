@@ -82,6 +82,7 @@
           <img src="~/assets/korpo/tamta.svg">
           <img src="~/assets/korpo/sof.svg">
           <img src="~/assets/korpo/drum.svg">
+          <img src="~/assets/korpo/vis.svg">
         </div>
 
         <!-- p>ARHIV lanskoletnih zmagovalcev</p-->

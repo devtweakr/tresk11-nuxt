@@ -50,7 +50,7 @@
                   Novice
                 </nuxt-link>
                 <nuxt-link to="/o-tresku">
-                  O tresku
+                  O Tresku
                 </nuxt-link>
                 <nuxt-link to="/arhiv">
                   Arhiv
