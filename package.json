@@ -5,9 +5,9 @@
   "author": "devtweakr",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --hostname 192.168.79.10 --port 3000",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start --hostname 192.168.79.10 --port 3000",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
