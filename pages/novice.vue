@@ -29,7 +29,17 @@ export default {
     }
   },
   fetch ({ store, params }) {
-    return store.dispatch('drupal/get', 'node/novica')
+    const zdaj = new Date()
+
+    const query = {
+      sort: '-field_datum',
+      'filter[field_leto.name][value]': '2020',
+      'filter[datefilter][condition][path]': 'field_datum',
+      'filter[datefilter][condition][operator]': '<',
+      'filter[datefilter][condition][value]': zdaj
+    }
+
+    return store.dispatch('drupal/get', ['node/novica', { params: query }])
   }
 }
 </script>
