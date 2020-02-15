@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div class="row">
       <div class="col-12">
         <p>Tresk 11 ponovno želi v vpogled dobiti izvirne, odštekane in inovativne oblikovalske rešitve za fizični nosilec glasbenega albuma. Sprejemamo vse od kaset, CD-jev in vinilk do USB ključkov in nenavadnih nosilcev kod za spletni dostop.</p>
@@ -19,9 +19,9 @@
         <br>
 
         <div class="sponzorji">
-          <img src="img/korpo/vaga.svg">
-          <img src="img/korpo/outsider.svg">
-          <img src="img/korpo/rs.svg">
+          <img src="/img/korpo/vaga.svg">
+          <img src="/img/korpo/outsider.svg">
+          <img src="/img/korpo/rs.svg">
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@ export default {
   },
   data () {
     return {
-      title: '4. NAJBOLJŠA PODOBA ALBUMA'
+      pageTitle: '4. NAJBOLJŠA PODOBA ALBUMA'
     }
   }
 }

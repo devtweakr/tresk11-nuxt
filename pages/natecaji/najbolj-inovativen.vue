@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div class="row">
       <div class="col-12">
         <p>Kategorija, ki razširjeno vključuje še vse “obplakatne” segmente dogodka, npr. celostno grafično podobo glasbenega dogodka, spletno podobo, promocijo prek družabnih omrežij, letake, promocijsko gradivo, vizualije, scenografijo ipd.</p>
@@ -19,11 +19,11 @@
         <br>
 
         <div class="sponzorji">
-          <img src="~/assets/korpo/sof.svg">
-          <img src="~/assets/korpo/drum.svg">
-          <img src="~/assets/korpo/vaga.svg">
-          <img src="~/assets/korpo/outsider.svg">
-          <img src="~/assets/korpo/rs.svg">
+          <img src="/img/korpo/sof.svg">
+          <img src="/img/korpo/drum.svg">
+          <img src="/img/korpo/vaga.svg">
+          <img src="/img/korpo/outsider.svg">
+          <img src="/img/korpo/rs.svg">
         </div>
 
         <!-- <p><strong>NE SPREGLEJTE: fizični izvodi</strong></p>
@@ -42,7 +42,7 @@ export default {
   },
   data () {
     return {
-      title: '5. INOVATIVEN PRISTOP K OBLIKOVANJU IN OGLAŠEVANJU DOGODKA'
+      pageTitle: '5. INOVATIVEN PRISTOP K OBLIKOVANJU IN OGLAŠEVANJU DOGODKA'
     }
   }
 }

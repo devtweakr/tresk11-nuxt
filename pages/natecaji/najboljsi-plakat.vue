@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div class="row">
       <div class="col-12">
         <p>Kategorija, ki se osredotoča na medij glasbenega plakata. Dobrodošle in zaželene so vse njegove variacije, kot tudi prikaz njihove uporabe v praksi.</p>
@@ -19,11 +19,11 @@
         <br>
 
         <div class="sponzorji">
-          <img src="~/assets/korpo/tamta.svg">
-          <img src="~/assets/korpo/vaga.svg">
+          <img src="/img/korpo/tamta.svg">
+          <img src="/img/korpo/vaga.svg">
 
-          <img src="~/assets/korpo/outsider.svg">
-          <img src="~/assets/korpo/rs.svg">
+          <img src="/img/korpo/outsider.svg">
+          <img src="/img/korpo/rs.svg">
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ export default {
   },
   data () {
     return {
-      title: '3. NAJBOLJŠI PLAKAT GLASBENEGA DOGODKA'
+      pageTitle: '3. NAJBOLJŠI PLAKAT GLASBENEGA DOGODKA'
     }
   }
 }

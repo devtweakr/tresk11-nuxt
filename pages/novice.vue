@@ -1,13 +1,18 @@
 <template>
   <div>
-    <PageTitle :title="title" />
-    <div v-for="novica in novice" class="row novica">
-      <div class="col-12">
-        <h2>{{ novica.title }}</h2>
-        <p class="datum">{{ novica.field_datum | dateFormat }}</p>
-        <p class="body" v-html="novica.body.value" />
-      </div>
-    </div>
+    <PageTitle :pageTitle="pageTitle" class="mb-4" />
+    <b-row :key="'novica'" v-for="novica in novice" class="novica">
+      <b-col>
+        <h3 class="mt-1">
+          {{ novica.title }}
+        </h3>
+        <p class="datum">
+          {{ novica.field_datum | dateFormat }}
+        </p>
+        <p v-html="novica.body.value" class="body" />
+        <hr>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -20,7 +25,7 @@ export default {
   },
   data () {
     return {
-      title: 'NOVICE'
+      pageTitle: 'NOVICE'
     }
   },
   computed: {
@@ -46,6 +51,5 @@ export default {
 
 <style scoped>
 .novica {
-  margin-top: 3rem;
 }
 </style>

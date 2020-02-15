@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div class="row">
       <div class="col-12">
         <p>
@@ -72,16 +72,16 @@
         <br>
 
         <div class="sponzorji">
-          <img src="~/assets/korpo/rs.svg">
-          <img src="~/assets/korpo/vaga.svg">
-          <img src="~/assets/korpo/outsider.svg">
-          <img src="~/assets/korpo/fekk.svg">
-          <img src="~/assets/korpo/liffe.svg">
-          <img src="~/assets/korpo/kinoteka.svg">
-          <img src="~/assets/korpo/fotografija.svg">
-          <img src="~/assets/korpo/tamta.svg">
-          <img src="~/assets/korpo/sof.svg">
-          <img src="~/assets/korpo/drum.svg">
+          <img src="/img/korpo/rs.svg">
+          <img src="/img/korpo/vaga.svg">
+          <img src="/img/korpo/outsider.svg">
+          <img src="/img/korpo/fekk.svg">
+          <img src="/img/korpo/liffe.svg">
+          <img src="/img/korpo/kinoteka.svg">
+          <img src="/img/korpo/fotografija.svg">
+          <img src="/img/korpo/tamta.svg">
+          <img src="/img/korpo/sof.svg">
+          <img src="/img/korpo/drum.svg">
         </div>
 
         <!-- p>ARHIV lanskoletnih zmagovalcev</p-->
@@ -99,7 +99,7 @@ export default {
   },
   data () {
     return {
-      title: 'PROGRAM'
+      pageTitle: 'PROGRAM'
     }
   }
 }
