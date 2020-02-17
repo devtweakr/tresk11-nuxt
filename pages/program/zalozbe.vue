@@ -24,7 +24,7 @@ export default {
   async asyncData ({ $axios }) {
     const zalozbe = await $axios.$get('node/zalozba')
     return {
-      zalozbe
+      zalozbe: zalozbe.data[0].attributes.title
     }
   }
 }
