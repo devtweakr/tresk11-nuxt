@@ -6,3 +6,7 @@ const dateFormat = (val, format) => {
 }
 
 Vue.filter('dateFormat', dateFormat)
+
+Vue.prototype.$log = console.log
+
+Vue.prototype.$logjson = obj => console.log(JSON.parse(JSON.stringify(obj)))

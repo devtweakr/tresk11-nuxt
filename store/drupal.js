@@ -8,5 +8,9 @@ const api = axios.create({
   }
 })
 
-const { state, mutations, actions, getters } = jsonapiModule(api)
+const config = {
+  clearOnUpdate: true
+}
+
+const { state, mutations, actions, getters } = jsonapiModule(api, config)
 export default { state, mutations, actions, getters }

@@ -5,6 +5,13 @@
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
         <p class="datum">{{ dogodek.field_datum | dateFormat }}</p>
+
+        <div class="koncerti">
+          <div v-for="band in dogodek.field_bendi" class="koncert">
+            <img :src="band.field_slika.uri ? 'https://tresk.si' + band.field_slika.uri.url : null">
+            <h3>{{ band.title }}</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -18,20 +25,18 @@ export default {
     PageTitle
   },
   data () {
-    return {
-      pageTitle: 'LINEUP'
-    }
+    return { title: 'LINEUP' }
   },
   computed: {
-    dogodki () {
-      console.log(this.$store.state.drupal)
-      return this.$store.state.drupal['node--koncert']
-    }
+    dogodki () { return this.$store.getters['drupal/get']('node--koncert') }
   },
   fetch ({ store, params }) {
     const query = {
       sort: 'field_datum',
-      'filter[field_leto.name][value]': '2020'
+      // 'filter[field_leto.name][value]': '2020',
+      'filter[field_leto.name][value]': '2019',
+      'filter[field_tip_dogodka.name][value]': 'koncert',
+      include: 'field_lokacija,field_bendi.field_slika'
     }
 
     return store.dispatch('drupal/get', ['node/koncert', { params: query }])
@@ -44,4 +49,7 @@ export default {
     margin-top: 2rem;
   }
 
+  .koncert > img {
+    max-width: 6rem;
+  }
 </style>
