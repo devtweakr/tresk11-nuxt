@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue'
 
 const dateFormat = (val, format) => {
@@ -6,8 +7,8 @@ const dateFormat = (val, format) => {
 }
 
 Vue.filter('dateFormat', dateFormat)
-/* eslint-disable */
+
 Vue.prototype.$log = console.log
 
 Vue.prototype.$logjson = obj => console.log(JSON.parse(JSON.stringify(obj)))
-/* eslint-enable */
+

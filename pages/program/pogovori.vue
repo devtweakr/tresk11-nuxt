@@ -4,7 +4,9 @@
     <div v-for="dogodek in dogodki" class="row dogodek">
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
-        <p class="datum">{{ dogodek.field_datum | dateFormat }}</p>
+        <p class="datum">
+          {{ dogodek.field_datum | dateFormat }}
+        </p>
       </div>
     </div>
   </div>
