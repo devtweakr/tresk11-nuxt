@@ -1,30 +1,10 @@
 <template>
   <div>
-    <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <PageTitle :title="title" />
+    <div v-for="dogodek in dogodki" class="row dogodek">
       <div class="col-12">
-        <p>Kategorija, ki se osredotoča na medij glasbenega plakata. Dobrodošle in zaželene so vse njegove variacije, kot tudi prikaz njihove uporabe v praksi.</p>
-        <p>Posameznik oz. posameznica lahko prijavi največ tri plakate glasbenih dogodkov, objavljene med 18. marcem 2019 in 3. aprilom 2020. Oblikovalcev oz. oblikovalk plakata je lahko tudi več. Datoteke plakatov naj bodo izvirne velikosti, nekonvencionalne oblikovalske rešitve pa naj bodo še dodatno fotografsko dokumentirane.</p>
-
-        <br>
-
-        <p><a href="https://tresk.si/d/natecaji/plakat" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
-
-        <br>
-
-        <p>
-          Avtori_ica zmagovalnega plakata prejme bon za 20 plakatnih mest, vključno s tiskom, ki ga podeljuje TAM-TAM Inštitut.
-        </p>
-
-        <br>
-
-        <div class="sponzorji">
-          <img src="/img/korpo/tamta.svg">
-          <img src="/img/korpo/vaga.svg">
-
-          <img src="/img/korpo/outsider.svg">
-          <img src="/img/korpo/rs.svg">
-        </div>
+        <h2>{{ dogodek.title }}</h2>
+        <p class="datum">{{ dogodek.field_datum | dateFormat }}</p>
       </div>
     </div>
   </div>
@@ -38,13 +18,25 @@ export default {
     PageTitle
   },
   data () {
-    return {
-      pageTitle: 'POGOVORI'
+    return { title: 'POGOVORI' }
+  },
+  computed: {
+    dogodki () { return this.$store.getters['drupal/get']('node--koncert') }
+  },
+  fetch ({ store, params }) {
+    const query = {
+      sort: 'field_datum',
+      'filter[field_leto.name][value]': '2020',
+      'filter[field_tip_dogodka.name][value]': 'pogovor'
     }
+
+    return store.dispatch('drupal/get', ['node/koncert', { params: query }])
   }
 }
 </script>
 
 <style scoped>
-
+  .dogodek {
+    margin-top: 2rem;
+  }
 </style>
