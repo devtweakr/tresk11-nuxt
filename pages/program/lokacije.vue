@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div class="row">
       <div class="col-12">
         <p>Festival Tresk podeljuje edino nagrado za lokalne video ustvarjalce na glasbeni sceni, s čimer se trudi, da bi žanr videospotov postal tako širše mišljen kot tudi predvajan v mednarodnem prostoru. Tej kategoriji pritiče javna projekcija desetih izbranih finalistov na dogodku v Slovenski kinoteki, 28. marca 2020, ki jo bo pospremila debata o stanju in možnostih lokalne video produkcije.</p>
@@ -23,12 +23,12 @@
         <br>
 
         <div class="sponzorji">
-          <img src="~/assets/korpo/kinoteka.svg">
-          <img src="~/assets/korpo/liffe.svg">
-          <img src="~/assets/korpo/fekk.svg">
-          <img src="~/assets/korpo/vaga.svg">
-          <img src="~/assets/korpo/outsider.svg">
-          <img src="~/assets/korpo/rs.svg">
+          <img src="/img/korpo/kinoteka.svg">
+          <img src="/img/korpo/liffe.svg">
+          <img src="/img/korpo/fekk.svg">
+          <img src="/img/korpo/vaga.svg">
+          <img src="/img/korpo/outsider.svg">
+          <img src="/img/korpo/rs.svg">
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
   },
   data () {
     return {
-      title: 'LOKACIJE'
+      pageTitle: 'LOKACIJE'
     }
   }
 }

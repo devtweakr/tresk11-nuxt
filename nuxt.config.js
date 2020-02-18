@@ -25,11 +25,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['../assets/css/style.css'],
+  css: ['@/assets/css/bootstrap.css', '@/assets/css/style.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/filters.js'],
+  plugins: ['~plugins/filters.js', '~plugins/axios.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,7 +50,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: 'https://tresk.si/d/jsonapi'
+  },
   /*
    ** Build configuration
    */

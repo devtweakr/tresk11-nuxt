@@ -1,9 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="dropdown ml-auto">
-      <button class="btn btn-primary btn-drop">
-        <i class="fa fa-bars" />
-      </button>
+      <button class="btn btn-drop" />
       <div class="dropdown-content">
         <div class="program-sub">
           <nuxt-link to="#" class="program-link">
@@ -49,19 +47,19 @@
           Kontakt
         </nuxt-link>
         <nuxt-link to="/sponzorji">
-          Sponzorji & podporniki
+          Podporniki
         </nuxt-link>
       </div>
     </div>
     <a href="https://radiostudent.si" target="_blank" class="rs-link">
-      <img src="~assets/rs_logo_black.svg"></img>
+      <img src="/img/home/rs_logo_black.svg"></img>
     </a>
     <a class="datum">
-      <img src="~assets/datum.svg"></img>
+      <img src="/img/home/datum.svg"></img>
     </a>
     <div class="home-content row">
       <div class="tabla overflow-hidden col">
-        <img class="img-tabla" src="~assets/signs.svg">
+        <img class="img-tabla" src="/img/home/signs.svg">
         <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
 
           <a xlink:href="/natecaji">
@@ -190,6 +188,13 @@ export default {
 }
 
 .btn-drop {
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
+  overflow: visible;
+  background-image: url(/img/home/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 0;
 }
 
@@ -201,6 +206,7 @@ export default {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   right: 0;
+  width: 170px;
 }
 
 .dropdown-content a {

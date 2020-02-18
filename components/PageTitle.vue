@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <h1>{{ pageTitle }}</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'PageTitle',
   props: {
-    title: {
+    pageTitle: {
       type: String,
       required: true
     }

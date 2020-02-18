@@ -11,6 +11,5 @@ export default {
 </script>
 
 <style scoped>
-/* dropdown menu home*/
 
 </style>
