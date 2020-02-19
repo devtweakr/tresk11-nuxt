@@ -2,7 +2,13 @@ html,
 body {
   min-height: 100%;
 }
+.koncert {
 
+}
+.koncert > img {
+  max-width: 100px;
+  padding-right: 20px
+}
 html {
   background: rgb(86, 181, 133);
   background: linear-gradient(
@@ -77,7 +83,14 @@ svg {
 .fade-leave-to {
   opacity: 0;
 }
-
+.nodeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px
+}
+.nodeContainer > img {
+  max-width: 100px;
+}
 /* @media screens */
 
 @media (max-width: 480px) {

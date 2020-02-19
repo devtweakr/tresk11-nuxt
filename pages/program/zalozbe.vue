@@ -1,9 +1,11 @@
-<template>
+   <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
-      <div class="col-12">
-        <p>Tresk 11 išče inovativne fotografije glasbenih dogodkov, ki presegajo običajno foto dokumentacijo, najsi bo v okvir ujeta publika ali nastopajoči, koncert ali glasbeni festival, klubski dogodki, rejvi ali intimni nastopi. Fotografija glasbenega dogodka se namreč spreminja skupaj s fotografi_njami, ki skrivajo svoje potenciale za objektivi pametnih telefonov, na filmskih negativih ali za velikimi digitalnimi napravami.</p>
+    <div v-for="zalozba in zalozbe"  class="row zalozba">
+      {{ $log(zalozba.field_zalozba_logo.uri) }}
+      <div class="nodeContainer">
+        <p>{{ zalozba.title }}</p>
+        <img :src="zalozba.field_zalozba_logo.uri ? 'https://tresk.si/d' + zalozba.field_zalozba_logo.uri.url : 'https://lh3.googleusercontent.com/proxy/cJ1p0dH-s9vnlF1aKQBpdEDtDGAcJ8i2G4X39Sl3_oUjW8QE6YfueJHF9hmNE8uwrwD0gC2IAJH3r05hL6h-_-t24ut8ljY_yPcBxek0rKGCuf3uvL3QW1tv0PU'">
       </div>
     </div>
   </div>
@@ -17,9 +19,18 @@ export default {
     PageTitle
   },
   data () {
-    return {
-      pageTitle: 'ZALOŽBE'
+    return { pageTitle: 'ZALOŽBE' }
+  },
+  computed: {
+    zalozbe () { return this.$store.getters['drupal/get']('node--zalozba') }
+  },
+  fetch ({ store, params }) {
+    const query = {
+      // 'filter[field_leto.name][value]': '2020',
+      // 'filter[field_leto.name][value]': '2019',
+      include: 'field_zalozba_logo'
     }
+    return store.dispatch('drupal/get', ['node/zalozba', { params: query }])
   }
 }
 </script>

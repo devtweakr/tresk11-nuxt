@@ -51,8 +51,4 @@ export default {
   .dogodek {
     margin-top: 2rem;
   }
-
-  .koncert > img {
-    max-width: 6rem;
-  }
 </style>
