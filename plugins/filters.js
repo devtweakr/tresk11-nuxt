@@ -7,7 +7,13 @@ const dateFormat = (val, format) => {
 }
 
 const treskSlika = (field_slika) => {
-  return field_slika.uri ? 'https://tresk.si/d' + field_slika.uri.url : null
+  const defaulti = [
+    'https://i.redd.it/hfjd0svm6gtz.png'
+  ]
+
+  return field_slika.uri
+    ? 'https://tresk.si/d' + field_slika.uri.url
+    : defaulti[Math.floor(Math.random(defaulti.length))]
 }
 
 Vue.filter('dateFormat', dateFormat)
