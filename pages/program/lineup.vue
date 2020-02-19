@@ -2,6 +2,7 @@
   <div>
     <PageTitle :title="title" />
     <div v-for="dogodek in dogodki" class="row dogodek">
+      {{ $log(dogodek) }}
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
         <p class="datum">
@@ -49,9 +50,5 @@ export default {
 <style scoped>
   .dogodek {
     margin-top: 2rem;
-  }
-
-  .koncert > img {
-    max-width: 6rem;
   }
 </style>
