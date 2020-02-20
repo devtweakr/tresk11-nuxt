@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle :pageTitle="pageTitle" />
     <div v-for="dogodek in dogodki" class="row dogodek">
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
@@ -20,7 +20,7 @@ export default {
     PageTitle
   },
   data () {
-    return { title: 'POGOVORI' }
+    return { pageTitle: 'POGOVORI' }
   },
   computed: {
     dogodki () { return this.$store.getters['drupal/get']('node--koncert') }
