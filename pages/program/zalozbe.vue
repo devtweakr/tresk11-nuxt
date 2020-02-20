@@ -24,10 +24,12 @@
         lg="2"
         class="dogodek bg-transparent border-0"
       >
-        <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid height="200" />
-        <h5 class="mt-3 b-0">
-          {{ zalozba.title }}
-        </h5>
+        <div class="zalozba mb-5">
+          <h6 mt-3 class="text-center">
+            {{ zalozba.title }}
+          </h6>
+          <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid height="200" class="zalozba-logo mt-3" center />
+        </div>
       </b-col>
     </b-row>
   </div>
@@ -58,5 +60,17 @@ export default {
 </script>
 
 <style scoped>
+/* .zalozba{
+  height: 200px;
+} */
+
+.zalozba-logo{
+  max-height: 150px;
+}
+
+h5{
+  /* position: absolute;
+  bottom: 0; */
+}
 
 </style>
