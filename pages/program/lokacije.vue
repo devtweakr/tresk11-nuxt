@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div v-for="lokacija in lokacije"  class="row zalozba">
+    <div v-for="lokacija in lokacije" class="row zalozba">
       <div class="nodeContainer">
         <p>{{ lokacija.title }}</p>
         <img :src="lokacija.field_slika | treskSlika">

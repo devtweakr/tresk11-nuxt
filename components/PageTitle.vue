@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-3 mb-5">
     <h1>{{ pageTitle }}</h1>
   </div>
 </template>

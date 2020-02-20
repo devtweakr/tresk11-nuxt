@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle pageTitle="LINEUP" />
+    <PageTitle page-title="LINEUP" />
     <div v-for="dogodek in dogodki" class="row dogodek">
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
@@ -14,7 +14,7 @@
             <nuxt-link v-if="band._jv" :to="'/program/artist/' + band._jv.id">
               <img :src="band.field_slika | treskSlika">
               {{ $log(band) }}
-            <p>{{ band.title }}</p>
+              <p>{{ band.title }}</p>
             </nuxt-link>
           </div>
         </div>

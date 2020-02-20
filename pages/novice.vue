@@ -1,16 +1,18 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" class="mb-4" />
-    <b-row :key="'novica'" v-for="novica in novice" class="novica">
+    <b-row>
       <b-col>
-        <h3 class="mt-1">
-          {{ novica.title }}
-        </h3>
-        <p class="datum">
-          {{ novica.field_datum | dateFormat }}
-        </p>
-        <p v-html="novica.body.value" class="body" />
-        <hr>
+        <div :key="'novica'" v-for="novica in novice" class="novica">
+          <h3>
+            {{ novica.title }}
+          </h3>
+          <p class="datum">
+            {{ novica.field_datum | dateFormat }}
+          </p>
+          <p v-html="novica.body.value" class="body" />
+          <hr>
+        </div>
       </b-col>
     </b-row>
   </div>
@@ -50,6 +52,5 @@ export default {
 </script>
 
 <style scoped>
-.novica {
-}
+
 </style>
