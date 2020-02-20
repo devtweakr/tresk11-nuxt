@@ -16,7 +16,7 @@ const treskSlika = (field_slika) => {
     'https://i.kym-cdn.com/photos/images/original/001/131/656/15d.jpg'
   ]
 
-  return field_slika.uri
+  return field_slika && field_slika.uri
     ? 'https://tresk.si/d' + field_slika.uri.url
     : defaulti[Math.floor(Math.random() * defaulti.length)]
 }

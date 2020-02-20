@@ -2,15 +2,6 @@ html,
 body {
   min-height: 100%;
 }
-.koncert {
-  display: flex;
-  align-items: center;
-}
-.koncert > img {
-  max-width: 100px;
-  padding-right: 20px;
-  padding-bottom: 1rem;
-}
 html {
   background: rgb(86, 181, 133);
   background: linear-gradient(
@@ -70,6 +61,20 @@ svg {
   margin-bottom: 3rem;
 }
 
+.node-slika {
+  max-width: 20rem;
+}
+
+.nodeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px
+}
+.nodeContainer img {
+  max-width: 100px;
+  margin-right: 1rem;
+}
+
 /* default layout */
 .btn-home {
   border-radius: 0;
@@ -85,15 +90,7 @@ svg {
 .fade-leave-to {
   opacity: 0;
 }
-.nodeContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px
-}
-.nodeContainer > img {
-  max-width: 100px;
-  margin-right: 1rem;
-}
+
 /* @media screens */
 
 @media (max-width: 480px) {

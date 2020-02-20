@@ -1,17 +1,21 @@
 <template>
   <div>
-    <PageTitle :title="title" />
+    <PageTitle pageTitle="LINEUP" />
     <div v-for="dogodek in dogodki" class="row dogodek">
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
+
         <p class="datum">
           {{ dogodek.field_datum | dateFormat }}
         </p>
 
         <div class="koncerti">
           <div v-for="band in dogodek.field_bendi" class="koncert">
-            <img :src="band.field_slika | treskSlika">
+            <nuxt-link v-if="band._jv" :to="'/program/artist/' + band._jv.id">
+              <img :src="band.field_slika | treskSlika">
+              {{ $log(band) }}
             <p>{{ band.title }}</p>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -26,9 +30,6 @@ export default {
   components: {
     PageTitle
   },
-  data () {
-    return { title: 'LINEUP' }
-  },
   computed: {
     dogodki () { return this.$store.getters['drupal/get']('node--koncert') }
   },
@@ -37,8 +38,8 @@ export default {
       sort: 'field_datum',
       // 'filter[field_leto.name][value]': '2020',
       'filter[field_leto.name][value]': '2019',
-      'filter[field_tip_dogodka.name][value]': 'koncert',
-      include: 'field_lokacija,field_bendi.field_slika'
+      'filter[field_tip_dogodka.name][value]': 'koncert'
+      // include: 'field_lokacija,field_bendi.field_slika'
     }
 
     return store.dispatch('drupal/get', ['node/koncert', { params: query }])
@@ -47,7 +48,11 @@ export default {
 </script>
 
 <style scoped>
-  .dogodek {
+.dogodek {
     margin-top: 2rem;
-  }
+}
+.koncert img {
+    max-width: 100px;
+    margin-right: 2rem;
+}
 </style>
