@@ -1,12 +1,9 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div v-for="zalozba in zalozbe"  class="row zalozba">
-      {{ $log(zalozba.field_zalozba_logo.uri) }}
-      <div class="nodeContainer">
-        <p>{{ zalozba.title }}</p>
-        <img :src="zalozba.field_zalozba_logo | treskSlika">
-      </div>
+    <div v-for="zalozba in zalozbe" class="nodeContainer">
+      <img :src="zalozba.field_zalozba_logo | treskSlika">
+      <p>{{ zalozba.title }}</p>
     </div>
   </div>
 </template>

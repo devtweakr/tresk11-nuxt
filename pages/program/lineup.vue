@@ -2,7 +2,6 @@
   <div>
     <PageTitle :title="title" />
     <div v-for="dogodek in dogodki" class="row dogodek">
-      {{ $log(dogodek) }}
       <div class="col-12">
         <h2>{{ dogodek.title }}</h2>
         <p class="datum">
@@ -12,7 +11,7 @@
         <div class="koncerti">
           <div v-for="band in dogodek.field_bendi" class="koncert">
             <img :src="band.field_slika | treskSlika">
-            <h3>{{ band.title }}</h3>
+            <p>{{ band.title }}</p>
           </div>
         </div>
       </div>

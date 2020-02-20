@@ -3,11 +3,13 @@ body {
   min-height: 100%;
 }
 .koncert {
-
+  display: flex;
+  align-items: center;
 }
 .koncert > img {
   max-width: 100px;
-  padding-right: 20px
+  padding-right: 20px;
+  padding-bottom: 1rem;
 }
 html {
   background: rgb(86, 181, 133);
@@ -90,6 +92,7 @@ svg {
 }
 .nodeContainer > img {
   max-width: 100px;
+  margin-right: 1rem;
 }
 /* @media screens */
 
