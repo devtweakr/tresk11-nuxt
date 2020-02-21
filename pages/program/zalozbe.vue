@@ -18,18 +18,16 @@
       <b-col
         :key="'zalozba'"
         v-for="zalozba in zalozbe"
+        class="zalozba mb-5"
         cols="6"
         sm="4"
         md="3"
         lg="2"
-        class="dogodek bg-transparent border-0"
       >
-        <div class="zalozba mb-5">
-          <h6 mt-3 class="text-center">
-            {{ zalozba.title }}
-          </h6>
-          <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid height="200" class="zalozba-logo mt-3" center />
-        </div>
+        <h6 mt-3 class="text-center">
+          {{ zalozba.title }}
+        </h6>
+        <b-img :src="zalozba.field_zalozba_logo | treskSlika" class="zalozba-logo" fluid center />
       </b-col>
     </b-row>
   </div>
@@ -66,11 +64,12 @@ export default {
 
 .zalozba-logo{
   max-height: 150px;
+  vertical-align: middle;
 }
 
 h5{
-  /* position: absolute;
-  bottom: 0; */
+  /* position: absolute;*/
+  top: 50%;
 }
 
 </style>
