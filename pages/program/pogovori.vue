@@ -1,74 +1,20 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <b-card-group columns>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
+    <b-row>
+      <b-col
+        :key="'dogodek'"
+        v-for="dogodek in dogodki"
+        class="dogodek mb-5"
+        sm="6"
+      >
+        <h4>
           {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
-          {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
-          {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
-          {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
-          {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-      <b-card :key="'dogodek'" v-for="dogodek in dogodki" class="dogodek bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
-          {{ dogodek.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ dogodek.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-text class="mt-3">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </b-card-text>
-      </b-card>
-    </b-card-group>
+        </h4>
+        <h5>{{ dogodek.field_datum | dateFormat }}</h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
