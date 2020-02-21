@@ -11,9 +11,9 @@
         md="3"
       >
         <div class="logo">
-          <b-img :src="zalozba.field_zalozba_logo | treskSlika" class="zalozba-logo my-auto" fluid center />
+          <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid center />
         </div>
-        <h4 mt-3 class="text-center mt-3">
+        <h4 class="text-center mt-3">
           {{ zalozba.title }}
         </h4>
       </b-col>
@@ -47,11 +47,9 @@ export default {
 
 <style scoped>
 .logo{
-  min-height: 150px;
-  vertical-align:middle;
-}
 
-.zalozba-logo{
+}
+.logo img{
   max-height: 150px;
 }
 </style>
