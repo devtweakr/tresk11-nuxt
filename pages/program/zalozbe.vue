@@ -10,12 +10,15 @@
         sm="4"
         md="3"
       >
-        <div class="logo">
-          <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid center />
-        </div>
-        <h4 class="text-center mt-3">
-          {{ zalozba.title }}
-        </h4>
+      {{ $log(zalozba) }}
+       <nuxt-link v-if="zalozba._jv" :to="'/program/zalozba/' + zalozba._jv.id">
+          <div class="logo">
+           <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid center />
+         </div>
+         <h4 class="text-center mt-3">
+            {{ zalozba.title }}
+         </h4>
+        </nuxt-link>
       </b-col>
     </b-row>
   </div>
