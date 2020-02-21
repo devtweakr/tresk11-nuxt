@@ -10,10 +10,10 @@
         sm="4"
         md="3"
       >
-        <h4 mt-3 class="text-center">
+        <b-img :src="zalozba.field_zalozba_logo | treskSlika" class="zalozba-logo mt-3" fluid center />
+        <h4 mt-3 class="text-center mt-3">
           {{ zalozba.title }}
         </h4>
-        <b-img :src="zalozba.field_zalozba_logo | treskSlika" class="zalozba-logo mt-3" fluid center />
       </b-col>
     </b-row>
   </div>
@@ -46,8 +46,5 @@ export default {
 <style scoped>
 .zalozba-logo{
   max-height: 150px;
-}
-h4{
- min-height: 45px;
 }
 </style>

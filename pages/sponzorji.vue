@@ -10,10 +10,10 @@
         sm="4"
         md="3"
       >
-        <h4 mt-3 class="text-center">
+        <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
+        <h4 mt-3 class="text-center mt-3">
           {{ sponzor.title }}
         </h4>
-        <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
       </b-col>
     </b-row>
   </div>
@@ -45,8 +45,5 @@ export default {
 <style scoped>
 .sponzor-logo{
   max-height: 150px;
-}
-h4{
- min-height: 45px;
 }
 </style>
