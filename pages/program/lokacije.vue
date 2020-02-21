@@ -8,18 +8,12 @@
         class="lokacija mb-5"
         cols="6"
         sm="4"
-        md="4"
+        md="3"
       >
-        <b-img
-          :src="lokacija.field_slika | treskSlika"
-          class="lokacija-logo mr-3"
-          fluid
-          center
-          left
-        />
-        <h4>
+        <h4 mt-3 class="text-center">
           {{ lokacija.title }}
         </h4>
+        <b-img :src="lokacija.field_lokacija_logo | treskSlika" class="lokacija-logo mt-3" fluid center />
       </b-col>
     </b-row>
   </div>
@@ -56,5 +50,8 @@ export default {
   max-height: 150px;
   width: 150px;
   object-fit: contain;
+}
+h4{
+ min-height: 45px;
 }
 </style>

@@ -4,63 +4,63 @@
       <b-container>
         <header>
           <b-navbar class="px-0 text-right">
-            <nuxt-link
+            <b-link
               to="/"
               class="btn btn-primary btn-home"
             >
               <i class="fa fa-home" />
-            </nuxt-link>
+            </b-link>
             <div class="dropdown ml-auto">
               <button class="btn btn-primary btn-drop">
                 <i class="fa fa-bars" />
               </button>
               <div class="dropdown-content">
                 <div class="program-sub">
-                  <nuxt-link to="#" class="program-link">
+                  <b-link to="#" class="program-link">
                     <i class="fa fa-caret-left pr-2" />Program
-                  </nuxt-link>
+                  </b-link>
                   <div class="program-content">
-                    <nuxt-link to="/program/lineup">
+                    <b-link to="/program/lineup">
                       Lineup
-                    </nuxt-link>
-                    <nuxt-link to="/program/sejmisce">
+                    </b-link>
+                    <b-link to="/program/sejmisce">
                       Sejmišče
-                    </nuxt-link>
-                    <nuxt-link to="/program/zalozbe">
+                    </b-link>
+                    <b-link to="/program/zalozbe">
                       Založbe
-                    </nuxt-link>
-                    <nuxt-link to="/program/pogovori">
+                    </b-link>
+                    <b-link to="/program/pogovori">
                       Pogovori
-                    </nuxt-link>
-                    <nuxt-link to="/program/lokacije">
+                    </b-link>
+                    <b-link to="/program/lokacije">
                       Lokacije
-                    </nuxt-link>
-                    <nuxt-link to="/program/extras">
+                    </b-link>
+                    <b-link to="/program/extras">
                       Extras
-                    </nuxt-link>
+                    </b-link>
                   </div>
                 </div>
-                <nuxt-link to="/natecaji">
+                <b-link to="/natecaji">
                   Natečaji
-                </nuxt-link>
-                <nuxt-link to="/vstopnice">
+                </b-link>
+                <b-link to="/vstopnice">
                   Vstopnice
-                </nuxt-link>
-                <nuxt-link to="/novice">
+                </b-link>
+                <b-link to="/novice">
                   Novice
-                </nuxt-link>
-                <nuxt-link to="/o-tresku">
+                </b-link>
+                <b-link to="/o-tresku">
                   O Tresku
-                </nuxt-link>
-                <nuxt-link to="/arhiv">
+                </b-link>
+                <b-link to="/arhiv">
                   Arhiv
-                </nuxt-link>
-                <nuxt-link to="/kontakt">
+                </b-link>
+                <b-link to="/kontakt">
                   Kontakt
-                </nuxt-link>
-                <nuxt-link to="/sponzorji">
+                </b-link>
+                <b-link to="/sponzorji">
                   Sponzorji & podporniki
-                </nuxt-link>
+                </b-link>
               </div>
             </div>
           </b-navbar>
