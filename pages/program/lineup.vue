@@ -1,19 +1,17 @@
 <template>
   <div>
     <PageTitle page-title="LINEUP" />
-    <div v-for="dogodek in dogodki" class="row dogodek">
-      <div class="col-12">
-        <h2>{{ dogodek.title }}</h2>
-
-        <p class="datum">
-          {{ dogodek.field_datum | dateFormat }}
-        </p>
-
-        <div class="koncerti">
-          <div v-for="band in dogodek.field_bendi" class="koncert">
-            <nuxt-link v-if="band._jv" :to="'/program/artist/' + band._jv.id">
+    <div class="dogodki">
+      <div class="dogodek row">
+        <div v-for="band in bendi" class="row dogodek">
+          <div class="col-12">
+            <nuxt-link v-if="band._jv" :to="`/program/artist/${band._jv.id}`">
               <img :src="band.field_slika | treskSlika">
               {{ $log(band) }}
+
+              <p class="datum" v-if="band.field_cas_nastopa">
+                {{ band.field_cas_nastopa | dateFormat }}
+              </p>
               <p>{{ band.title }}</p>
             </nuxt-link>
           </div>
@@ -31,18 +29,17 @@ export default {
     PageTitle
   },
   computed: {
-    dogodki () { return this.$store.getters['drupal/get']('node--koncert') }
+    bendi () { return this.$store.getters['drupal/get']('node--band') }
   },
   fetch ({ store, params }) {
     const query = {
-      sort: 'field_datum',
-      // 'filter[field_leto.name][value]': '2020',
-      'filter[field_leto.name][value]': '2019',
-      'filter[field_tip_dogodka.name][value]': 'koncert'
+      // sort: 'field_datum',
+      'filter[field_leto.name][value]': '2020'
+      // 'filter[field_tip_dogodka.name][value]': 'koncert'
       // include: 'field_lokacija,field_bendi.field_slika'
     }
 
-    return store.dispatch('drupal/get', ['node/koncert', { params: query }])
+    return store.dispatch('drupal/get', ['node/band', { params: query }])
   }
 }
 </script>
@@ -51,7 +48,7 @@ export default {
 .dogodek {
     margin-top: 2rem;
 }
-.koncert img {
+.dogodek img {
     max-width: 100px;
     margin-right: 2rem;
 }
