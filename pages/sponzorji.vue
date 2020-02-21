@@ -1,12 +1,21 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div v-for="sponzor in sponzorji" class="row sponzor">
-      {{ $log(sponzor.field_slika) }}
-      <div class="col-12">
-        <p>{{ sponzor.title }}</p>
-      </div>
-    </div>
+    <b-row>
+      <b-col
+        :key="'sponzor'"
+        v-for="sponzor in sponzorji"
+        class="sponzor mb-5"
+        cols="6"
+        sm="4"
+        md="3"
+      >
+        <h6 mt-3 class="text-center">
+          {{ sponzor.title }}
+        </h6>
+        <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -33,7 +42,8 @@ export default {
   }
 }
 </script>
-
 <style scoped>
-
+.sponzor-logo{
+  max-height: 150px;
+}
 </style>
