@@ -1,20 +1,18 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" class="mb-4" />
-    <b-row>
-      <b-col>
-        <div :key="'novica'" v-for="novica in novice" class="novica">
-          <h3>
-            {{ novica.title }}
-          </h3>
-          <p class="datum">
-            {{ novica.field_datum | dateFormat }}
-          </p>
-          <p v-html="novica.body.value" class="body" />
-          <hr>
-        </div>
-      </b-col>
-    </b-row>
+    <b-card-group columns>
+      <b-card :key="'novica'" v-for="novica in novice" class="novica bg-transparent border-0" no-body>
+        <b-card-title title-tag="h3">
+          {{ novica.title }}
+        </b-card-title>
+        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
+          {{ novica.field_datum | dateFormat }}
+        </b-card-sub-title>
+        <b-card-text v-html="novica.body.value" class="mt-3" />
+        </b-card-text>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
 

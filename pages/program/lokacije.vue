@@ -1,12 +1,27 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div v-for="lokacija in lokacije" class="row zalozba">
-      <div class="nodeContainer">
-        <p>{{ lokacija.title }}</p>
-        <img :src="lokacija.field_slika | treskSlika">
-      </div>
-    </div>
+    <b-row>
+      <b-col
+        :key="'lokacija'"
+        v-for="lokacija in lokacije"
+        class="lokacija mb-5"
+        cols="6"
+        sm="4"
+        md="4"
+      >
+        <b-img
+          :src="lokacija.field_slika | treskSlika"
+          class="lokacija-logo mr-3"
+          fluid
+          center
+          left
+        />
+        <h4>
+          {{ lokacija.title }}
+        </h4>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -37,5 +52,9 @@ export default {
 </script>
 
 <style scoped>
-
+.lokacija-logo{
+  max-height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
 </style>
