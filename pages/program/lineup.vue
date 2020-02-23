@@ -9,7 +9,7 @@
               <img :src="band.field_slika | treskSlika">
               {{ $log(band) }}
 
-              <p class="datum" v-if="band.field_cas_nastopa">
+              <p v-if="band.field_cas_nastopa" class="datum">
                 {{ band.field_cas_nastopa | dateFormat }}
               </p>
               <p>{{ band.title }}</p>

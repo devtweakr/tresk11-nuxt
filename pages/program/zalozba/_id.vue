@@ -5,7 +5,7 @@
       <div class="col-md-6">
         <img :src="zalozba.field_zalozba_logo| treskSlika" class="node-slika">
       </div>
-     {{ $log(zalozba) }}
+      {{ $log(zalozba) }}
       <div class="col-md-6">
         <p v-html="zalozba.body.value" v-if="zalozba.body" />
       </div>
