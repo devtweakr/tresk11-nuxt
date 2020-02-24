@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="node-page">
     <PageTitle :pageTitle="artist.title" />
     <img :src="artist.field_slika | treskSlika" class="node-slika">
     <p v-html="artist.body.value" v-if="artist.body" class="nodeParagraph"/>
@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style scoped>
+  .artist-page {
+  }
 
 </style>
