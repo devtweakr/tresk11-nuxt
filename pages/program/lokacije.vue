@@ -10,8 +10,8 @@
         sm="4"
         md="3"
       >
-        <nuxt-link v-if="lokacija._jv" :to="`/program/lokacija/${lokacija._jv.id}`">
-          <b-img :src="lokacija.field_lokacija_logo | treskSlika" class="lokacija-logo mt-3" fluid center />
+        <nuxt-link v-if="lokacija.title" :to="`/program/lokacija/${lokacija.title}`">
+          <b-img :src="lokacija.field_slika | treskSlika" class="lokacija-logo mt-3" fluid center />
           <h4 mt-3 class="text-center mt-3">
             {{ lokacija.title }}
           </h4>
@@ -39,7 +39,7 @@ export default {
   fetch ({ store, params }) {
     const query = {
       'filter[field_leto.name][value]': '2020',
-      include: ''
+      include: 'field_slika'
     }
 
     return store.dispatch('drupal/get', ['node/lokacija', { params: query }])

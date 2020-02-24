@@ -23,6 +23,7 @@ export default {
       include: 'field_slika'
     }
     return store.dispatch('drupal/get', [`node/band`, {
+      'filter[field_leto.name][value]': '2020',
       'filter[title]': params.id,
       params: query
     }])
