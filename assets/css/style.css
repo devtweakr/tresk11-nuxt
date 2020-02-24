@@ -28,7 +28,14 @@ svg {
   -ms-user-select: none;
   user-select: none;
 }
-
+.odstavekZirija {
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+.slikaZirija {
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
 .content-page {
   min-height: 100%;
   background: rgb(255, 255, 255);

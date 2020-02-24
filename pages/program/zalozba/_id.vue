@@ -3,7 +3,7 @@
     <PageTitle :pageTitle="zalozba.title" />
     <div class="row">
       <div class="col-md-6">
-        <img :src="zalozba.field_zalozba_logo| treskSlika" class="node-slika">
+        <img :src="zalozba.field_zalozba_logo | treskSlika" class="node-slika">
       </div>
       {{ $log(zalozba) }}
       <div class="col-md-6">
