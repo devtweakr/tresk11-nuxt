@@ -33,6 +33,9 @@
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
                     <div class="program-content">
+                      <b-link to="/program/urnik">
+                        Urnik
+                      </b-link>
                       <b-link to="/program/lineup">
                         Lineup
                       </b-link>

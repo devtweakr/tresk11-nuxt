@@ -12,7 +12,7 @@
       >
         <nuxt-link v-if="sponzor._jv" :to="`/sponzor/${sponzor._jv.id}`">
           <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
-          <h4 mt-3 class="text-center mt-3">
+          <h4 class="text-center mt-3">
             {{ sponzor.title }}
           </h4>
         </nuxt-link>
@@ -36,7 +36,7 @@ export default {
   },
   fetch ({ store, params }) {
     const query = {
-      'filter[field_leto.name][value]': '2019',
+      'filter[field_leto.name][value]': '2020',
       include: 'field_slika'
     }
 
