@@ -23,6 +23,10 @@ export default {
       include: 'field_slika',
       'filter[field_leto.name][value]': '2020',
       'filter[title]': decodeURIComponent(params.id)
+      /*
+      'filter[path.alias][operator]': 'CONTAINS',
+      'filter[path.alias][value]': decodeURIComponent(params.id)
+*/
     }
     return store.dispatch('drupal/get', [`node/band`, {
       params: query

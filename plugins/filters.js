@@ -26,8 +26,15 @@ const treskSlika = (field_slika) => {
 }
 
 const drupalLinks = (body) => {
-  console.log("FIDIDIID", body, arguments)
-  return body
+  const regexLokacija = /href="\/d\/lokacija\/(.+)"/g
+  const regexZalozba = /href="\/d\/zalozba\/(.+)"/g
+  const regexArtist = /href="\/d\/artist\/(.+)"/g
+
+  const cisto_lokacije = body.replace(regexLokacija, 'href="/program/lokacija/$1"').replace('-', '%20')
+  const cisto_zalozbe = cisto_lokacije.replace(regexZalozba, 'href="/program/zalozba/$1"').replace('-', '%20')
+  const cisto_bandi = cisto_zalozbe.replace(regexArtist, 'href="/program/artist/$1"').replace('-', '%20')
+
+  return cisto_bandi
 }
 
 Vue.filter('dateFormat', dateFormat)
