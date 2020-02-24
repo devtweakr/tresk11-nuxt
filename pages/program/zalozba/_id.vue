@@ -5,7 +5,6 @@
       <div class="col-md-6">
         <img :src="zalozba.field_zalozba_logo | treskSlika" class="node-slika">
       </div>
-      {{ $log(zalozba) }}
       <div class="col-md-6">
         <p v-html="zalozba.body.value" v-if="zalozba.body" />
       </div>
@@ -21,13 +20,16 @@ export default {
     PageTitle
   },
   computed: {
-    zalozba () { return this.$store.getters['drupal/get']('node--zalozba')[this.$route.params.id] }
+    zalozba () {
+      return Object.values(this.$store.getters['drupal/get']('node--zalozba'))[0]
+    }
   },
   fetch ({ store, params }) {
     const query = {
       include: 'field_zalozba_logo'
     }
-    return store.dispatch('drupal/get', [`node/zalozba/${params.id}`, {
+    return store.dispatch('drupal/get', [`node/zalozba`, {
+      'filter[title]': params.id,
       params: query
     }])
   }

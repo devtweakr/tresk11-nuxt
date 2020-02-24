@@ -14,7 +14,9 @@
         >
           <nuxt-link v-if="band.title" :to="`/program/artist/${band.title}`">
             <img :src="band.field_slika | treskSlika" class="band-logo">
-            <h4 class="text-center mt-3">{{ band.title }}</h4>
+            <h4 class="text-center mt-3">
+              {{ band.title }}
+            </h4>
           </nuxt-link>
         </b-col>
       </b-row>
