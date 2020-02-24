@@ -58,7 +58,8 @@ svg {
   color: #e5332a;
 }
 
-.sponzorji > img {
+.sponzorji > img,
+.bandi > img {
   max-height: 2rem;
   max-width: 9rem;
   margin: 0.5rem;

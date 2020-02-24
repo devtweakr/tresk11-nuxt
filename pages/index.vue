@@ -8,6 +8,9 @@
             <i class="fa fa-caret-left pr-2" />Program
           </nuxt-link>
           <div class="program-content">
+            <nuxt-link to="/program/urnik">
+              Urnik
+            </nuxt-link>
             <nuxt-link to="/program/lineup">
               Lineup
             </nuxt-link>
