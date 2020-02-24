@@ -127,7 +127,7 @@ svg {
 .node-slika {
     max-width: 100%;
   }
-.nodeParagraph {
+.nodeParagraph p iframe {
     width: 100%;
   }
 }
