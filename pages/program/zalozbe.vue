@@ -49,9 +49,6 @@ export default {
 </script>
 
 <style scoped>
-.logo{
-
-}
 .logo img{
   max-height: 150px;
 }

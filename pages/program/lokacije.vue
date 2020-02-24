@@ -10,10 +10,12 @@
         sm="4"
         md="3"
       >
-        <b-img :src="lokacija.field_lokacija_logo | treskSlika" class="lokacija-logo mt-3" fluid center />
-        <h4 mt-3 class="text-center mt-3">
-          {{ lokacija.title }}
-        </h4>
+        <nuxt-link v-if="lokacija._jv" :to="`/program/lokacija/${lokacija._jv.id}`">
+          <b-img :src="lokacija.field_lokacija_logo | treskSlika" class="lokacija-logo mt-3" fluid center />
+          <h4 mt-3 class="text-center mt-3">
+            {{ lokacija.title }}
+          </h4>
+        </nuxt-link>
       </b-col>
     </b-row>
   </div>
