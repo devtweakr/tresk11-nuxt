@@ -88,6 +88,3 @@ sw.*
 
 # Vim swap files
 *.swp
-
-# Skip dist folder where the app is built
-dist/*
