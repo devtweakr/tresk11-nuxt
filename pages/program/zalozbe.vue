@@ -5,7 +5,7 @@
       <b-col
         :key="'zalozba'"
         v-for="zalozba in zalozbe"
-        class="zalozba mb-5"
+        class="mb-5"
         cols="6"
         sm="4"
         md="3"
@@ -49,6 +49,6 @@ export default {
 
 <style scoped>
 .logo img{
-  max-height: 10rem;
+  max-height: 150px;
 }
 </style>

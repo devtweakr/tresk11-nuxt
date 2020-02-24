@@ -9,7 +9,7 @@
         <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
           {{ novica.field_datum | dateFormat }}
         </b-card-sub-title>
-        <b-card-img v-if="novica.field_slika" class="mt-2" :src="novica.field_slika | treskSlika" />
+        <b-card-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" class="mt-2" />
         <b-card-text v-html="novica.body.value" class="mt-3" />
         </b-card-text>
       </b-card>

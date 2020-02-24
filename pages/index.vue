@@ -127,8 +127,8 @@
               96.5h209.7v129.7h-209.7z"
             />
           </a>
-          <a xlink:href="/program">
-            <nuxt-link to="/program">
+          <a xlink:href="/program/urnik">
+            <nuxt-link to="/program/urnik">
               <path
                 id="program-link"
                 d="M235.932 373.22L108.814 603.05l263.703-5.902z"

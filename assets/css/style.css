@@ -86,7 +86,7 @@ svg {
 .nodeContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 .nodeContainer img {
   max-width: 100px;
@@ -120,11 +120,10 @@ svg {
 /* @media screens */
 
 @media (max-width: 480px) {
-
 }
 
 @media (max-width: 576px) {
-.multiColumn {
+  .multiColumn {
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
@@ -132,10 +131,10 @@ svg {
     -moz-column-gap: 3em;
     column-gap: 3em;
   }
-.node-slika {
+  .node-slika {
     max-width: 100%;
   }
-.nodeParagraph p iframe {
+  .nodeParagraph p iframe {
     width: 100%;
   }
 }

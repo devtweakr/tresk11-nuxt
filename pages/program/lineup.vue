@@ -1,26 +1,25 @@
 <template>
   <div>
     <PageTitle page-title="LINEUP" />
-
-    <div class="bandi">
-      <b-row>
-        <b-col
-          :key="band._jv.id"
-          v-for="band in bandi"
-          class="mb-5"
-          cols="6"
-          sm="4"
-          md="3"
-        >
-          <nuxt-link v-if="band.title" :to="`/program/artist/${encodeURIComponent(band.title)}`">
-            <img :src="band.field_slika | treskSlika" class="band-logo">
-            <h4 class="text-center mt-3">
-              {{ band.title }}
-            </h4>
-          </nuxt-link>
-        </b-col>
-      </b-row>
-    </div>
+    <b-row>
+      <b-col
+        :key="band._jv.id"
+        v-for="band in bandi"
+        class="mb-5"
+        cols="6"
+        sm="4"
+        md="3"
+      >
+        <nuxt-link v-if="band.title" :to="`/program/artist/${encodeURIComponent(band.title)}`">
+          <div class="logo">
+            <b-img :src="band.field_slika | treskSlika" class="band-logo" fluid center />
+          </div>
+          <h4 class="text-center mt-3">
+            {{ band.title }}
+          </h4>
+        </nuxt-link>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -49,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-  .band-logo {
-    max-height: 150px;
-  }
+.logo img{
+  max-height: 250px;
+}
 </style>

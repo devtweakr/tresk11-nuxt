@@ -25,21 +25,44 @@
           <img src="/img/korpo/outsider.svg">
           <img src="/img/korpo/rs.svg">
         </div>
-        <h3 class="mt-3 mb-5">ŽIRIJA</h3>
+        <h3 class="mt-3 mb-5">
+          ŽIRIJA
+        </h3>
         <img class="slikaZirija" src="/img/zirija/ajda-b.jpg">
-        <p class="odstavekZirija">Ajda Bračič je članica uredniškega odbora revije <a href="https://outsider.si " target="blank">Outsider</a> ter nekdanja urednica redakcije za scenske umetnosti spletnega medija Koridor – križišča umetnosti.
+        <p
+          c
+          lass="odstavekZirija"
+        >
+          Ajda Bračič je članica uredniškega odbora revije <a href="https://outsider.si " target="blank">Outsider</a> ter nekdanja urednica redakcije za scenske umetnosti spletnega medija Koridor – križišča umetnosti.
         </p>
         <img class="slikaZirija" src="/img/zirija/bostjan-napotnik.jpg">
-        <p class="odstavekZirija">Boštjan Napotnik - Napo je avdicijo za špikerja na Radiu Študent opravil daljnega leta 1991, še vedno pa enkrat na mesec odfura jutranji program. Leta 1994 se je začelo njegovo agencijsko življenje, ki ga zadnjih ducat let preživlja kot kreativni direktor na Futuri DDB.
+
+        <p class="odstavekZirija">
+          Boštjan Napotnik - Napo je avdicijo za špikerja na Radiu Študent opravil daljnega leta 1991, še vedno pa enkrat na mesec odfura jutranji program. Leta 1994 se je začelo njegovo agencijsko življenje, ki ga zadnjih ducat let preživlja kot kreativni direktor na Futuri DDB.
         </p>
-        <img class="slikaZirija" src="/img/zirija/stela-ivsek.jpg">
-        <p class="odstavekZirija">Stella Ivšek je oblikovalka, vidžejka, scenografinja in intermedijska umetnica, ki pod aliasom 5237 samostojno nastopa kot VJ in je soustanoviteljica projekcijske dvojice BEAM TEAM (5237 x SMECH). Je tudi lanskoletna zmagovalka kategorije inovativnega pristopa k oblikovanju in oglaševanju dogodka.
+        <img
+          class="slikaZirija"
+          src="/img/zirija/stela-i
+vsek.jpg"
+        >
+        <p class="odstavekZirija">
+          Stella Ivšek je oblikovalka, vidžejka, scenografinja in intermedijska umetnica, ki pod aliasom 5237 samostojno nastopa kot VJ in je soustanoviteljica projekcijske dvojice BEAM TEAM (5237 x SMECH). Je tudi lanskoletna zmagovalka kategorije inovativnega pristopa k oblikovanju in oglaševanju dogodka.
         </p>
-        <img class="slikaZirija" src="/img/zirija/vladimir-m.jpg">
-        <p class="odstavekZirija">Vladimir Mićković je interdisciplinarni oblikovalec, pisec in soustanovitelj večkrat nagrajenega oblikovalskega studia <a href="https://www.instagram.com/ljudje/" target="blank">Ljudje</a>. Je tudi soustanovitelj bistroja <a href="https://kucha.co/ " target="blank">Kucha</a> in vodja istoimenske blagovne znamke.
+        <img
+          class="slikaZirija"
+          src="/img/z
+irija/vladimir-m.jpg"
+        >
+        <p class="odstavekZirija">
+          Vladimir Mićković je interdisciplinarni oblikovalec, pisec in soustanovitelj večkrat nagrajenega oblikovalskega studia <a href="https://www.instagram.com/ljudje/" target="blank">Ljudje</a>. Je tudi soustanovitelj bistroja <a href="https://kucha.co/ " target="blank">Kucha</a> in vodja istoimenske blagovne znamke.
         </p>
-        <img class="slikaZirija" src="/img/zirija/zala-v.jpg">
-        <p class="odstavekZirija">Zala Velkavrh se kot članica urbanističnega kolektiva prostoRož med drugim ukvarja s temami urbane prenove, mestnega brandinga in vključujočega urbanega razvoja.
+        <img
+          class="slikaZir
+ija"
+          src="/img/zirija/zala-v.jpg"
+        >
+        <p class="odstavekZirija">
+          Zala Velkavrh se kot članica urbanističnega kolektiva prostoRož med drugim ukvarja s temami urbane prenove, mestnega brandinga in vključujočega urbanega razvoja.
         </p>
         <!-- <p><strong>NE SPREGLEJTE: fizični izvodi</strong></p>
         <p>V primeru, da vaše nekonvencionalne rešitve vsebujejo fizične objekte, ki jih je najlažje predstaviti in razumeti v živo, lahko stvari pošljete po pošti ali prinesete osebno na Radio Študent (naslov: Zavod Radio Študent (Natečaji festivala Tresk: inovativni pristop), Svetčeva 9, 1000 Ljubljana). Po zaključku festivala vam bomo fizične objekte vrnili po pošti oziroma jih boste lahko prevzeli na naslovu organizatorja.</p> -->

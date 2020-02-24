@@ -25,21 +25,28 @@
           <img src="/img/korpo/outsider.svg">
           <img src="/img/korpo/rs.svg">
         </div>
-        <h3 class="mt-3 mb-5">ŽIRIJA</h3>
+        <h3 class="mt-3 mb-5">
+          ŽIRIJA
+        </h3>
         <img class="slikaZirija" src="/img/zirija/jan-kmet.jpg">
-        <p class="odstavekZirija">Jan Kmet goji strast do analogne fotografije in ima oko za detajle, kar v dobi vsakdana, prenasičenega z informacijami, zahteva precejšnji fokus. Je lanskoletni zmagovalec natečajev Tresk v kategoriji plakata.
+        <p class="odstavekZirija">
+          Jan Kmet goji strast do analogne fotografije in ima oko za detajle, kar v dobi vsakdana, prenasičenega z informacijami, zahteva precejšnji fokus. Je lanskoletni zmagovalec natečajev Tresk v kategoriji plakata.
         </p>
         <img class="slikaZirija" src="/img/zirija/marusa-racic.jpg">
-        <p class="odstavekZirija"><a href="http://www.marusaracic.com/" target="blank">Maruša Račič</a> je grafična oblikovalka, ki je doštudirala v Pragi, od leta 2015 pa kot samozaposlena v kulturi deluje večinoma na lokalnem terenu. Aktivna je na področju ilustracije in risbe, poleg tega pa se ukvarja tudi z analogno fotografijo.
+        <p class="odstavekZirija">
+          <a href="http://www.marusaracic.com/" target="blank">Maruša Račič</a> je grafična oblikovalka, ki je doštudirala v Pragi, od leta 2015 pa kot samozaposlena v kulturi deluje večinoma na lokalnem terenu. Aktivna je na področju ilustracije in risbe, poleg tega pa se ukvarja tudi z analogno fotografijo.
         </p>
         <img class="slikaZirija" src="/img/zirija/nejc-prah.jpg">
-        <p class="odstavekZirija"><a href="https://nejcprah.com" target="blank">Nejc Prah</a> je oblikovalec, ki deluje med New Yorkom in Ljubljano. Prejel je Prešernovo nagrado 2020 za izjemne oblikovalske dosežke preteklih treh let. Zaradi varstva osebnih podatkov in nevarnih mehanizmov prepoznave obraza izpostavljamo le fragment vizualne podobe, ki jo je oblikoval za osmo edicijo festivala Tresk.
+        <p class="odstavekZirija">
+          <a href="https://nejcprah.com" target="blank">Nejc Prah</a> je oblikovalec, ki deluje med New Yorkom in Ljubljano. Prejel je Prešernovo nagrado 2020 za izjemne oblikovalske dosežke preteklih treh let. Zaradi varstva osebnih podatkov in nevarnih mehanizmov prepoznave obraza izpostavljamo le fragment vizualne podobe, ki jo je oblikoval za osmo edicijo festivala Tresk.
         </p>
         <img class="slikaZirija" src="/img/zirija/rina-b.jpg">
-        <p class="odstavekZirija"><a href="https://www.instagram.com/rina_malac/?hl=en" target="blank">Rina Barbarić</a> je grafična oblikovalka in ilustratorka, ki deluje med Zagrebom, Ljubljano in Reko. Z avtorskimi projekti je sodelovala na številnih razstavah. Redno sodeluje z ekipo Vox Feminae.
+        <p class="odstavekZirija">
+          <a href="https://www.instagram.com/rina_malac/?hl=en" target="blank">Rina Barbarić</a> je grafična oblikovalka in ilustratorka, ki deluje med Zagrebom, Ljubljano in Reko. Z avtorskimi projekti je sodelovala na številnih razstavah. Redno sodeluje z ekipo Vox Feminae.
         </p>
         <img class="slikaZirija" src="/img/zirija/tamara-m.jpg">
-        <p class="odstavekZirija">Tamara Mateša je umetnostna zgodovinarka in hispanistka ter sodelavka Inštituta TAM-TAM, kjer goji ljubezen do plakatov vseh sort in oblik.
+        <p class="odstavekZirija">
+          Tamara Mateša je umetnostna zgodovinarka in hispanistka ter sodelavka Inštituta TAM-TAM, kjer goji ljubezen do plakatov vseh sort in oblik.
         </p>
       </div>
     </div>
