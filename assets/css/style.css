@@ -122,7 +122,14 @@ svg {
     -webkit-column-gap: 3em;
     -moz-column-gap: 3em;
     column-gap: 3em;
-  }}
+  }
+.node-slika {
+    max-width: 100%;
+  }
+.nodeParagraph {
+    width: 100%;
+  }
+}
 
 @media (min-width: 576px) {
   .multiColumn {
