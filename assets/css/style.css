@@ -56,7 +56,8 @@ svg {
   margin-right: auto;
 }
 
-.node-page .node-slika {
+.node-page .node-slika,
+.node-page iframe {
   width: 100%;
   margin-bottom: 2rem;
 }

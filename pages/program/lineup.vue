@@ -12,7 +12,7 @@
           sm="4"
           md="3"
         >
-          <nuxt-link v-if="band._jv" :to="`/program/artist/${band._jv.id}`">
+          <nuxt-link v-if="band.title" :to="`/program/artist/${band.title}`">
             <img :src="band.field_slika | treskSlika" class="band-logo">
             <h4 class="text-center mt-3">{{ band.title }}</h4>
           </nuxt-link>
