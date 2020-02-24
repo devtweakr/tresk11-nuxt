@@ -2,7 +2,7 @@
   <div>
     <PageTitle :pageTitle="pageTitle" />
     <div class="row">
-      <div v-html="body" v-if="body" class="col-12" />
+      <div v-html="page.body.value" v-if="page" class="col-12" />
     </div>
   </div>
 </template>
@@ -20,11 +20,11 @@ export default {
     }
   },
   computed: {
-    body () {
+    page () {
       // Basic page sejmisce
       const pageId = 'fbcfdc36-c420-4089-bd97-c27898f198c1'
 
-      return this.$store.getters['drupal/get']('node--page')[pageId].body.value
+      return this.$store.getters['drupal/get']('node--page')[pageId]
     }
   },
   fetch ({ store, params }) {

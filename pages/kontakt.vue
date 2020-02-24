@@ -2,7 +2,7 @@
   <div>
     <PageTitle page-title="KONTAKT" />
     <div class="row">
-      <div v-html="body" v-if="body" class="col-12" />
+      <div v-html="page.body.value" v-if="page" class="col-12" />
     </div>
   </div>
 </template>
@@ -15,11 +15,11 @@ export default {
     PageTitle
   },
   computed: {
-    body () {
+    page () {
       // Basic page kontakt
       const pageId = '69ae2ee0-c951-46b0-bb35-47494aab1f59'
 
-      return this.$store.getters['drupal/get']('node--page')[pageId].body.value
+      return this.$store.getters['drupal/get']('node--page')[pageId]
     }
   },
   fetch ({ store, params }) {

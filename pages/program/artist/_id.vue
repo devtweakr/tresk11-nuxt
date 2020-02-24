@@ -2,7 +2,6 @@
   <div>
     <PageTitle :pageTitle="artist.title" />
     <img :src="artist.field_slika | treskSlika" class="node-slika">
-    {{ $log(artist) }}
     <p v-html="artist.body.value" v-if="artist.body" />
   </div>
 </template>

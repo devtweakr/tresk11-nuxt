@@ -2,7 +2,7 @@
   <div>
     <PageTitle page-title="EXTRAS" />
     <div class="row">
-      <div v-html="body" v-if="body" class="col-12" />
+      <div v-html="page.body.value" v-if="page" class="col-12" />
     </div>
   </div>
 </template>
@@ -15,11 +15,11 @@ export default {
     PageTitle
   },
   computed: {
-    body () {
+    page () {
       // Basic page extras
       const pageId = '27f572f8-feb8-4a3f-b0d5-e98c9c784a2e'
 
-      return this.$store.getters['drupal/get']('node--page')[pageId].body.value
+      return this.$store.getters['drupal/get']('node--page')[pageId]
     }
   },
   fetch ({ store, params }) {
