@@ -10,10 +10,12 @@
         sm="4"
         md="3"
       >
-        <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
-        <h4 mt-3 class="text-center mt-3">
-          {{ sponzor.title }}
-        </h4>
+        <nuxt-link v-if="sponzor._jv" :to="`/sponzor/${sponzor._jv.id}`">
+          <b-img :src="sponzor.field_sponzor_logo | treskSlika" class="sponzor-logo mt-3" fluid center />
+          <h4 mt-3 class="text-center mt-3">
+            {{ sponzor.title }}
+          </h4>
+        </nuxt-link>
       </b-col>
     </b-row>
   </div>
