@@ -1,10 +1,14 @@
 /* eslint-disable */
 import Vue from 'vue'
 
-const dateFormat = (val, format) => {
+const dateFormat = (val) => {
+  const MESECI = [
+    'januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij', 'avgust', 'september', 'oktober', 'november', 'december'
+  ]
+
   const date = new Date(val)
   // return date.toLocaleString()
-  return date.getDate() + '. ' + date.getMonth()
+  return date.getDate() + '. ' + MESECI[date.getMonth()]
 }
 
 const treskSlika = (field_slika) => {
@@ -17,7 +21,7 @@ const treskSlika = (field_slika) => {
   ]
 
   return field_slika && field_slika.uri
-    ? 'https://tresk.si/d' + field_slika.uri.url
+    ? 'https://tresk.si' + field_slika.uri.url
     : defaulti[Math.floor(Math.random() * defaulti.length)]
 }
 

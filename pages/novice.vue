@@ -9,6 +9,7 @@
         <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
           {{ novica.field_datum | dateFormat }}
         </b-card-sub-title>
+        <b-card-img v-if="novica.field_slika" class="mt-2" :src="novica.field_slika | treskSlika" />
         <b-card-text v-html="novica.body.value" class="mt-3" />
         </b-card-text>
       </b-card>
@@ -41,7 +42,8 @@ export default {
       'filter[field_leto.name][value]': '2020',
       'filter[datefilter][condition][path]': 'field_datum',
       'filter[datefilter][condition][operator]': '<',
-      'filter[datefilter][condition][value]': zdaj
+      'filter[datefilter][condition][value]': zdaj,
+      include: 'field_slika'
     }
 
     return store.dispatch('drupal/get', ['node/novica', { params: query }])

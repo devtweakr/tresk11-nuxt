@@ -39,8 +39,7 @@ export default {
   },
   fetch ({ store, params }) {
     const query = {
-      // 'filter[field_leto.name][value]': '2020',
-      // 'filter[field_leto.name][value]': '2019',
+      'filter[field_leto.name][value]': '2020',
       include: 'field_zalozba_logo'
     }
     return store.dispatch('drupal/get', ['node/zalozba', { params: query }])
@@ -50,6 +49,6 @@ export default {
 
 <style scoped>
 .logo img{
-  max-height: 150px;
+  max-height: 10rem;
 }
 </style>
