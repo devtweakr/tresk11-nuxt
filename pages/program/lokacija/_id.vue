@@ -20,11 +20,11 @@ export default {
   },
   fetch ({ store, params }) {
     const query = {
-      include: 'field_slika'
+      include: 'field_slika',
+      'filter[field_leto.name][value]': '2020',
+      'filter[title]': decodeURIComponent(params.id)
     }
     return store.dispatch('drupal/get', [`node/lokacija`, {
-      'filter[field_leto.name][value]': '2020',
-      'filter[title]': params.id,
       params: query
     }])
   }

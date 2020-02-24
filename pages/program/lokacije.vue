@@ -10,7 +10,7 @@
         sm="4"
         md="3"
       >
-        <nuxt-link v-if="lokacija.title" :to="`/program/lokacija/${lokacija.title}`">
+        <nuxt-link v-if="lokacija.title" :to="`/program/lokacija/${encodeURIComponent(lokacija.title)}`">
           <b-img :src="lokacija.field_slika | treskSlika" class="lokacija-logo mt-3" fluid center />
           <h4 mt-3 class="text-center mt-3">
             {{ lokacija.title }}

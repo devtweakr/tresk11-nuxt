@@ -26,10 +26,10 @@ export default {
   },
   fetch ({ store, params }) {
     const query = {
-      include: 'field_zalozba_logo'
+      include: 'field_zalozba_logo',
+      'filter[title]': decodeURIComponent(params.id)
     }
     return store.dispatch('drupal/get', [`node/zalozba`, {
-      'filter[title]': params.id,
       params: query
     }])
   }

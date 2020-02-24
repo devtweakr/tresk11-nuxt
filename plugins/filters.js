@@ -25,8 +25,14 @@ const treskSlika = (field_slika) => {
     : defaulti[Math.floor(Math.random() * defaulti.length)]
 }
 
+const drupalLinks = (body) => {
+  console.log("FIDIDIID", body, arguments)
+  return body
+}
+
 Vue.filter('dateFormat', dateFormat)
 Vue.filter('treskSlika', treskSlika)
+Vue.filter('drupalLinks', drupalLinks)
 
 Vue.prototype.$log = console.log
 

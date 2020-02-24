@@ -2,7 +2,7 @@
   <div>
     <PageTitle page-title="URNIK" />
     <div class="row">
-      <div v-html="page.body.value" v-if="page" class="col-12" />
+      <div v-html="$options.filters.drupalLink(page.body.value)" v-if="page" class="col-12" />
     </div>
   </div>
 </template>
