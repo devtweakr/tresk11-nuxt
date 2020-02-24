@@ -16,13 +16,13 @@
             >
               <i class="fa fa-arrow-left" />
             </b-link>
-            <div class="lang ml-auto">
-              <b-link
+            <div class="ml-auto">
+              <!-- <b-link
                 to="#"
                 class="btn btn-primary btn-lang"
               >
                 EN
-              </b-link>
+              </b-link> -->
               <div class="dropdown">
                 <button class="btn btn-primary btn-drop">
                   <i class="fa fa-bars" />
