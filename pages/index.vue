@@ -124,6 +124,47 @@
               96.5h209.7v129.7h-209.7z"
             />
           </a>
+          <a xlink:href="/program">
+            <nuxt-link to="/program">
+              <path
+                id="program-link"
+                d="M235.932 373.22L108.814 603.05l263.703-5.902z"
+                opacity="1"
+                vector-effect="none"
+                fill="gray"
+                fill-opacity="0"
+                stroke="none"
+                stroke-width="7.559"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="4"
+                stroke-dasharray="none"
+                stroke-dashoffset="0"
+                stroke-opacity="1"
+              />
+            </nuxt-link>
+          </a>
+          <!-- <a xlink:href="#">
+            <nuxt-link to="#"> -->
+          <path
+            id="vstopnice-link"
+            d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
+            opacity="1"
+            vector-effect="none"
+            fill="gray"
+            fill-opacity="0"
+            stroke="none"
+            stroke-width="7.559"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="4"
+            stroke-dasharray="none"
+            stroke-dashoffset="0"
+            stroke-opacity="1"
+          />
+          <!-- </nuxt-link>
+          </a> -->
+
         </svg>
       </div>
     </div>
