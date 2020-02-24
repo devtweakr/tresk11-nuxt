@@ -1,23 +1,8 @@
 <template>
   <div>
-    <PageTitle :pageTitle="pageTitle" />
+    <PageTitle page-title="EXTRAS" />
     <div class="row">
-      <div class="col-12">
-        <p>Tresk 11 ponovno želi v vpogled dobiti izvirne, odštekane in inovativne oblikovalske rešitve za fizični nosilec glasbenega albuma. Sprejemamo vse od kaset, CD-jev in vinilk do USB ključkov in nenavadnih nosilcev kod za spletni dostop.</p>
-        <p>Posameznik oz. posameznica lahko prijavi največ tri podobe albumov, objavljenih med 18. marcem 2019 in 3. aprilom 2020. Izvajalcev oz. izvajalk podobe je lahko tudi več. Datoteke podob albumov naj bodo izvirne velikosti, nekonvencionalne oblikovalske rešitve pa naj bodo še dodatno fotografsko dokumentirane.</p>
-
-        <p>
-          Avtori_ica zmagovalne podobe albuma se bo predstavil_a s samostojno razstavo v galeriji DobraVaga.
-        </p>
-
-        <br>
-
-        <div class="sponzorji">
-          <img src="/img/korpo/vaga.svg">
-          <img src="/img/korpo/outsider.svg">
-          <img src="/img/korpo/rs.svg">
-        </div>
-      </div>
+      <div v-html="body" v-if="body" class="col-12" />
     </div>
   </div>
 </template>
@@ -29,10 +14,22 @@ export default {
   components: {
     PageTitle
   },
-  data () {
-    return {
-      pageTitle: 'Extras'
+  computed: {
+    body () {
+      // Basic page extras
+      const pageId = '27f572f8-feb8-4a3f-b0d5-e98c9c784a2e'
+
+      return this.$store.getters['drupal/get']('node--page')[pageId].body.value
     }
+  },
+  fetch ({ store, params }) {
+    // Basic page extras
+    const pageId = '27f572f8-feb8-4a3f-b0d5-e98c9c784a2e'
+
+    const query = {}
+    return store.dispatch('drupal/get', [`node/page/${pageId}`, {
+      params: query
+    }])
   }
 }
 </script>
