@@ -10,57 +10,71 @@
             >
               <i class="fa fa-home" />
             </b-link>
-            <div class="dropdown ml-auto">
-              <button class="btn btn-primary btn-drop">
-                <i class="fa fa-bars" />
-              </button>
-              <div class="dropdown-content">
-                <div class="program-sub">
-                  <b-link to="#" class="program-link">
-                    <i class="fa fa-caret-left pr-2" />Program
-                  </b-link>
-                  <div class="program-content">
-                    <b-link to="/program/lineup">
-                      Lineup
+            <b-link
+              onclick="history.go(-1)"
+              class="btn btn-primary btn-back ml-1"
+            >
+              <i class="fa fa-arrow-left" />
+            </b-link>
+            <div class="lang ml-auto">
+              <b-link
+                to="#"
+                class="btn btn-primary btn-lang"
+              >
+                EN
+              </b-link>
+              <div class="dropdown">
+                <button class="btn btn-primary btn-drop">
+                  <i class="fa fa-bars" />
+                </button>
+                <div class="dropdown-content">
+                  <div class="program-sub">
+                    <b-link to="#" class="program-link">
+                      <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
-                    <b-link to="/program/sejmisce">
-                      Sejmišče
-                    </b-link>
-                    <b-link to="/program/zalozbe">
-                      Založbe
-                    </b-link>
-                    <b-link to="/program/pogovori">
-                      Pogovori
-                    </b-link>
-                    <b-link to="/program/lokacije">
-                      Lokacije
-                    </b-link>
-                    <b-link to="/program/extras">
-                      Extras
-                    </b-link>
+                    <div class="program-content">
+                      <b-link to="/program/lineup">
+                        Lineup
+                      </b-link>
+                      <b-link to="/program/sejmisce">
+                        Sejmišče
+                      </b-link>
+                      <b-link to="/program/zalozbe">
+                        Založbe
+                      </b-link>
+                      <b-link to="/program/pogovori">
+                        Pogovori
+                      </b-link>
+                      <b-link to="/program/lokacije">
+                        Lokacije
+                      </b-link>
+                      <b-link to="/program/extras">
+                        Extras
+                      </b-link>
+                    </div>
                   </div>
+                  <b-link to="/natecaji">
+                    Natečaji
+                  </b-link>
+                  <b-link to="/vstopnice">
+                    Vstopnice
+                  </b-link>
+                  <b-link to="/novice">
+                    Novice
+                  </b-link>
+                  <b-link to="/o-tresku">
+                    O Tresku
+                  </b-link>
+                  <b-link to="/arhiv">
+                    Arhiv
+                  </b-link>
+                  <b-link to="/kontakt">
+                    Kontakt
+                  </b-link>
+                  <b-link to="/sponzorji">
+                    Podporniki
+                  </b-link>
                 </div>
-                <b-link to="/natecaji">
-                  Natečaji
-                </b-link>
-                <b-link to="/vstopnice">
-                  Vstopnice
-                </b-link>
-                <b-link to="/novice">
-                  Novice
-                </b-link>
-                <b-link to="/o-tresku">
-                  O Tresku
-                </b-link>
-                <b-link to="/arhiv">
-                  Arhiv
-                </b-link>
-                <b-link to="/kontakt">
-                  Kontakt
-                </b-link>
-                <b-link to="/sponzorji">
-                  Sponzorji & podporniki
-                </b-link>
               </div>
             </div>
           </b-navbar>
@@ -96,6 +110,7 @@ export default {}
   background-color: #2c3e50b0;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  width: 170px;
 }
 
 .dropdown-content a {

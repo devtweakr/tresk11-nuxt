@@ -80,6 +80,14 @@ svg {
   border-radius: 0;
 }
 
+.btn-back {
+  border-radius: 0;
+}
+
+.btn-lang {
+  border-radius: 0;
+}
+
 /* transitions */
 
 .fade-enter-active,
