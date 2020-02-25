@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <b-row>
       <div class="col-12">
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
@@ -86,7 +86,8 @@
 
         <!-- p>ARHIV lanskoletnih zmagovalcev</p-->
       </div>
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

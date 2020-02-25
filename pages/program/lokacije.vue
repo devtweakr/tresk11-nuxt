@@ -5,13 +5,15 @@
       <b-col
         :key="'lokacija'"
         v-for="lokacija in lokacije"
-        class="lokacija mb-4"
+        class="mb-4"
         cols="6"
         sm="4"
         md="3"
       >
         <nuxt-link v-if="lokacija.title" :to="`/program/lokacija/${encodeURIComponent(lokacija.title)}`">
-          <b-img :src="lokacija.field_slika | treskSlika" class="lokacija-logo mt-3" fluid center />
+          <div class="logo">
+            <b-img :src="lokacija.field_slika | treskSlika" fluid center />
+          </div>
           <h4 mt-3 class="text-center mt-3">
             {{ lokacija.title }}
           </h4>
@@ -48,10 +50,7 @@ export default {
 </script>
 
 <style scoped>
-.lokacija-logo{
-  max-height: 150px;
-  width: 150px;
-  object-fit: contain;
+.logo img{
+  max-height: 250px;
 }
-
 </style>

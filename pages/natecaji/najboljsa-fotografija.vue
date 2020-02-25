@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <b-row>
       <div class="col-12">
         <p>Tresk 11 išče inovativne fotografije glasbenih dogodkov, ki presegajo običajno foto dokumentacijo, najsi bo v okvir ujeta publika ali nastopajoči, koncert ali glasbeni festival, klubski dogodki, rejvi ali intimni nastopi. Fotografija glasbenega dogodka se namreč spreminja skupaj s fotografi_njami, ki skrivajo svoje potenciale za objektivi pametnih telefonov, na filmskih negativih ali za velikimi digitalnimi napravami.</p>
         <p>Posameznik oz. posameznica lahko predloži do največ tri fotografije (ki so lahko zasnovane tudi kot serija), posnete med 18. marcem 2019 in 3. aprilom 2020. Prosimo, da ob prijavi upoštevate spodaj navedene tehnične specifikacije.</p>
@@ -48,7 +48,8 @@
           <a href="http://www.gifgifachance.com/" target="blank">Petra Švajger</a> je oblikovalka in fotografinja, ki je zorala ledino animacije GIF na lokalni sceni in kot prva v Sloveniji definirala pojem modne animacije. Poznamo jo iz Kluba K4, kjer je bila vrsto let uradna fotografinja.
         </p>
       </div>
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

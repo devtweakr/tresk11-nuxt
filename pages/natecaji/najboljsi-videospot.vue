@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <b-row>
       <div class="col-12">
         <p>
           Festival Tresk podeljuje edino nagrado za lokalne video ustvarjalce na
@@ -89,7 +89,8 @@
           </p>
         </div>
       </div>
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

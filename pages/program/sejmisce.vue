@@ -1,9 +1,10 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <b-row>
       <div v-html="page.body.value" v-if="page" class="col-12" />
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

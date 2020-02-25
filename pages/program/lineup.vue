@@ -12,7 +12,7 @@
       >
         <nuxt-link v-if="band.title" :to="`/program/artist/${encodeURIComponent(band.title)}`">
           <div class="logo">
-            <b-img :src="band.field_slika | treskSlika" class="band-logo" fluid center />
+            <b-img :src="band.field_slika | treskSlika" fluid center />
           </div>
           <h4 class="text-center mt-3">
             {{ band.title }}
