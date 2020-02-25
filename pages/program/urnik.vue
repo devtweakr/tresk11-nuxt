@@ -1,10 +1,10 @@
 <template>
   <div>
     <PageTitle page-title="URNIK" />
-    <div class="row">
-      {{ $log($options.filters) }}
+    <b-row>
       <div v-html="$options.filters.drupalLinks(page.body.value)" v-if="page" class="col-12" />
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

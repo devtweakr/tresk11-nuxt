@@ -1,8 +1,14 @@
 <template>
   <div>
     <PageTitle :pageTitle="lokacija.title" />
-    <img :src="lokacija.field_slika | treskSlika" class="node-slika">
-    <p v-html="lokacija.body.value" v-if="lokacija.body" />
+    <b-row>
+      <b-col md="6">
+        <b-img :src="lokacija.field_slika | treskSlika" class="mb-4" fluid />
+      </b-col>
+      <b-col md="6">
+        <p v-html="$options.filters.drupalLinks(lokacija.body.value)" v-if="lokacija.body" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -19,10 +25,22 @@ export default {
     }
   },
   fetch ({ store, params }) {
+    const id = decodeURIComponent(params.id)
+    // Poskusi tudi drupalov path alias
+    const alias = `/lokacija/${id}`
+
     const query = {
       include: 'field_slika',
       'filter[field_leto.name][value]': '2020',
-      'filter[title]': decodeURIComponent(params.id)
+      'filter[id-group][group][conjunction]': 'OR',
+      'filter[title][condition][path]': 'title',
+      'filter[title][condition][operator]': '=',
+      'filter[title][condition][value]': id,
+      'filter[title][condition][memberOf]': 'id-group',
+      'filter[alias][condition][path]': 'field_path',
+      'filter[alias][condition][operator]': '=',
+      'filter[alias][condition][value]': alias,
+      'filter[alias][condition][memberOf]': 'id-group'
     }
     return store.dispatch('drupal/get', [`node/lokacija`, {
       params: query

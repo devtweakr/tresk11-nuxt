@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <div class="row">
+    <b-row>
       <div class="col-12">
         <p>
           Festival Tresk podeljuje edino nagrado za lokalne video ustvarjalce na
@@ -59,7 +59,7 @@
           <img src="/img/korpo/vis.svg">
         </div>
         <div>
-          <h3 class="mt-3 mb-5">
+          <h3 class="mt-5 mb-3">
             ŽIRIJA
           </h3>
           <img class="slikaZirija" src="/img/zirija/barbara-b.jpg">
@@ -89,7 +89,8 @@
           </p>
         </div>
       </div>
-    </div>
+    </b-row>
+  </div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="node-page">
+  <div>
     <PageTitle :pageTitle="artist.title" />
     <div>
     <p v-for="link in artist.field_povezave">
@@ -12,6 +12,14 @@
     <p>{{ artist.field_cas_nastopa }}</p>
     <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" />
     {{ $log(artist) }}
+    <b-row>
+      <b-col md="6">
+        <b-img :src="artist.field_slika | treskSlika" class="mb-4" fluid />
+      </b-col>
+      <b-col md="6">
+        <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -28,14 +36,22 @@ export default {
     }
   },
   fetch ({ store, params }) {
+    const id = decodeURIComponent(params.id)
+    // Poskusi tudi drupalov path alias
+    const alias = `/artist/${id}`
+
     const query = {
       include: 'field_slika',
       'filter[field_leto.name][value]': '2020',
-      'filter[title]': decodeURIComponent(params.id)
-      /*
-      'filter[path.alias][operator]': 'CONTAINS',
-      'filter[path.alias][value]': decodeURIComponent(params.id)
-*/
+      'filter[id-group][group][conjunction]': 'OR',
+      'filter[title][condition][path]': 'title',
+      'filter[title][condition][operator]': '=',
+      'filter[title][condition][value]': id,
+      'filter[title][condition][memberOf]': 'id-group',
+      'filter[alias][condition][path]': 'field_path',
+      'filter[alias][condition][operator]': '=',
+      'filter[alias][condition][value]': alias,
+      'filter[alias][condition][memberOf]': 'id-group'
     }
     return store.dispatch('drupal/get', [`node/band`, {
       params: query
