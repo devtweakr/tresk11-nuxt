@@ -41,6 +41,14 @@ export default {
   fetch ({ store, params }) {
     const query = {
       'filter[field_leto.name][value]': '2020',
+      'filter[pogoj][group][conjunction]': 'OR',
+      'filter[skrij_a][condition][path]': 'field_ni_na_sejmiscu',
+      'filter[skrij_a][condition][operator]': 'IS NULL',
+      'filter[skrij_a][condition][memberOf]': 'pogoj',
+      'filter[skrij_b][condition][path]': 'field_ni_na_sejmiscu',
+      'filter[skrij_b][condition][operator]': '=',
+      'filter[skrij_b][condition][value]': 'false',
+      'filter[skrij_b][condition][memberOf]': 'pogoj',
       include: 'field_zalozba_logo'
     }
     return store.dispatch('drupal/get', ['node/zalozba', { params: query }])
