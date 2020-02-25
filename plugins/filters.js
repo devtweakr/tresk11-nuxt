@@ -26,15 +26,26 @@ const treskSlika = (field_slika) => {
 }
 
 const drupalLinks = (body) => {
-  const regexLokacija = /href="\/d\/lokacija\/(.+)"/g
-  const regexZalozba = /href="\/d\/zalozba\/(.+)"/g
-  const regexArtist = /href="\/d\/artist\/(.+)"/g
+  // Resevanje decoupled routing problema, s pomocjo path aliasov
+  const zamenjave = [
+    // Lokacija
+    [/href="\/d\/lokacija\/(.+?)"/g, 'href="/program/lokacija/$1"'],
+    // Zalozba
+    [/href="\/d\/zalozba\/(.+?)"/g, 'href="/program/zalozba/$1"'],
+    // Artist / Band
+    [/href="\/d\/artist\/(.+?)"/g, 'href="/program/artist/$1"'],
+    // Pogovori
+    [/href="\/d\/dogodek\/(.+?)"/g, 'href="/program/pogovori"'],
+    // Basic strani
+    ['href="/basic-page/kontakt"/g', 'href="/kontakt"'],
+    ['href="/basic-page/o-tresku-11"/g', 'href="/o-tresku"'],
+    ['href="/basic-page/sejmisce"/g', 'href="/kontakt"'],
+    ['href="/basic-page/urnik"/g', 'href="/urnik"']
+  ]
 
-  const cisto_lokacije = body.replace(regexLokacija, 'href="/program/lokacija/$1"').replace('-', '%20')
-  const cisto_zalozbe = cisto_lokacije.replace(regexZalozba, 'href="/program/zalozba/$1"').replace('-', '%20')
-  const cisto_bandi = cisto_zalozbe.replace(regexArtist, 'href="/program/artist/$1"').replace('-', '%20')
-
-  return cisto_bandi
+  return zamenjave.reduce((cisto, zamenjavi) => {
+    return cisto.replace(zamenjavi[0], zamenjavi[1])
+  }, body)
 }
 
 Vue.filter('dateFormat', dateFormat)
