@@ -1,9 +1,11 @@
 <template>
   <div>
     <PageTitle page-title="O TRESKU" />
-    <div class="row">
-      <div v-html="page.body.value" v-if="page" class="col-12" />
-    </div>
+    <b-row>
+      <b-col>
+        <div v-html="$options.filters.drupalLinks(page.body.value)" v-if="page" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
