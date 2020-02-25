@@ -1,8 +1,14 @@
 <template>
-  <div class="node-page">
+  <div>
     <PageTitle :pageTitle="artist.title" />
-    <img :src="artist.field_slika | treskSlika" class="node-slika">
-    <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" />
+    <b-row>
+      <b-col md="6">
+        <b-img :src="artist.field_slika | treskSlika" class="node-slika mb-4" fluid />
+      </b-col>
+      <b-col md="6">
+        <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 

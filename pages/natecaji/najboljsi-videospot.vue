@@ -59,7 +59,7 @@
           <img src="/img/korpo/vis.svg">
         </div>
         <div>
-          <h3 class="mt-3 mb-5">
+          <h3 class="mt-5 mb-3">
             ŽIRIJA
           </h3>
           <img class="slikaZirija" src="/img/zirija/barbara-b.jpg">

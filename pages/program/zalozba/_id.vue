@@ -1,14 +1,14 @@
 <template>
   <div>
     <PageTitle :pageTitle="zalozba.title" />
-    <div class="row">
-      <div class="col-md-6">
-        <img :src="zalozba.field_zalozba_logo | treskSlika" class="node-slika">
-      </div>
-      <div class="col-md-6">
+    <b-row>
+      <b-col md="4" sm="3">
+        <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid class="mb-3" />
+      </b-col>
+      <b-col md="8" sm="9">
         <p v-html="zalozba.body.value" v-if="zalozba.body" />
-      </div>
-    </div>
+      </b-col>
+    </b-row>
   </div>
 </template>
 

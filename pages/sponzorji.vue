@@ -5,7 +5,7 @@
       <b-col
         :key="'sponzor'"
         v-for="sponzor in sponzorji"
-        class="sponzor mb-5"
+        class="sponzor mb-4"
         cols="6"
         sm="4"
         md="3"

@@ -23,7 +23,7 @@
           <img src="/img/korpo/outsider.svg">
           <img src="/img/korpo/rs.svg">
         </div>
-        <h3 class="mt-3 mb-5">
+        <h3 class="mt-5 mb-3">
           ŽIRIJA
         </h3>
         <img class="slikaZirija" src="/img/zirija/dora-trcek.jpg">
