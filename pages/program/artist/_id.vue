@@ -2,11 +2,9 @@
   <div class="node-page">
     <PageTitle :pageTitle="artist.title" />
     <div>
-    <p v-for="link in artist.field_povezave">
-      <a v-bind:href="''">
-        {{ link.uri }}
-      </a>
-    </p>
+      <p v-for="link in artist.field_povezave">
+        <a :href="link.uri" target="blank">link</a>
+      </p>
     </div>
     <img :src="artist.field_slika | treskSlika" class="node-slika">
     <p>{{ artist.field_cas_nastopa }}</p>
