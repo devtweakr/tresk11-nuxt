@@ -5,7 +5,7 @@
       <b-col
         :key="'lokacija'"
         v-for="lokacija in lokacije"
-        class="lokacija mb-5"
+        class="lokacija mb-4"
         cols="6"
         sm="4"
         md="3"

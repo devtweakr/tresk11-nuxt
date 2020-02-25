@@ -5,7 +5,7 @@
       <b-col
         :key="'dogodek'"
         v-for="dogodek in dogodki"
-        class="dogodek mb-5"
+        class="dogodek mb-4"
         sm="6"
       >
         <h4>

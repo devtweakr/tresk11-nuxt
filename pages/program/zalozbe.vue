@@ -1,27 +1,28 @@
 <template>
-  <div>
+  <b-media>
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
       <b-col
         :key="'zalozba'"
         v-for="zalozba in zalozbe"
-        class="mb-5"
+        class="mb-4"
         cols="6"
         sm="4"
         md="3"
       >
         {{ $log(zalozba) }}
         <nuxt-link v-if="zalozba.title" :to="`/program/zalozba/${encodeURIComponent(zalozba.title)}`">
-          <div class="logo">
+          <b-media vertical-align="end" class="logo">
             <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid center />
-          </div>
+          </b-media>
           <h4 class="text-center mt-3">
             {{ zalozba.title }}
           </h4>
         </nuxt-link>
       </b-col>
     </b-row>
-  </div>
+    </div>
+  </b-media>
 </template>
 
 <script>
@@ -48,6 +49,9 @@ export default {
 </script>
 
 <style scoped>
+.logo{
+  height: 150px;
+}
 .logo img{
   max-height: 150px;
 }

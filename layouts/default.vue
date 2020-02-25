@@ -29,7 +29,7 @@
                 </button>
                 <div class="dropdown-content">
                   <div class="program-sub">
-                    <b-link to="#" class="program-link">
+                    <b-link to="/program/urnik" class="program-link">
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
                     <div class="program-content">
@@ -85,8 +85,24 @@
         <div class="content">
           <nuxt />
         </div>
+        <footer class="my-5">
+          <hr>
+          <div class="float-left">
+            Tresk #11 - 2020
+          </div>
+          <div class="float-right">
+            <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-1"><i class="fa fa-facebook" /></a>
+            <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
+          </div>
+        </footer>
       </b-container>
     </div>
+    </b-col>
+    </b-row>
+    </b-col>
+    </footer>
+    </b-container>
+  </div>
   </div>
 </template>
 
@@ -100,6 +116,9 @@ export default {}
 .dropdown {
   position: relative;
   display: inline-block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .btn-drop {
@@ -123,6 +142,11 @@ export default {}
   display: block;
   white-space: nowrap;
 }
+
+.dropdown-content a:visited ~ .dropdown-content {
+  display: none;
+}
+
 .program-sub a:hover + .program-content {
   display: block;
 }
@@ -143,13 +167,6 @@ export default {}
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
-}
-.dropdown-content a:focus + .dropdown-content {
-  display: none;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 </style>

@@ -4,7 +4,7 @@
       <button class="btn btn-drop" />
       <div class="dropdown-content">
         <div class="program-sub">
-          <nuxt-link to="#" class="program-link">
+          <nuxt-link to="/program/urnik" class="program-link">
             <i class="fa fa-caret-left pr-2" />Program
           </nuxt-link>
           <div class="program-content">

@@ -5,7 +5,7 @@
       <b-col
         :key="band._jv.id"
         v-for="band in bandi"
-        class="mb-5"
+        class="mb-4"
         cols="6"
         sm="4"
         md="3"
