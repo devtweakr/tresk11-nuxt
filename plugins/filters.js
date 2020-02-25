@@ -37,10 +37,12 @@ const drupalLinks = (body) => {
     // Pogovori
     [/href="\/d\/dogodek\/(.+?)"/g, 'href="/program/pogovori"'],
     // Basic strani
-    ['href="/basic-page/kontakt"/g', 'href="/kontakt"'],
-    ['href="/basic-page/o-tresku-11"/g', 'href="/o-tresku"'],
-    ['href="/basic-page/sejmisce"/g', 'href="/kontakt"'],
-    ['href="/basic-page/urnik"/g', 'href="/urnik"']
+    ['href="/d/basic-page/kontakt"/g', 'href="/kontakt"'],
+    ['href="/d/basic-page/o-tresku-11"/g', 'href="/o-tresku"'],
+    ['href="/d/basic-page/sejmisce"/g', 'href="/kontakt"'],
+    ['href="/d/basic-page/urnik"/g', 'href="/urnik"']
+    ['href="/d/basic-page/urnik"/g', 'href="/urnik"']
+    ['href="/d/zalozbe"/g', 'href="/program/zalozbe"']
   ]
 
   return zamenjave.reduce((cisto, zamenjavi) => {
