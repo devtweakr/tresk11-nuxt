@@ -1,8 +1,14 @@
 <template>
   <div>
     <PageTitle :pageTitle="lokacija.title" />
-    <img :src="lokacija.field_slika | treskSlika" class="node-slika">
-    <p v-html="lokacija.body.value" v-if="lokacija.body" />
+    <b-row>
+      <b-col md="6">
+        <b-img :src="lokacija.field_slika | treskSlika" class="mb-4" fluid />
+      </b-col>
+      <b-col md="6">
+        <p v-html="lokacija.body.value" v-if="lokacija.body" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
