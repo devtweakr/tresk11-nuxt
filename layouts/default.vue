@@ -59,9 +59,9 @@
                   <b-link to="/natecaji">
                     Natečaji
                   </b-link>
-                  <b-link to="/vstopnice">
+                  <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
                     Vstopnice
-                  </b-link>
+                  </a>
                   <b-link to="/novice">
                     Novice
                   </b-link>
@@ -88,9 +88,12 @@
         <footer class="my-5">
           <hr>
           <div class="float-left">
-            Tresk #11 - 2020
+            Tresk #11 &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
           </div>
           <div class="float-right">
+            <b-link to="/kontakt">
+              Kontakt
+            </b-link> |
             <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-1"><i class="fa fa-facebook" /></a>
             <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
           </div>
