@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <b-row>
+    <div class="row">
       <div class="col-12">
         <p>Kategorija, ki razširjeno vključuje še vse “obplakatne” segmente dogodka, npr. celostno grafično podobo glasbenega dogodka, spletno podobo, promocijo prek družabnih omrežij, letake, promocijsko gradivo, vizualije, scenografijo ipd.</p>
         <p>Posameznik oz. posameznica lahko prijavi največ tri objave glasbenih dogodkov, ki so bile objavljene oz. so se zgodile med 18. marcem 2019 ter 3. aprilom 2020. Snovalcev oz. snovalk dogodka je lahko tudi več. Prijavljeno delo je lahko predstavljeno v obliki fotografij, PDF prezentacije ali videa.</p>
@@ -25,7 +25,7 @@
           <img src="/img/korpo/outsider.svg">
           <img src="/img/korpo/rs.svg">
         </div>
-        <h3 class="mt-5 mb-3">
+        <h3 class="mt-3 mb-5">
           ŽIRIJA
         </h3>
         <img class="slikaZirija" src="/img/zirija/ajda-b.jpg">
@@ -64,8 +64,7 @@
         <!-- <p><strong>NE SPREGLEJTE: fizični izvodi</strong></p>
         <p>V primeru, da vaše nekonvencionalne rešitve vsebujejo fizične objekte, ki jih je najlažje predstaviti in razumeti v živo, lahko stvari pošljete po pošti ali prinesete osebno na Radio Študent (naslov: Zavod Radio Študent (Natečaji festivala Tresk: inovativni pristop), Svetčeva 9, 1000 Ljubljana). Po zaključku festivala vam bomo fizične objekte vrnili po pošti oziroma jih boste lahko prevzeli na naslovu organizatorja.</p> -->
       </div>
-    </b-row>
-  </div>
+    </div>
   </div>
 </template>
 

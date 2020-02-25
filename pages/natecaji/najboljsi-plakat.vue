@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :pageTitle="pageTitle" />
-    <b-row>
+    <div class="row">
       <div class="col-12">
         <p>Kategorija, ki se osredotoča na medij glasbenega plakata. Dobrodošle in zaželene so vse njegove variacije, kot tudi prikaz njihove uporabe v praksi.</p>
         <p>Posameznik oz. posameznica lahko prijavi največ tri plakate glasbenih dogodkov, objavljene med 18. marcem 2019 in 3. aprilom 2020. Oblikovalcev oz. oblikovalk plakata je lahko tudi več. Datoteke plakatov naj bodo izvirne velikosti, nekonvencionalne oblikovalske rešitve pa naj bodo še dodatno fotografsko dokumentirane.</p>
@@ -25,7 +25,7 @@
           <img src="/img/korpo/outsider.svg">
           <img src="/img/korpo/rs.svg">
         </div>
-        <h3 class="mt-5 mb-3">
+        <h3 class="mt-3 mb-5">
           ŽIRIJA
         </h3>
         <img class="slikaZirija" src="/img/zirija/jan-kmet.jpg">
@@ -49,8 +49,7 @@
           Tamara Mateša je umetnostna zgodovinarka in hispanistka ter sodelavka Inštituta TAM-TAM, kjer goji ljubezen do plakatov vseh sort in oblik.
         </p>
       </div>
-    </b-row>
-  </div>
+    </div>
   </div>
 </template>
 

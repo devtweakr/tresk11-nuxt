@@ -4,7 +4,7 @@
       <button class="btn btn-drop" />
       <div class="dropdown-content">
         <div class="program-sub">
-          <nuxt-link to="/program/urnik" class="program-link">
+          <nuxt-link to="#" class="program-link">
             <i class="fa fa-caret-left pr-2" />Program
           </nuxt-link>
           <div class="program-content">
@@ -34,9 +34,9 @@
         <nuxt-link to="/natecaji">
           Natečaji
         </nuxt-link>
-        <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+        <nuxt-link to="/vstopnice">
           Vstopnice
-        </a>
+        </nuxt-link>
         <nuxt-link to="/novice">
           Novice
         </nuxt-link>
@@ -147,24 +147,27 @@
               />
             </nuxt-link>
           </a>
-          <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
-            <path
-              id="vstopnice-link"
-              d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
-              opacity="1"
-              vector-effect="none"
-              fill="gray"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="7.559"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </a>
+          <!-- <a xlink:href="#">
+            <nuxt-link to="#"> -->
+          <path
+            id="vstopnice-link"
+            d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
+            opacity="1"
+            vector-effect="none"
+            fill="gray"
+            fill-opacity="0"
+            stroke="none"
+            stroke-width="7.559"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="4"
+            stroke-dasharray="none"
+            stroke-dashoffset="0"
+            stroke-opacity="1"
+          />
+          <!-- </nuxt-link>
+          </a> -->
+
         </svg>
       </div>
     </div>

@@ -1,14 +1,13 @@
 <template>
   <div>
     <PageTitle page-title="VSTOPNICE" />
-    <b-row>
-      <b-col>
+    <div class="row">
+      <div class="col-12">
         <p>
           Še pride
         </p>
-      </b-col>
-    </b-row>
-  </div>
+      </div>
+    </div>
   </div>
 </template>
 

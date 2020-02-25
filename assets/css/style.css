@@ -2,12 +2,13 @@ html,
 body {
   min-height: 100%;
 }
-
 html {
   background: rgb(86, 181, 133);
-  background: linear-gradient(35deg,
-      rgba(0, 158, 226, 1) 0%,
-      rgba(86, 181, 133, 1) 100%);
+  background: linear-gradient(
+    35deg,
+    rgba(0, 158, 226, 1) 0%,
+    rgba(86, 181, 133, 1) 100%
+  );
   background-image: url(/img/global/back_tresk11.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -27,34 +28,38 @@ svg {
   -ms-user-select: none;
   user-select: none;
 }
-
 .odstavekZirija {
+  margin-bottom: 2rem;
   max-width: 600px;
 }
-
 .slikaZirija {
-  margin-top: 1rem;
   max-width: 250px;
   margin-bottom: 1rem;
 }
-
 .content-page {
   min-height: 100%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 1) 400px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 1) 400px
+  );
 }
 
 /* home page */
 
 /* splosno za podstrani */
+.node-page {
+  max-width: 33rem;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-iframe {
+.node-page .node-slika,
+.node-page iframe {
   width: 100%;
-  /* height: 26rem; */
   margin-bottom: 2rem;
-  flex: 0rem;
 }
 
 /* sponzorji */
@@ -67,11 +72,15 @@ iframe {
   color: #e5332a;
 }
 
-.sponzorji>img,
-.bandi>img {
+.sponzorji > img,
+.bandi > img {
   max-height: 2rem;
   max-width: 9rem;
   margin: 0.5rem;
+}
+
+.sponzorji {
+  margin-bottom: 3rem;
 }
 
 .nodeContainer {
@@ -79,7 +88,6 @@ iframe {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .nodeContainer img {
   max-width: 100px;
   margin-right: 1rem;
@@ -104,7 +112,6 @@ iframe {
 .fade-leave-active {
   transition: opacity 0.5s;
 }
-
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -112,7 +119,8 @@ iframe {
 
 /* @media screens */
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}
 
 @media (max-width: 576px) {
   .multiColumn {
@@ -123,11 +131,9 @@ iframe {
     -moz-column-gap: 3em;
     column-gap: 3em;
   }
-
   .node-slika {
     max-width: 100%;
   }
-
   .nodeParagraph p iframe {
     width: 100%;
   }
@@ -144,7 +150,8 @@ iframe {
   }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 @media (min-width: 992px) {
   .multiColumn {
@@ -157,4 +164,5 @@ iframe {
   }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
