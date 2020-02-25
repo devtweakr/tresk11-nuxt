@@ -42,23 +42,20 @@
         </p>
         <img
           class="slikaZirija"
-          src="/img/zirija/stela-i
-vsek.jpg"
+          src="/img/zirija/stela-ivsek.jpg"
         >
         <p class="odstavekZirija">
           Stella Ivšek je oblikovalka, vidžejka, scenografinja in intermedijska umetnica, ki pod aliasom 5237 samostojno nastopa kot VJ in je soustanoviteljica projekcijske dvojice BEAM TEAM (5237 x SMECH). Je tudi lanskoletna zmagovalka kategorije inovativnega pristopa k oblikovanju in oglaševanju dogodka.
         </p>
         <img
           class="slikaZirija"
-          src="/img/z
-irija/vladimir-m.jpg"
+          src="/img/zirija/vladimir-m.jpg"
         >
         <p class="odstavekZirija">
           Vladimir Mićković je interdisciplinarni oblikovalec, pisec in soustanovitelj večkrat nagrajenega oblikovalskega studia <a href="https://www.instagram.com/ljudje/" target="blank">Ljudje</a>. Je tudi soustanovitelj bistroja <a href="https://kucha.co/ " target="blank">Kucha</a> in vodja istoimenske blagovne znamke.
         </p>
         <img
-          class="slikaZir
-ija"
+          class="slikaZirija"
           src="/img/zirija/zala-v.jpg"
         >
         <p class="odstavekZirija">
