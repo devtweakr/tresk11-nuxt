@@ -37,7 +37,8 @@ export default {
   fetch ({ store, params }) {
     const query = {
       'filter[field_leto.name][value]': '2020',
-      include: 'field_slika'
+      include: 'field_slika',
+      sort: 'field_weight'
     }
 
     return store.dispatch('drupal/get', ['node/sponzor', { params: query }])
