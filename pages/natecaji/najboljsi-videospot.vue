@@ -2,7 +2,7 @@
   <div>
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
-      <div class="col-12">
+      <b-col>
         <p>
           Festival Tresk podeljuje edino nagrado za lokalne video ustvarjalce na
           glasbeni sceni, s čimer se trudi, da bi žanr videospotov postal tako
@@ -88,9 +88,8 @@
             Tomaž Šantl je za videospot Ivone skupine Futurski je prejel lanskoletno nagrado za najboljši videospot festivala Tresk, njegovo drugo prijavljeno delo OriginalCopy no. 8 – Expedition to Iran pa je prejelo posebno omembo žirije. Avtor fotografije: Jaka Babnik
           </p>
         </div>
-      </div>
+      </b-col>
     </b-row>
-  </div>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div>
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
-      <div class="col-12">
+      <b-col>
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
           natečaj, ki se je ob jubilejni izvedbi leta 2019 razširil v pet
@@ -86,9 +86,8 @@
         </div>
 
         <!-- p>ARHIV lanskoletnih zmagovalcev</p-->
-      </div>
+      </b-col>
     </b-row>
-  </div>
   </div>
 </template>
 
