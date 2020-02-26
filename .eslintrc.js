@@ -13,5 +13,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-  }
+  },
+  ignorePatterns: ["node_modules/", "dist/"]
 }
