@@ -58,36 +58,50 @@
           <img src="/img/korpo/rs.svg">
           <img src="/img/korpo/vis.svg">
         </div>
-        <div>
-          <h3 class="mt-3 mb-5">
-            ŽIRIJA
-          </h3>
-          <img class="slikaZirija" src="/img/zirija/barbara-b.jpg">
-          <p class="odstavekZirija">
-            Barbara Borčić se aktivno ukvarja z video umetnostjo kot kuratorka, publicistka, raziskovalka in urednica. Kot direktorica Zavoda za sodobno umetnost SCCA v Ljubljani je iniciirala in vodila številne projekte s področja video umetnosti, vse od arhiva video umetnosti
-            <a href="http://www.e-arhiv.org/diva/" target="blank">Postaja DIVA</a> do
-            <a href="http://www.videodokument.org/ " target="blank">Videodokumenta</a>.
-          </p>
-          <img class="slikaZirija" src="/img/zirija/cristoph.jpg">
-          <p class="odstavekZirija">
-            Christoph Etzlsdorfer je programski kustos in soustanovitelj lokalnega in mednarodnega video programa na festivalu kratkega filma
-            <a href="https://www.viennashorts.com/nc/en/" target="blank">VIS</a> na Dunaju, ter kustos programa glasbenih videospotov na mednarodnem festivalu plesa ImPuls Tanz in Rathausplatz.
+      </b-col>
+    </b-row>
+    <h3 class="mt-5 mb-5">
+      ŽIRIJA
+    </h3>
+    <b-row>
+      <b-col lg="4" sm="6">
+        <b-img fluid class="mb-2" src="/img/zirija/barbara-b.jpg" />
+        <p>
+          Barbara Borčić se aktivno ukvarja z video umetnostjo kot kuratorka, publicistka, raziskovalka in urednica. Kot direktorica Zavoda za sodobno umetnost SCCA v Ljubljani je iniciirala in vodila številne projekte s področja video umetnosti, vse od arhiva video umetnosti
+          <a href="http://www.e-arhiv.org/diva/" target="blank">Postaja DIVA</a> do
+          <a href="http://www.videodokument.org/ " target="blank">Videodokumenta</a>.
+          medija Koridor – križišča umetnosti.
+        </p>
+      </b-col>
+      <b-col lg="4" sm="6">
+        <b-img fluid class="mb-2" src="/img/zirija/cristoph.jpg" />
+        <p>
+          Christoph Etzlsdorfer je programski kustos in soustanovitelj lokalnega in mednarodnega video programa na festivalu kratkega filma
+          <a href="https://www.viennashorts.com/nc/en/" target="blank">VIS</a> na Dunaju, ter kustos programa glasbenih videospotov na mednarodnem festivalu plesa ImPuls Tanz in Rathausplatz.
 
-            Avtorica fotografije: Hanna Pribitzer
-          </p>
-          <img class="slikaZirija" src="/img/zirija/matic-majcen.jpg">
-          <p class="odstavekZirija">
-            Matic Majcen je filmski kritik, novinar, urednik in akademik s področja filma. V sklopu Ljubljanskega mednarodnega filmskega festivala organizira in vodi mednarodni tekmovalni program glasbenega videa.
-          </p>
-          <img class="slikaZirija" src="/img/zirija/robert-kuret.jpg">
-          <p class="odstavekZirija">
-            Robert Kuret je literarni in filmski kritik ter soselektor tekmovalnega programa slovenskih filmov na FeKK-u. Nekajkrat je predaval tudi o fenomenu filmskega trasha.
-          </p>
-          <img class="slikaZirija" src="/img/zirija/tomaz-santl.jpg">
-          <p class="odstavekZirija">
-            Tomaž Šantl je za videospot Ivone skupine Futurski je prejel lanskoletno nagrado za najboljši videospot festivala Tresk, njegovo drugo prijavljeno delo OriginalCopy no. 8 – Expedition to Iran pa je prejelo posebno omembo žirije. Avtor fotografije: Jaka Babnik
-          </p>
-        </div>
+          Avtorica fotografije: Hanna Pribitzer
+          medija Koridor – križišča umetnosti.
+        </p>
+      </b-col>
+      <b-col lg="4" sm="6">
+        <b-img fluid class="mb-2" src="/img/zirija/matic-majcen.jpg" />
+        <p>
+          Matic Majcen je filmski kritik, novinar, urednik in akademik s področja filma. V sklopu Ljubljanskega mednarodnega filmskega festivala organizira in vodi mednarodni tekmovalni program glasbenega videa.
+          medija Koridor – križišča umetnosti.
+        </p>
+      </b-col>
+      <b-col lg="4" sm="6">
+        <b-img fluid class="mb-2" src="/img/zirija/robert-kuret.jpg" />
+        <p>
+          Robert Kuret je literarni in filmski kritik ter soselektor tekmovalnega programa slovenskih filmov na FeKK-u. Nekajkrat je predaval tudi o fenomenu filmskega trasha.
+          medija Koridor – križišča umetnosti.
+        </p>
+      </b-col>
+      <b-col lg="4" sm="6">
+        <b-img fluid class="mb-2" src="/img/zirija/tomaz-santl.jpg" />
+        <p>
+          Tomaž Šantl je za videospot Ivone skupine Futurski je prejel lanskoletno nagrado za najboljši videospot festivala Tresk, njegovo drugo prijavljeno delo OriginalCopy no. 8 – Expedition to Iran pa je prejelo posebno omembo žirije. Avtor fotografije: Jaka Babnik
+        </p>
       </b-col>
     </b-row>
   </div>
