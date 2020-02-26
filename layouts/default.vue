@@ -24,15 +24,15 @@
                 EN
               </b-link> -->
               <div class="dropdown">
-                <button class="btn btn-primary btn-drop">
+                <button @click="dropShow=!dropShow" class="btn btn-primary btn-drop">
                   <i class="fa fa-bars" />
                 </button>
-                <div class="dropdown-content">
+                <div v-show="dropShow" class="dropdown-content">
                   <div class="program-sub">
-                    <b-link to="/program/urnik" class="program-link">
+                    <b-link class="program-link">
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
-                    <div class="program-content">
+                    <div @click="dropShow=!dropShow" class="program-content">
                       <b-link to="/program/urnik">
                         Urnik
                       </b-link>
@@ -56,27 +56,29 @@
                       </b-link>
                     </div>
                   </div>
-                  <b-link to="/natecaji">
-                    Natečaji
-                  </b-link>
-                  <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
-                    Vstopnice
-                  </a>
-                  <b-link to="/novice">
-                    Novice
-                  </b-link>
-                  <b-link to="/o-tresku">
-                    O Tresku
-                  </b-link>
-                  <b-link to="/arhiv">
-                    Arhiv
-                  </b-link>
-                  <b-link to="/kontakt">
-                    Kontakt
-                  </b-link>
-                  <b-link to="/sponzorji">
-                    Podporniki
-                  </b-link>
+                  <div @click="dropShow=!dropShow" class="main-drop">
+                    <b-link to="/natecaji">
+                      Natečaji
+                    </b-link>
+                    <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+                      Vstopnice
+                    </a>
+                    <b-link to="/novice">
+                      Novice
+                    </b-link>
+                    <b-link to="/o-tresku">
+                      O Tresku
+                    </b-link>
+                    <b-link to="/arhiv">
+                      Arhiv
+                    </b-link>
+                    <b-link to="/kontakt">
+                      Kontakt
+                    </b-link>
+                    <b-link to="/sponzorji">
+                      Podporniki
+                    </b-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,7 +112,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      dropShow: false
+    }
+  }
+}
+
 </script>
 
 <style scoped>
@@ -118,7 +127,6 @@ export default {}
 
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -129,7 +137,6 @@ export default {}
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   right: 0;
   background-color: #2c3e50b0;
@@ -146,25 +153,20 @@ export default {}
   white-space: nowrap;
 }
 
-.dropdown-content a:visited ~ .dropdown-content {
+.program-content{
+  position: absolute;
+  margin-right: auto;
   display: none;
+  top:0;
+  text-align: left;
 }
 
 .program-sub a:hover + .program-content {
   display: block;
 }
-.program-content{
-  position:absolute;
-  margin-right:auto;
-  display: none;
-  top:0;
-  text-align: left;
-}
+
 .program-content:hover, .program-content:active + .program-content{
   display: block;
-}
-.program-content a:active + .program-content{
-  display: none;
 }
 
 .dropdown-content a:hover {

@@ -1,57 +1,59 @@
 <template>
   <div class="container-fluid">
     <div class="dropdown ml-auto">
-      <button class="btn btn-drop" />
-      <div class="dropdown-content">
+      <button @click="dropShow=!dropShow" class="btn btn-drop" />
+      <div v-show="dropShow" class="dropdown-content">
         <div class="program-sub">
-          <nuxt-link to="/program/urnik" class="program-link">
+          <b-link class="program-link">
             <i class="fa fa-caret-left pr-2" />Program
-          </nuxt-link>
-          <div class="program-content">
-            <nuxt-link to="/program/urnik">
+          </b-link>
+          <div @click="dropShow=!dropShow" class="program-content">
+            <b-link to="/program/urnik">
               Urnik
-            </nuxt-link>
-            <nuxt-link to="/program/lineup">
+            </b-link>
+            <b-link to="/program/lineup">
               Lineup
-            </nuxt-link>
-            <nuxt-link to="/program/sejmisce">
+            </b-link>
+            <b-link to="/program/sejmisce">
               Sejmišče
-            </nuxt-link>
-            <nuxt-link to="/program/zalozbe">
+            </b-link>
+            <b-link to="/program/zalozbe">
               Založbe
-            </nuxt-link>
-            <nuxt-link to="/program/pogovori">
+            </b-link>
+            <b-link to="/program/pogovori">
               Pogovori
-            </nuxt-link>
-            <nuxt-link to="/program/lokacije">
+            </b-link>
+            <b-link to="/program/lokacije">
               Lokacije
-            </nuxt-link>
-            <nuxt-link to="/program/extras">
+            </b-link>
+            <b-link to="/program/extras">
               Extras
-            </nuxt-link>
+            </b-link>
           </div>
         </div>
-        <nuxt-link to="/natecaji">
-          Natečaji
-        </nuxt-link>
-        <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
-          Vstopnice
-        </a>
-        <nuxt-link to="/novice">
-          Novice
-        </nuxt-link>
-        <nuxt-link to="/o-tresku">
-          O Tresku
-        </nuxt-link>
-        <nuxt-link to="/arhiv">
-          Arhiv
-        </nuxt-link>
-        <nuxt-link to="/kontakt">
-          Kontakt
-        </nuxt-link>
-        <nuxt-link to="/sponzorji">
-          Podporniki
-        </nuxt-link>
+        <div @click="dropShow=!dropShow" class="main-drop">
+          <b-link to="/natecaji">
+            Natečaji
+          </b-link>
+          <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+            Vstopnice
+          </a>
+          <b-link to="/novice">
+            Novice
+          </b-link>
+          <b-link to="/o-tresku">
+            O Tresku
+          </b-link>
+          <b-link to="/arhiv">
+            Arhiv
+          </b-link>
+          <b-link to="/kontakt">
+            Kontakt
+          </b-link>
+          <b-link to="/sponzorji">
+            Podporniki
+          </b-link>
+        </div>
       </div>
     </div>
     <a href="https://radiostudent.si" target="_blank" class="rs-link">
@@ -64,31 +66,27 @@
       <div class="tabla overflow-hidden col">
         <img class="img-tabla" src="/img/home/signs.svg">
         <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
-
-          <a xlink:href="/natecaji">
-            <nuxt-link to="/natecaji">
-              <ellipse
-                id="natecaji-link"
-                cx="245.6"
-                cy="747.9"
-                rx="121.9"
-                ry="123"
-                opacity="1"
-                vector-effect="none"
-                fill="white"
-                fill-opacity="0"
-                stroke="none"
-                stroke-width="3.5"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="4"
-                stroke-dasharray="none"
-                stroke-dashoffset="0"
-                stroke-opacity="1"
-              />
-            </nuxt-link>
-          </a>
-
+          <nuxt-link tag="a" to="/natecaji">
+            <ellipse
+              id="natecaji-link"
+              cx="245.6"
+              cy="747.9"
+              rx="121.9"
+              ry="123"
+              opacity="1"
+              vector-effect="none"
+              fill="white"
+              fill-opacity="0"
+              stroke="none"
+              stroke-width="3.5"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="4"
+              stroke-dasharray="none"
+              stroke-dashoffset="0"
+              stroke-opacity="1"
+            />
+          </nuxt-link>
           <a xlink:href="https://www.facebook.com/festivaltresk" target="_blank">
             <path
               id="tresk-fb-link"
@@ -127,26 +125,24 @@
               96.5h209.7v129.7h-209.7z"
             />
           </a>
-          <a xlink:href="/program/urnik">
-            <nuxt-link to="/program/urnik">
-              <path
-                id="program-link"
-                d="M235.932 373.22L108.814 603.05l263.703-5.902z"
-                opacity="1"
-                vector-effect="none"
-                fill="gray"
-                fill-opacity="0"
-                stroke="none"
-                stroke-width="7.559"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="4"
-                stroke-dasharray="none"
-                stroke-dashoffset="0"
-                stroke-opacity="1"
-              />
-            </nuxt-link>
-          </a>
+          <nuxt-link tag="a" to="/program/urnik">
+            <path
+              id="program-link"
+              d="M235.932 373.22L108.814 603.05l263.703-5.902z"
+              opacity="1"
+              vector-effect="none"
+              fill="gray"
+              fill-opacity="0"
+              stroke="none"
+              stroke-width="7.559"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="4"
+              stroke-dasharray="none"
+              stroke-dashoffset="0"
+              stroke-opacity="1"
+            />
+          </nuxt-link>
           <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
             <path
               id="vstopnice-link"
@@ -174,7 +170,12 @@
 <script>
 export default {
   transition: 'default',
-  layout: 'home'
+  layout: 'home',
+  data () {
+    return {
+      dropShow: false
+    }
+  }
 }
 </script>
 
@@ -236,11 +237,14 @@ export default {
   background-image: url(/img/home/hamburger.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0;
+  border: none;
+}
+
+.btn-drop:focus {
+box-shadow: none;
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   text-align: right;
   background-color: #2c3e50b0;
@@ -257,34 +261,31 @@ export default {
   display: block;
   white-space: nowrap;
 }
-.program-sub a:hover + .program-content {
-  display: block;
-}
+
 .program-content{
-  position:absolute;
-  margin-right:auto;
+  position: absolute;
+  margin-right: auto;
   display: none;
   top:0;
   text-align: left;
 }
-.program-content:hover, .program-content:active + .program-content{
+
+.program-sub a:hover + .program-content {
   display: block;
 }
-.program-content a:active + .program-content{
-  display: none;
+
+.program-content:hover, .program-content:active + .program-content{
+  display: block;
 }
 
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
 }
-.dropdown-content a:focus + .dropdown-content {
-  display: none;
-}
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* @media screens */
 
