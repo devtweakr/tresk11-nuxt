@@ -45,11 +45,11 @@ const drupalLinks = (body) => {
     // Pogovori
     [/href="\/d\/dogodek\/(.+?)"/g, 'href="/program/pogovori"'],
     // Basic strani
-    ['href="/d/basic-page/kontakt"/g', 'href="/kontakt"'],
-    ['href="/d/basic-page/o-tresku-11"/g', 'href="/o-tresku"'],
-    ['href="/d/basic-page/sejmisce"/g', 'href="/kontakt"'],
-    ['href="/d/basic-page/urnik"/g', 'href="/urnik"'],
-    ['href="/d/zalozbe"/g', 'href="/program/zalozbe"'],
+    ['href="/d/basic-page/kontakt', 'href="/kontakt"'],
+    ['href="/d/basic-page/o-tresku-11', 'href="/o-tresku"'],
+    ['href="/d/basic-page/sejmisce', 'href="/program/sejmisce"'],
+    ['href="/d/basic-page/urnik', 'href="/program/urnik"'],
+    ['href="/d/zalozbe', 'href="/program/zalozbe"'],
     // Slike
     [/src="\/d\/(.+?)"/g, 'src="https://tresk.si/d/$1"']
   ]
