@@ -72,12 +72,12 @@ export default {
     mode: 'out-in'
   },
   router: {
-    routes: [
-      {
+    extendRoutes (routes, resolve) {
+      routes.push({
         path: '/program',
         component: 'pages/program/urnik.vue',
         name: 'program_index'
-      }
-    ]
+      })
+    }
   }
 }

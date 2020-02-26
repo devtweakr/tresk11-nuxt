@@ -175,6 +175,11 @@ export default {
     return {
       dropShow: false
     }
+  },
+  head () {
+    return {
+      title: 'Tresk #11'
+    }
   }
 }
 </script>
