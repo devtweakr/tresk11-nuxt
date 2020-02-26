@@ -10,8 +10,7 @@
         sm="4"
         md="3"
       >
-        {{ $log(zalozba) }}
-        <nuxt-link v-if="zalozba.title" :to="`/program/zalozba/${encodeURIComponent(zalozba.title)}`">
+        <nuxt-link v-if="zalozba.title" :to="$options.filters.getAlias(zalozba, 'zalozba')">
           <div class="logo">
             <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid center />
           </div>

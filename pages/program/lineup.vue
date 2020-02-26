@@ -10,7 +10,7 @@
         sm="4"
         md="3"
       >
-        <nuxt-link v-if="band.title" :to="`/program/artist/${encodeURIComponent(band.title)}`">
+        <nuxt-link v-if="band.title" :to="$options.filters.getAlias(band, 'artist')">
           <div class="logo">
             <b-img :src="band.field_slika | treskSlika" class="band-logo" fluid center />
           </div>

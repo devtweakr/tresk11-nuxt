@@ -31,15 +31,7 @@ export default {
 
     const query = {
       include: 'field_zalozba_logo',
-      'filter[id-group][group][conjunction]': 'OR',
-      'filter[title][condition][path]': 'title',
-      'filter[title][condition][operator]': '=',
-      'filter[title][condition][value]': id,
-      'filter[title][condition][memberOf]': 'id-group',
-      'filter[alias][condition][path]': 'field_path',
-      'filter[alias][condition][operator]': '=',
-      'filter[alias][condition][value]': alias,
-      'filter[alias][condition][memberOf]': 'id-group'
+      'filter[field_path]': alias
     }
     return store.dispatch('drupal/get', [`node/zalozba`, {
       params: query

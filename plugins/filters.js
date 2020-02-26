@@ -50,9 +50,22 @@ const drupalLinks = (body) => {
   }, body)
 }
 
+const getAlias = (entity, type) => {
+  console.log('zamenjava', entity.field_path, type)
+  const replacements = {
+    artist: [/\/artist\/(.+)/, '/program/artist/$1'],
+    zalozba: [/\/zalozba\/(.+)/, '/program/zalozba/$1'],
+    lokacija: [/\/lokacija\/(.+)/, '/program/lokacija/$1'],
+    pogovor: [/\/dogodek\/(.+)/, '/program/pogovor/$1']
+  }
+
+  return entity.field_path.replace(replacements[type][0], replacements[type][1])
+}
+
 Vue.filter('dateFormat', dateFormat)
 Vue.filter('treskSlika', treskSlika)
 Vue.filter('drupalLinks', drupalLinks)
+Vue.filter('getAlias', getAlias)
 
 Vue.prototype.$log = console.log
 
