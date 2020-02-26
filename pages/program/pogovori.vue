@@ -8,7 +8,7 @@
         class="dogodek mb-5"
         sm="6"
       >
-      <nuxt-link v-if="dogodek.title" :to="`/program/pogovor/${encodeURIComponent(dogodek.title)}`">
+      <nuxt-link v-if="dogodek.title" :to="$options.filters.getAlias(dogodek, 'pogovor')">
         <h4>
           {{ dogodek.title }}
         </h4>

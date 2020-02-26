@@ -63,7 +63,6 @@ const summary = (body) => {
 }
 
 const getAlias = (entity, type) => {
-  console.log('zamenjava', entity.field_path, type)
   const replacements = {
     artist: [/\/artist\/(.+)/, '/program/artist/$1'],
     zalozba: [/\/zalozba\/(.+)/, '/program/zalozba/$1'],
