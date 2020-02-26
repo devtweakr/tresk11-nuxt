@@ -93,6 +93,10 @@ svg {
   margin-right: 1rem;
 }
 
+.containerPogovor img {
+  margin-right: 1rem
+}
+
 /* default layout */
 .btn-home {
   border-radius: 0;

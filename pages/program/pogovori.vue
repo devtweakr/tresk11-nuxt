@@ -8,11 +8,14 @@
         class="dogodek mb-5"
         sm="6"
       >
+      <nuxt-link v-if="dogodek.title" :to="`/program/pogovor/${encodeURIComponent(dogodek.title)}`">
         <h4>
           {{ dogodek.title }}
         </h4>
-        <h5>{{ dogodek.field_datum | dateFormat }}</h5>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      </nuxt-link>
+        <h5>{{ dogodek.field_datum | dateTimeFormat }}</h5>
+        <p v-html="$options.filters.drupalLinks($options.filters.summary(dogodek.body.value))" v-if="dogodek.body" class="text-justify"/>
+
       </b-col>
     </b-row>
   </div>

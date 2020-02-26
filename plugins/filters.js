@@ -1,14 +1,22 @@
 /* eslint-disable */
 import Vue from 'vue'
 
-const dateFormat = (val) => {
-  const MESECI = [
-    'januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij', 'avgust', 'september', 'oktober', 'november', 'december'
-  ]
+const MESECI = [
+  'januar', 'februar', 'marec', 'april', 'maj', 'junij', 'julij', 'avgust', 'september', 'oktober', 'november', 'december'
+]
 
+const dateFormat = (val) => {
   const date = new Date(val)
   // return date.toLocaleString()
   return date.getDate() + '. ' + MESECI[date.getMonth()]
+}
+
+const dateTimeFormat = (val) => {
+  const date = new Date(val)
+  return date.getDate()
+    + '. ' + MESECI[date.getMonth()]
+    + " " + date.getHours()
+    + ":" + String(date.getMinutes()).padStart(2, '0')
 }
 
 const treskSlika = (field_slika) => {
@@ -40,14 +48,18 @@ const drupalLinks = (body) => {
     ['href="/d/basic-page/kontakt"/g', 'href="/kontakt"'],
     ['href="/d/basic-page/o-tresku-11"/g', 'href="/o-tresku"'],
     ['href="/d/basic-page/sejmisce"/g', 'href="/kontakt"'],
-    ['href="/d/basic-page/urnik"/g', 'href="/urnik"']
-    ['href="/d/basic-page/urnik"/g', 'href="/urnik"']
-    ['href="/d/zalozbe"/g', 'href="/program/zalozbe"']
+    ['href="/d/basic-page/urnik"/g', 'href="/urnik"'],
+    ['href="/d/zalozbe"/g', 'href="/program/zalozbe"'],
+    // Slike
+    [/src="\/d\/(.+?)"/g, 'src="https://tresk.si/d/$1"']
   ]
 
   return zamenjave.reduce((cisto, zamenjavi) => {
     return cisto.replace(zamenjavi[0], zamenjavi[1])
   }, body)
+}
+const summary = (body) => {
+  return body.substring(0, 250) + "..."
 }
 
 const getAlias = (entity, type) => {
@@ -63,9 +75,11 @@ const getAlias = (entity, type) => {
 }
 
 Vue.filter('dateFormat', dateFormat)
+Vue.filter('dateTimeFormat', dateTimeFormat)
 Vue.filter('treskSlika', treskSlika)
 Vue.filter('drupalLinks', drupalLinks)
 Vue.filter('getAlias', getAlias)
+Vue.filter('summary', summary)
 
 Vue.prototype.$log = console.log
 
