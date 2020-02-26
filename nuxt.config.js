@@ -70,5 +70,15 @@ export default {
   layoutTransition: {
     name: 'fade',
     mode: 'out-in'
-  }
+  },
+  router: {
+    routes: [
+      {
+        path: '/program',
+        component: 'pages/program/urnik.vue',
+        name: 'program_index'
+      }
+    ]
+  },
+  buildDir: 'dist'
 }
