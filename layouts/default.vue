@@ -24,15 +24,15 @@
                 EN
               </b-link> -->
               <div class="dropdown">
-                <button class="btn btn-primary btn-drop">
+                <button @click="dropShow=!dropShow" class="btn btn-primary btn-drop">
                   <i class="fa fa-bars" />
                 </button>
-                <div class="dropdown-content">
+                <div v-show="dropShow" class="dropdown-content">
                   <div class="program-sub">
-                    <b-link to="#" class="program-link">
+                    <b-link class="program-link">
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
-                    <div class="program-content">
+                    <div @click="dropShow=!dropShow" class="program-content">
                       <b-link to="/program/urnik">
                         Urnik
                       </b-link>
@@ -56,27 +56,29 @@
                       </b-link>
                     </div>
                   </div>
-                  <b-link to="/natecaji">
-                    Natečaji
-                  </b-link>
-                  <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
-                    Vstopnice
-                  </a>
-                  <b-link to="/novice">
-                    Novice
-                  </b-link>
-                  <b-link to="/o-tresku">
-                    O Tresku
-                  </b-link>
-                  <b-link to="/arhiv">
-                    Arhiv
-                  </b-link>
-                  <b-link to="/kontakt">
-                    Kontakt
-                  </b-link>
-                  <b-link to="/sponzorji">
-                    Podporniki
-                  </b-link>
+                  <div @click="dropShow=!dropShow" class="main-drop">
+                    <b-link to="/natecaji">
+                      Natečaji
+                    </b-link>
+                    <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+                      Vstopnice
+                    </a>
+                    <b-link to="/novice">
+                      Novice
+                    </b-link>
+                    <b-link to="/o-tresku">
+                      O Tresku
+                    </b-link>
+                    <b-link to="/arhiv">
+                      Arhiv
+                    </b-link>
+                    <b-link to="/kontakt">
+                      Kontakt
+                    </b-link>
+                    <b-link to="/sponzorji">
+                      Podporniki
+                    </b-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,11 +102,24 @@
         </footer>
       </b-container>
     </div>
+    </b-col>
+    </b-row>
+    </b-col>
+    </footer>
+    </b-container>
+  </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      dropShow: false
+    }
+  }
+}
+
 </script>
 
 <style scoped>
@@ -112,7 +127,6 @@ export default {}
 
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .btn-drop {
@@ -120,7 +134,6 @@ export default {}
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   right: 0;
   background-color: #2c3e50b0;
@@ -136,33 +149,26 @@ export default {}
   display: block;
   white-space: nowrap;
 }
-.program-sub a:hover + .program-content {
-  display: block;
-}
+
 .program-content{
-  position:absolute;
-  margin-right:auto;
+  position: absolute;
+  margin-right: auto;
   display: none;
   top:0;
   text-align: left;
 }
-.program-content:hover, .program-content:active + .program-content{
+
+.program-sub a:hover + .program-content {
   display: block;
 }
-.program-content a:active + .program-content{
-  display: none;
+
+.program-content:hover, .program-content:active + .program-content{
+  display: block;
 }
 
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
-}
-.dropdown-content a:focus + .dropdown-content {
-  display: none;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 </style>
