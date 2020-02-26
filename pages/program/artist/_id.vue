@@ -1,15 +1,14 @@
 <template>
-  <div class="node-page">
+  <div>
     <PageTitle :pageTitle="artist.title" />
-    <div>
-      <p v-for="link in artist.field_povezave">
-        <a :href="link.uri" target="blank">link</a>
-      </p>
-    </div>
-    <img :src="artist.field_slika | treskSlika" class="node-slika">
-    <p>{{ artist.field_cas_nastopa }}</p>
-    <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" />
-    {{ $log(artist) }}
+    <b-row>
+      <b-col md="6">
+        <b-img :src="artist.field_slika | treskSlika" class="mb-4" fluid />
+      </b-col>
+      <b-col md="6">
+        <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 
