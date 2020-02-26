@@ -3,7 +3,7 @@
     <PageTitle page-title="O TRESKU" />
     <b-row>
       <b-col>
-        <div v-html="$options.filters.drupalLinks(page.body.value)" v-if="page" />
+        <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
       </b-col>
     </b-row>
   </div>

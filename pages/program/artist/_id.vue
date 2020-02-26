@@ -6,7 +6,7 @@
         <b-img :src="artist.field_slika | treskSlika" class="mb-4" fluid />
       </b-col>
       <b-col md="6">
-        <p v-html="$options.filters.drupalLinks(artist.body.value)" v-if="artist.body" class="text-justify" />
+        <p v-html="$options.filters.drupalLinks(artist.body.processed)" v-if="artist.body" class="text-justify" />
       </b-col>
     </b-row>
   </div>

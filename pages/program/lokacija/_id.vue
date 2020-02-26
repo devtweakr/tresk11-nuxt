@@ -6,7 +6,7 @@
         <b-img :src="lokacija.field_slika | treskSlika" class="mb-4" fluid />
       </b-col>
       <b-col md="6">
-        <p v-html="$options.filters.drupalLinks(lokacija.body.value)" v-if="lokacija.body" class="text-justify" />
+        <p v-html="$options.filters.drupalLinks(lokacija.body.processed)" v-if="lokacija.body" class="text-justify" />
       </b-col>
     </b-row>
   </div>

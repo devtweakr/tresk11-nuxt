@@ -3,7 +3,7 @@
     <PageTitle :pageTitle="dogodek.title" />
     <b-row>
       <b-col>
-        <p v-html="$options.filters.drupalLinks(dogodek.body.value)" v-if="dogodek.body" class="text-justify" />
+        <p v-html="$options.filters.drupalLinks(dogodek.body.processed)" v-if="dogodek.body" class="text-justify" />
       </b-col>
     </b-row>
   </div>

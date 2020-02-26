@@ -6,7 +6,7 @@
         <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid class="mb-3" />
       </b-col>
       <b-col md="8" sm="9">
-        <p v-html="$options.filters.drupalLinks(zalozba.body.value)" v-if="zalozba.body" />
+        <p v-html="$options.filters.drupalLinks(zalozba.body.processed)" v-if="zalozba.body" />
       </b-col>
     </b-row>
   </div>
