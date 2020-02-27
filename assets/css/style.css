@@ -1,13 +1,16 @@
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 
-html {
+/* html {
   background: rgb(86, 181, 133);
   background: linear-gradient(35deg,
       rgba(0, 158, 226, 1) 0%,
       rgba(86, 181, 133, 1) 100%);
+} */
+
+body{
   background-image: url(/img/global/back_tresk11.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +19,7 @@ html {
 
 #app {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(/img/global/grain.png);
   position: absolute;
 }
@@ -91,17 +94,13 @@ a.disabled {
 
 /* @media screens */
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .img-tabla {
-    margin-left: -50px;
+   margin-left: -10%;
   }
 }
 
 @media (max-width: 400px) {
-  .img-tabla {
-    margin-left: -40px;
-  }
-
 }
 
 @media (min-width: 576px) {

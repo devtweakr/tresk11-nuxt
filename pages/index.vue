@@ -197,7 +197,7 @@ export default {
 
 /* logo, date */
 .rs-link {
-  position: absolute;
+  position: fixed;
   left: 2rem;
   bottom: 2rem;
   z-index: 1;
@@ -209,7 +209,7 @@ export default {
 }
 
 .datum {
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
   right: 2rem;
 }
@@ -307,7 +307,6 @@ box-shadow: none;
   }
 
   .datum {
-    position: absolute;
     bottom: 1rem;
     right: 1rem;
   }
