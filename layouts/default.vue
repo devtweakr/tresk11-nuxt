@@ -126,7 +126,6 @@ export default {
 
 .dropdown {
   position: relative;
-  margin: -18px -15px -15px 0;
 }
 
 .btn-drop {
