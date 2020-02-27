@@ -14,7 +14,7 @@
           <div class="logo">
             <b-img :src="lokacija.field_slika | treskSlika" fluid center />
           </div>
-          <h4 mt-3 class="text-center mt-3">
+          <h4 class="text-center mt-3">
             {{ lokacija.title }}
           </h4>
         </nuxt-link>

@@ -88,13 +88,13 @@
         <footer class="my-5">
           <hr>
           <div class="float-left">
-            Tresk #11 &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
+            <a href="/o-tresku">Tresk #11</a> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
           </div>
           <div class="float-right">
-            <b-link to="/kontakt">
+            <b-link to="/kontakt" class="mr-2">
               Kontakt
-            </b-link> |
-            <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-1"><i class="fa fa-facebook" /></a>
+            </b-link>
+            <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-2"><i class="fa fa-facebook" /></a>
             <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
           </div>
         </footer>

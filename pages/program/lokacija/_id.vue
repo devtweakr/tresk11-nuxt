@@ -3,7 +3,7 @@
     <PageTitle :pageTitle="lokacija.title" />
     <b-row>
       <b-col md="6">
-        <b-img :src="lokacija.field_slika | treskSlika" class="mb-3" fluid />
+        <b-img :src="lokacija.field_slika | treskSlika" class="mb-4" fluid />
       </b-col>
       <b-col md="6">
         <p v-html="$options.filters.drupalLinks(lokacija.body.processed)" v-if="lokacija.body" class="text-justify" />
