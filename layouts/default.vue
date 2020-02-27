@@ -87,7 +87,7 @@
           <footer class="pt-3 pb-5">
             <hr>
             <div class="float-left">
-              <b-link href="/o-tresku">
+              <b-link to="/o-tresku">
                 Tresk #11
               </b-link> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
             </div>
