@@ -5,8 +5,6 @@ export default ({ app }) => {
   Vue.use(VueMatomo, {
     router: app.router,
     host: 'https://anal.radiostudent.si',
-    siteId: 2,
-
-    /** Other configuration options **/
+    siteId: 2
   })
 }
