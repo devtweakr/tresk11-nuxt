@@ -5,7 +5,7 @@
       <b-col
         :key="'zalozba'"
         v-for="zalozba in zalozbe"
-        class="mb-5"
+        class="mb-4"
         cols="6"
         sm="4"
         md="3"

@@ -20,13 +20,13 @@
             <b-link to="/program/zalozbe">
               Založbe
             </b-link>
-            <b-link to="/program/pogovori">
+            <b-link to="/program/pogovori" disabled>
               Pogovori
             </b-link>
             <b-link to="/program/lokacije">
               Lokacije
             </b-link>
-            <b-link to="/program/extras">
+            <b-link to="/program/extras" disabled>
               Extras
             </b-link>
           </div>
@@ -44,7 +44,7 @@
           <b-link to="/o-tresku">
             O Tresku
           </b-link>
-          <b-link to="/arhiv">
+          <b-link to="/arhiv" disabled>
             Arhiv
           </b-link>
           <b-link to="/kontakt">
@@ -235,9 +235,9 @@ export default {
 }
 
 .btn-drop {
+  border-radius: 0;
   width: 80px;
   height: 80px;
-  border-radius: 0;
   overflow: visible;
   background-image: url(/img/home/hamburger.svg);
   background-repeat: no-repeat;
@@ -256,13 +256,14 @@ box-shadow: none;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   right: 0;
-  width: 170px;
+  width: 200px;
 }
 
 .dropdown-content a {
   color: white;
   padding: 8px 10px;
   text-decoration: none;
+  font-size: 1.2em;
   display: block;
   white-space: nowrap;
 }

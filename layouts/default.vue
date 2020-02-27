@@ -24,9 +24,7 @@
                 EN
               </b-link> -->
               <div class="dropdown">
-                <button @click="dropShow=!dropShow" class="btn btn-primary btn-drop">
-                  <i class="fa fa-bars" />
-                </button>
+                <button @click="dropShow=!dropShow" class="btn btn-drop" />
                 <div v-show="dropShow" class="dropdown-content">
                   <div class="program-sub">
                     <b-link class="program-link">
@@ -45,13 +43,13 @@
                       <b-link to="/program/zalozbe">
                         Založbe
                       </b-link>
-                      <b-link to="/program/pogovori">
+                      <b-link to="/program/pogovori" disabled>
                         Pogovori
                       </b-link>
                       <b-link to="/program/lokacije">
                         Lokacije
                       </b-link>
-                      <b-link to="/program/extras">
+                      <b-link to="/program/extras" disabled>
                         Extras
                       </b-link>
                     </div>
@@ -69,7 +67,7 @@
                     <b-link to="/o-tresku">
                       O Tresku
                     </b-link>
-                    <b-link to="/arhiv">
+                    <b-link to="/arhiv" disabled>
                       Arhiv
                     </b-link>
                     <b-link to="/kontakt">
@@ -132,25 +130,37 @@ export default {
 
 .dropdown {
   position: relative;
+  margin: -18px -15px -15px 0;
 }
 
 .btn-drop {
   border-radius: 0;
+  width: 80px;
+  height: 80px;
+  overflow: visible;
+  background-image: url(/img/home/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 
+.btn-drop:focus {
+box-shadow: none;
+}
 .dropdown-content {
   position: absolute;
-  right: 0;
+  right: 15px;
   background-color: #2c3e50b0;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 170px;
+  width: 200px;
 }
 
 .dropdown-content a {
   color: white;
   padding: 8px 10px;
   text-decoration: none;
+  font-size: 1.2em;
   display: block;
   white-space: nowrap;
 }

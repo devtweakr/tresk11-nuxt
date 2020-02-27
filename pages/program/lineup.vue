@@ -5,14 +5,14 @@
       <b-col
         :key="band._jv.id"
         v-for="band in bandi"
-        class="mb-5"
+        class="mb-3"
         cols="6"
         sm="4"
         md="3"
       >
         <nuxt-link v-if="band.title" :to="$options.filters.getAlias(band, 'artist')">
           <div class="logo">
-            <b-img :src="band.field_slika | treskSlika" class="band-logo" fluid center />
+            <b-img :src="band.field_slika | treskSlika" fluid center />
           </div>
           <h4 class="text-center mt-3">
             {{ band.title }}

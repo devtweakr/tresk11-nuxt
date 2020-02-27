@@ -36,9 +36,11 @@ svg {
       rgba(255, 255, 255, 1) 400px);
 }
 
-/* home page */
-
 /* splosno za podstrani */
+
+p{
+  margin-bottom: 0.6rem
+}
 
 .sponzorji>img{
   max-height: 2rem;
@@ -52,6 +54,11 @@ iframe {
 }
 
 /* navbar */
+
+a.disabled {
+  pointer-events: none;
+  color: #aaa !important;
+}
 
 .navbar-light .navbar-nav .nav-link {
   color: #212529;

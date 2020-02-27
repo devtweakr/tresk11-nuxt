@@ -26,31 +26,31 @@
     </h3>
     <b-row>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/ajda-b.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/ajda-b.jpg" />
         <p>
           Ajda Bračič je članica uredniškega odbora revije <a href="https://outsider.si " target="blank">Outsider</a> ter nekdanja urednica redakcije za scenske umetnosti spletnega medija Koridor – križišča umetnosti.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/bostjan-napotnik.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/bostjan-napotnik.jpg" />
         <p>
           Boštjan Napotnik - Napo je avdicijo za špikerja na Radiu Študent opravil daljnega leta 1991, še vedno pa enkrat na mesec odfura jutranji program. Leta 1994 se je začelo njegovo agencijsko življenje, ki ga zadnjih ducat let preživlja kot kreativni direktor na Futuri DDB.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/stela-ivsek.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/stela-ivsek.jpg" />
         <p>
           Stella Ivšek je oblikovalka, vidžejka, scenografinja in intermedijska umetnica, ki pod aliasom 5237 samostojno nastopa kot VJ in je soustanoviteljica projekcijske dvojice BEAM TEAM (5237 x SMECH). Je tudi lanskoletna zmagovalka kategorije inovativnega pristopa k oblikovanju in oglaševanju dogodka.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/vladimir-m.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/vladimir-m.jpg" />
         <p>
           Vladimir Mićković je interdisciplinarni oblikovalec, pisec in soustanovitelj večkrat nagrajenega oblikovalskega studia <a href="https://www.instagram.com/ljudje/" target="blank">Ljudje</a>. Je tudi soustanovitelj bistroja <a href="https://kucha.co/ " target="blank">Kucha</a> in vodja istoimenske blagovne znamke.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/zala-v.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/zala-v.jpg" />
         <p>
           Zala Velkavrh se kot članica urbanističnega kolektiva prostoRož med drugim ukvarja s temami urbane prenove, mestnega brandinga in vključujočega urbanega razvoja.
         </p>

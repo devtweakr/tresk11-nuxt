@@ -3,7 +3,7 @@
     <PageTitle :pageTitle="artist.title" />
     <b-row>
       <b-col md="6">
-        <b-img :src="artist.field_slika | treskSlika" class="mb-4" fluid />
+        <b-img :src="artist.field_slika | treskSlika" class="mb-3" fluid />
       </b-col>
       <b-col md="6">
         <p v-html="$options.filters.drupalLinks(artist.body.processed)" v-if="artist.body" class="text-justify" />

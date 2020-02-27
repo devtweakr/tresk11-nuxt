@@ -30,25 +30,25 @@
     </h3>
     <b-row>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/dora-trcek.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/dora-trcek.jpg" />
         <p>
           Dora Trček je kuratorka cikla mesečnih razstav v galeriji DobraVaga. Kot del ekipe festivala MENT Ljubljana pa vsako leto organizira in (so)kurira razstavni projekt glasbenih plakatov appointMENT.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/hanna-juta.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/hanna-juta.jpg" />
         <p>
           Hanna Juta Kozar se je med študijem arhitekture prepisala na program grafičnega oblikovanja in ilustracije na ALUO. Deluje na področju vizualnih komunikacij. Je lanskoletna zmagovalka kategorije za najboljšo podobo albuma.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/jaka-spiler.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/jaka-spiler.jpg" />
         <p>
           Jaka Špiler je dolgoletni in praktično bivši sodelavec tehniške službe in glasbene redakcije Radia Študent, pa tudi večletni vodja radijske fonoteke in prav festivala Tresk. Oboje je bilo v resnici razlog za incestuozno povabilo v vrste žirije podobe albuma.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
-        <b-img fluid class="mb-2" src="/img/zirija/nina-vrhovec.jpg" />
+        <b-img fluid class="mb-3" src="/img/zirija/nina-vrhovec.jpg" />
         <p>
           <a href="http://www.multipraktik.com/" target="blank">Nina Vrhovec</a> se je po študiju na ALUO pet let urila v okolju DIY Kluba K4, kjer sta glasba in oblikovanje postala pomemben in nerazdružljiv par v njenem delu. Je soustanoviteljica multidisciplinarnega studia Multipraktik.
         </p>

@@ -1,19 +1,24 @@
 <template>
   <div>
-    <PageTitle :pageTitle="pageTitle" class="mb-4" />
-    <b-card-group columns>
-      <b-card :key="'novica'" v-for="novica in novice" class="novica bg-transparent border-0" no-body>
-        <b-card-title title-tag="h3">
+    <PageTitle :pageTitle="pageTitle" />
+
+    <b-row>
+      <b-col
+        :key="'novica'"
+        v-for="novica in novice"
+        class="novica mb-5"
+        sm="6"
+      >
+        <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+        <h4>
           {{ novica.title }}
-        </b-card-title>
-        <b-card-sub-title sub-title-text-variant="black" sub-title-tag="h5">
-          {{ novica.field_datum | dateFormat }}
-        </b-card-sub-title>
-        <b-card-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" class="mt-2" />
-        <b-card-text v-html="$options.filters.drupalLinks(novica.body.processed)" class="mt-3" />
-        </b-card-text>
-      </b-card>
-    </b-card-group>
+        </h4>
+        <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+        <!-- </nuxt-link> -->
+        <h5>{{ novica.field_datum | dateFormat }}</h5>
+        <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+      </b-col>
+    </b-row>
   </div>
 </template>
 

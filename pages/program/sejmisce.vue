@@ -2,7 +2,9 @@
   <div>
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
-      <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" class="col-12" />
+      <b-col>
+        <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
+      </b-col>
     </b-row>
   </div>
 </template>
