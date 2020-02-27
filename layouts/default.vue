@@ -43,7 +43,7 @@
                       <b-link to="/program/zalozbe">
                         Založbe
                       </b-link>
-                      <b-link to="/program/pogovori" disabled>
+                      <b-link to="/program/pogovori">
                         Pogovori
                       </b-link>
                       <b-link to="/program/lokacije">
