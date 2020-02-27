@@ -84,28 +84,22 @@
         </header>
         <div class="content">
           <nuxt />
+          <footer class="pt-3 pb-5">
+            <hr>
+            <div class="float-left">
+              <a href="/o-tresku">Tresk #11</a> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
+            </div>
+            <div class="float-right">
+              <b-link to="/kontakt" class="mr-2">
+                Kontakt
+              </b-link>
+              <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-2"><i class="fa fa-facebook" /></a>
+              <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
+            </div>
+          </footer>
         </div>
-        <footer class="my-5">
-          <hr>
-          <div class="float-left">
-            <a href="/o-tresku">Tresk #11</a> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
-          </div>
-          <div class="float-right">
-            <b-link to="/kontakt" class="mr-2">
-              Kontakt
-            </b-link>
-            <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-2"><i class="fa fa-facebook" /></a>
-            <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
-          </div>
-        </footer>
       </b-container>
     </div>
-    </b-col>
-    </b-row>
-    </b-col>
-    </footer>
-    </b-container>
-  </div>
   </div>
 </template>
 

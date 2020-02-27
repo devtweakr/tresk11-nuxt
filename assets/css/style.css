@@ -1,26 +1,25 @@
-html,
-body {
+html {
   min-height: 100vh;
 }
 
-/* html {
+html {
   background: rgb(86, 181, 133);
   background: linear-gradient(35deg,
       rgba(0, 158, 226, 1) 0%,
       rgba(86, 181, 133, 1) 100%);
-} */
-
-body{
   background-image: url(/img/global/back_tresk11.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
+
+body {}
 
 #app {
   width: 100%;
-  height: 100vh;
   background: url(/img/global/grain.png);
+  background-attachment: fixed;
   position: absolute;
 }
 
@@ -32,11 +31,12 @@ svg {
 }
 
 .content-page {
-  min-height: 100%;
+  min-height: 100vh;
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 1) 400px);
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 1) 500px);
+  background-attachment: fixed;
 }
 
 /* splosno za podstrani */
@@ -96,19 +96,19 @@ a.disabled {
 
 @media (max-width: 360px) {
   .img-tabla {
-   margin-left: -10%;
+    margin-left: -10%;
   }
 }
 
 @media (max-width: 400px) {
+  .img-tabla {
+    margin-left: -10%;
+  }
 }
 
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
 
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 @media (min-width: 992px) {}
 
