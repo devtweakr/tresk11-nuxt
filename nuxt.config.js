@@ -29,7 +29,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/filters.js'],
+  plugins: [
+    '~plugins/filters.js',
+    { src: '~/plugins/vue-matomo.js', ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -44,8 +47,14 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-facebook-pixel-module'
   ],
+  facebook: {
+    track: 'PageView',
+    pixelId: '199752654600647',
+    disabled: false
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
