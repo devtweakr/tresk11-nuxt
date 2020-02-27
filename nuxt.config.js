@@ -48,16 +48,13 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-facebook-pixel-module',
-
-    // With options
-    ['nuxt-facebook-pixel-module', {
-      /* module options */
-      track: 'PageView',
-      pixelId: '199752654600647',
-      disabled: false
-    }]
+    'nuxt-facebook-pixel-module'
   ],
+  facebook: {
+    track: 'PageView',
+    pixelId: '199752654600647',
+    disabled: false
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
