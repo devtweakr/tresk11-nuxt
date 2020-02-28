@@ -38,7 +38,7 @@
       <b-col lg="4" sm="6">
         <b-img fluid class="mb-3" src="/img/zirija/primoz-z.jpg" />
         <p>
-          tekst
+          <a href="https://primozzorko.tumblr.com/" target="blank">Primož Zorko</a> je med študijem arhitekture pričel flirtati z ilustracijo in dizajnom. Danes je samostojni umetnik, fotograf in oblikovalec z dolgim seznamom samostojnih in skupinskih razstav doma in po svetu. Avtorica fotografije: Urša Premik
         </p>
       </b-col>
       <b-col lg="4" sm="6">
