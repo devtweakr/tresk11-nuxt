@@ -13,7 +13,7 @@
         {{ hours | twoDigits }}
       </p>
       <p class="text">
-        {{ hours === 2 ? 'uri' : seconds === 1 ? 'ura' : 'ur' }}
+        {{ hours === 2 ? 'uri' : hours === 1 ? 'ura' : 'ur' }}
       </p>
     </li>
     <li>
@@ -21,7 +21,7 @@
         {{ minutes | twoDigits }}
       </p>
       <p class="text">
-        {{ minutes === 2 ? 'minuti' : seconds === 1 ? 'minuta' : 'minut' }}
+        {{ minutes === 2 ? 'minuti' : minutes === 1 ? 'minuta' : 'minut' }}
       </p>
     </li>
     <li>
