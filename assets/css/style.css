@@ -105,6 +105,31 @@ a.disabled {
   text-align: left !important;
 }
 
+.logoArtist {
+  width: 100%;
+}
+.ikoneContainer div a:empty {
+  background-color: red;
+}
+.artistLink {
+  float: left;
+  margin-right: 1em;
+  vertical-align: middle;
+  clear: both;
+  width: 100%;
+}
+.artistLink.imgLink {
+  order: -10;
+  clear: none;
+  width: 50px;
+  margin-bottom: 1em;
+}
+.ikoneContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* @media screens */
 
 

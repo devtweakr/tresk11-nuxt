@@ -73,13 +73,35 @@ const getAlias = (entity, type) => {
   return entity.field_path.replace(replacements[type][0], replacements[type][1])
 }
 
+const logoPick = (value) => {
+  if (value.uri.match(/bandcamp\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/bandcamp-brands.svg" />'
+  }
+  if (value.uri.match(/facebook\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/facebook-square-brands.svg"/>'
+  }
+  if (value.uri.match(/soundcloud\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/soundcloud-brands.svg" />'
+  }
+  if (value.uri.match(/youtube\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/youtube-brands.svg" />'
+  }
+  if (value.uri.match(/instagram\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/instagram-brands.svg" />'
+  }
+  if (value.uri.match(/discogs\.com/)) {
+    return '<img class="logoArtist" src="/img/icons/discogs logo.svg" />'
+  }
+  return value.title
+}
+
 Vue.filter('dateFormat', dateFormat)
 Vue.filter('dateTimeFormat', dateTimeFormat)
 Vue.filter('treskSlika', treskSlika)
 Vue.filter('drupalLinks', drupalLinks)
 Vue.filter('getAlias', getAlias)
 Vue.filter('summary', summary)
-
+Vue.filter('logoPick', logoPick)
 Vue.prototype.$log = console.log
 
 Vue.prototype.$logjson = obj => console.log(JSON.parse(JSON.stringify(obj)))

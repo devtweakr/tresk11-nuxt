@@ -4,9 +4,17 @@
     <b-row>
       <b-col md="6">
         <b-img :src="artist.field_slika | treskSlika" class="mb-4" fluid />
+        <div class="ikoneContainer">
+          <a
+          v-for="link in artist.field_povezave"
+          class="artistLink"
+          v-html="$options.filters.logoPick(link)"
+          :href="link.uri"
+          target="_blank"
+          :class="($options.filters.logoPick(link).indexOf('<img') > -1) ? 'imgLink' : ''"
+        />
+        </div>
       </b-col>
-      {{ $log(artist.field_povezave) }}
-
       <b-col md="6">
         <p v-html="$options.filters.drupalLinks(artist.body.processed)" v-if="artist.body" class="text-justify" />
       </b-col>
