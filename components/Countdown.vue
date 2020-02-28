@@ -149,7 +149,7 @@ export default {
 }
 .vuejs-countdown .digit {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.4;
   margin-bottom: 0;
 }
