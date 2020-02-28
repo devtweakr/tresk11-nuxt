@@ -91,14 +91,20 @@ a.disabled {
 .fade-leave-to {
   opacity: 0;
 }
-
+.pogovorContainer figure {
+  float: left;
+  padding-right: 1.5em;
+}
+.pogovorContainer figure figcaption {
+  min-height: 11em;
+}
+.pogovorContainer img {
+  width: 100%;
+  height: 100%;
+}
 /* @media screens */
 
-@media (max-width: 360px) {
-  .img-tabla {
-    margin-left: -10%;
-  }
-}
+
 
 @media (max-width: 400px) {
   .img-tabla {
@@ -106,10 +112,32 @@ a.disabled {
   }
 }
 
-@media (min-width: 576px) {}
+@media (max-width: 992px) {
+  .pogovorContainer figure {
+    max-width: 25%;
+  }
+}
 
-@media (min-width: 768px) {}
-
-@media (min-width: 992px) {}
+@media (max-width: 768px) {
+  .pogovorContainer figure {
+    max-width: 33.3%;
+  }
+}
+@media (max-width: 576px) {
+  .pogovorContainer figure {
+    max-width: 50%;
+  }
+}
+@media (max-width: 360px) {
+  .img-tabla {
+    margin-left: -10%;
+  }
+  .pogovorContainer figure {
+    max-width: 100%;
+  }
+  .pogovorContainer figure figcaption {
+    min-height: 6em;
+  }
+}
 
 @media (min-width: 1200px) {}

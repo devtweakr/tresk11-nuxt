@@ -2,7 +2,7 @@
   <div>
     <PageTitle :pageTitle="dogodek.title" />
     <b-row>
-      <b-col>
+      <b-col class="pogovorContainer">
         <p v-html="$options.filters.drupalLinks(dogodek.body.processed)" v-if="dogodek.body" class="text-justify" />
       </b-col>
     </b-row>
