@@ -71,8 +71,11 @@ export default {
     description: 'Obračun glasbe in založništva',
     lang: 'si',
     image: 'https://tresk.si/img/tresk_social.jpg',
-    'og-title': 'Tresk #11',
-    'og-image': 'https://tresk.si/img/tresk_social.jpg'
+    openGraph: {
+      title: 'Tresk #11',
+      type: 'website',
+      image: 'https://tresk.si/img/tresk_social.jpg'
+    }
   },
   /*
    ** Build configuration
