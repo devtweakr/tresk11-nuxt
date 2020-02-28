@@ -1,7 +1,9 @@
 <template>
   <div>
     <PageTitle :pageTitle="dogodek.title" />
-    <h2 class="pb-3">{{ dogodek.field_datum | dateTimeFormat }}</h2>
+    <h2 class="pb-3">
+      {{ dogodek.field_datum | dateTimeFormat }}
+    </h2>
     <b-row>
       <b-col class="pogovorContainer">
         <p v-html="$options.filters.drupalLinks(dogodek.body.processed)" v-if="dogodek.body" class="text-justify" />

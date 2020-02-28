@@ -30,6 +30,9 @@ export default {
   components: {
     PageTitle
   },
+  data () {
+    return { pageTitle: 'LINEUP' }
+  },
   computed: {
     bandi () {
       return this.$store.getters['drupal/get']('node--band')
@@ -43,9 +46,6 @@ export default {
     })
 
     return store.dispatch('drupal/get', ['node/band', { params: query }])
-  },
-  data () {
-    return { pageTitle: 'LINEUP' }
   },
   head () {
     return { title: this._data.pageTitle }

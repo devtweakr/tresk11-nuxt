@@ -16,6 +16,9 @@ export default {
   components: {
     PageTitle
   },
+  data () {
+    return { pageTitle: 'KONTAKT' }
+  },
   computed: {
     page () {
       // Basic page kontakt
@@ -32,9 +35,6 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
-  },
-  data () {
-    return { pageTitle: 'KONTAKT' }
   },
   head () {
     return { title: this._data.pageTitle }

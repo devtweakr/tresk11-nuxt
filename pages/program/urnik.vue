@@ -17,6 +17,9 @@ export default {
   components: {
     PageTitle
   },
+  data () {
+    return { pageTitle: 'URNIK' }
+  },
   computed: {
     page () {
       // Basic page urnik
@@ -33,9 +36,6 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
-  },
-  data () {
-    return { pageTitle: 'URNIK' }
   },
   head () {
     return { title: this._data.pageTitle }

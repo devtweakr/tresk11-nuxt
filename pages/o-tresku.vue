@@ -16,6 +16,9 @@ export default {
   components: {
     PageTitle
   },
+  data () {
+    return { pageTitle: 'O TRESKU' }
+  },
   computed: {
     page () {
       // Basic page O TRESKU
@@ -32,9 +35,6 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
-  },
-  asyncData (ctx) {
-    return { pageTitle: 'O TRESKU' }
   },
   head () {
     return { title: this._data.pageTitle }
