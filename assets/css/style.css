@@ -91,6 +91,7 @@ a.disabled {
 .pogovorContainer figure {
   float: left;
   padding-right: 1.5em;
+  max-width: 25%;
 }
 .pogovorContainer figure figcaption {
   min-height: 11em;
