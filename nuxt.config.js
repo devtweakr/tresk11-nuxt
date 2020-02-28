@@ -49,7 +49,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-facebook-pixel-module',
-    'nuxt-seo'
+    'nuxt-seo',
+    'nuxt-svg-loader'
   ],
   /*
    ** Axios module configuration

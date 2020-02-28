@@ -27,6 +27,14 @@ svg {
   user-select: none;
 }
 
+svg|a:link, svg|a:visited {
+  cursor: pointer;
+}
+
+svg a {
+  pointer-events: all;
+}
+
 .content-page {
   min-height: 100vh;
   background: rgb(255, 255, 255);
@@ -172,5 +180,3 @@ a.disabled {
     min-height: 6em;
   }
 }
-
-

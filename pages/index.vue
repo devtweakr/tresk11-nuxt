@@ -57,7 +57,13 @@
       </div>
     </div>
     <a href="https://radiostudent.si" target="_blank" class="rs-link">
-      <img src="/img/home/rs_logo_black.svg"></img>
+      <img src="/img/home/rs_logo_black.svg?inline"></img>
+    </a>
+    <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
+      <IgLogo />
+    </a>
+    <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
+      <FbLogo />
     </a>
     <a class="datum">
       <img src="/img/home/datum.svg"></img>
@@ -65,110 +71,19 @@
     <div class="home-content row">
       <div class="tabla overflow-hidden col">
         <img class="img-tabla" src="/img/home/signs.svg">
-        <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
-          <nuxt-link tag="a" to="/natecaji">
-            <ellipse
-              id="natecaji-link"
-              cx="245.6"
-              cy="747.9"
-              rx="121.9"
-              ry="123"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="3.5"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </nuxt-link>
-          <a xlink:href="https://www.facebook.com/festivaltresk" target="_blank">
-            <path
-              id="tresk-fb-link"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-              d="M286.29999
-              256.39999H672v112.4H286.29999z"
-            />
-          </a>
-          <a xlink:href="https://www.instagram.com/festivaltresk" target="_blank">
-            <path
-              id="festival-instagram-link"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-              d="M130.39999
-              96.5h209.7v129.7h-209.7z"
-            />
-          </a>
-          <nuxt-link tag="a" to="/program/urnik">
-            <path
-              id="program-link"
-              d="M235.932 373.22L108.814 603.05l263.703-5.902z"
-              opacity="1"
-              vector-effect="none"
-              fill="gray"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="7.559"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </nuxt-link>
-          <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
-            <path
-              id="vstopnice-link"
-              d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
-              opacity="1"
-              vector-effect="none"
-              fill="gray"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="7.559"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </a>
-        </svg>
+        <TablaLinki class="img-tabla" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import TablaLinki from '@/static/img/home/signs-link.svg'
+import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
+import IgLogo from '@/static/img/icons/instagram-brands.svg'
+
 export default {
+  components: { FbLogo, IgLogo, TablaLinki },
   transition: 'default',
   layout: 'home',
   data () {
@@ -202,6 +117,25 @@ export default {
   z-index: 1;
 }
 
+.fb-link,
+.ig-link {
+  position: fixed;
+  right: 4.7rem;
+  z-index: 1;
+  bottom: 10.8rem;
+}
+
+.ig-link {
+  bottom: 14.4rem;
+}
+
+.fb-link svg,
+.ig-link svg {
+  width: 40px;
+  height: 40px;
+
+  color: white;
+}
 .rs-link img {
   width: 70px;
   height: 70px;
@@ -215,11 +149,11 @@ export default {
 
 /* tabla styles */
 
-.tabla{
+.tabla {
   height: 100vh;
 }
 
-.img-tabla{
+.img-tabla {
   position: absolute;
   height: 140vh;
 
@@ -308,6 +242,16 @@ box-shadow: none;
   .rs-link img {
     width: 60px;
     height: 60px;
+  }
+
+  .ig-link,
+  .fb-link {
+    right: 3rem;
+    bottom: 11.9rem;
+  }
+
+  .fb-link {
+    bottom: 8.3rem;
   }
 
   .datum {
