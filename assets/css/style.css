@@ -98,7 +98,12 @@ a.disabled {
 .pogovorContainer img {
   width: 100%;
   height: 100%;
+  margin-bottom: 0.4em;
 }
+.pogovorContainer figure p {
+  text-align: left !important;
+}
+
 /* @media screens */
 
 
@@ -106,6 +111,11 @@ a.disabled {
 @media (max-width: 400px) {
   .img-tabla {
     margin-left: -10%;
+  }
+}
+@media (max-width: 1200px) {
+  .pogovorContainer figure {
+    max-width: 25%;
   }
 }
 
@@ -137,4 +147,4 @@ a.disabled {
   }
 }
 
-@media (min-width: 1200px) {}
+
