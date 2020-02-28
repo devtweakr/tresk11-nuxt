@@ -120,13 +120,14 @@ export default {
 .fb-link,
 .ig-link {
   position: fixed;
-  right: 4.7rem;
   z-index: 1;
-  bottom: 10.8rem;
+  right: 14rem;
+  bottom: 1.8rem;
+  opacity: 0.6;
 }
 
 .ig-link {
-  bottom: 14.4rem;
+  right: 10.5rem;
 }
 
 .fb-link svg,
@@ -246,12 +247,12 @@ box-shadow: none;
 
   .ig-link,
   .fb-link {
-    right: 3rem;
-    bottom: 11.9rem;
+    right: 6.1rem;
+    bottom: 1.6rem;
   }
 
   .fb-link {
-    bottom: 8.3rem;
+    right: 9.5rem;
   }
 
   .datum {
@@ -260,8 +261,8 @@ box-shadow: none;
   }
 
   .datum img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 }
 </style>
