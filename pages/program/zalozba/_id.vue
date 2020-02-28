@@ -36,6 +36,9 @@ export default {
     return store.dispatch('drupal/get', [`node/zalozba`, {
       params: query
     }])
+  },
+  head () {
+    return { title: this.zalozba.title }
   }
 }
 </script>

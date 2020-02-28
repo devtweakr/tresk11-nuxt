@@ -45,6 +45,9 @@ export default {
     }
 
     return store.dispatch('drupal/get', ['node/lokacija', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

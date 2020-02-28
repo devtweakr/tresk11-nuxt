@@ -47,6 +47,9 @@ export default {
     return store.dispatch('drupal/get', [`node/band`, {
       params: query
     }])
+  },
+  head () {
+    return { title: this.artist.title }
   }
 }
 </script>

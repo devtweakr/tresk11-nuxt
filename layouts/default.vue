@@ -109,12 +109,15 @@
 export default {
   data () {
     return {
-      dropShow: false
+      dropShow: false,
+      siteTitle: 'Tresk #11'
     }
   },
   head () {
     return {
-      title: 'Tresk #11'
+      titleTemplate (title) {
+        return title ? `${title} | ${this.$store.state.app.siteTitle}` : this.$store.siteTitle
+      }
     }
   }
 }

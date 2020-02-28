@@ -173,13 +173,12 @@ export default {
   layout: 'home',
   data () {
     return {
-      dropShow: false
+      dropShow: false,
+      pageTitle: 'Tresk #11'
     }
   },
   head () {
-    return {
-      title: 'Tresk #11'
-    }
+    return { title: this._data.pageTitle }
   }
 }
 </script>

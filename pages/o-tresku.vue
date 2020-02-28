@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle page-title="O TRESKU" />
+    <PageTitle :page-title="pageTitle" />
     <b-row>
       <b-col>
         <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
@@ -32,6 +32,12 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
+  },
+  asyncData (ctx) {
+    return { pageTitle: 'O TRESKU' }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle page-title="URNIK" />
+    <PageTitle :page-title="pageTitle" />
     <b-row>
       <b-col>
         {{ $log($options.filters) }}
@@ -33,6 +33,12 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
+  },
+  data () {
+    return { pageTitle: 'URNIK' }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

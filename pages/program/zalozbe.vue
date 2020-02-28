@@ -50,6 +50,9 @@ export default {
       include: 'field_zalozba_logo'
     }
     return store.dispatch('drupal/get', ['node/zalozba', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

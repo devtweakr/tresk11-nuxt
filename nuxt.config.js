@@ -48,19 +48,28 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-facebook-pixel-module'
+    'nuxt-facebook-pixel-module',
+    'nuxt-seo'
   ],
-  facebook: {
-    track: 'PageView',
-    pixelId: '199752654600647',
-    disabled: false
-  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
     baseURL: 'https://tresk.si/d/jsonapi'
+  },
+  facebook: {
+    track: 'PageView',
+    pixelId: '199752654600647',
+    disabled: false
+  },
+  seo: {
+    name: 'Tresk #11',
+    hostname: 'tresk.si',
+    templateTitle: '%title% | %name%',
+    description: 'Obračun glasbe in založništva',
+    lang: 'si',
+    image: 'https://tresk.si/img/tresk_social.jpg'
   },
   /*
    ** Build configuration

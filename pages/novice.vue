@@ -30,9 +30,7 @@ export default {
     PageTitle
   },
   data () {
-    return {
-      pageTitle: 'NOVICE'
-    }
+    return { pageTitle: 'NOVICE' }
   },
   computed: {
     novice () {
@@ -52,6 +50,9 @@ export default {
     }
 
     return store.dispatch('drupal/get', ['node/novica', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

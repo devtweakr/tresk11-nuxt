@@ -18,9 +18,7 @@ export default {
     PageTitle
   },
   data () {
-    return {
-      pageTitle: 'ARHIV'
-    }
+    return { pageTitle: 'ARHIV' }
   },
   computed: {
     page () {
@@ -38,6 +36,9 @@ export default {
     return store.dispatch('drupal/get', [`node/page/${pageId}`, {
       params: query
     }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

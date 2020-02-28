@@ -33,7 +33,7 @@ export default {
     PageTitle
   },
   data () {
-    return { pageTitle: 'SPONZORJI' }
+    return { pageTitle: 'PODPORNIKI' }
   },
   computed: {
     kategorije () {
@@ -50,9 +50,6 @@ export default {
         }
 
         kat[kategorija].sponzorji.push(sponzor)
-        /* eslint-disable */
-        console.log('push', kategorija, sponzor.title);
-        /* eslint-enable */
 
         return kat
       }, {})
@@ -66,6 +63,9 @@ export default {
     }
 
     return store.dispatch('drupal/get', ['node/sponzor', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

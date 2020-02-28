@@ -92,10 +92,12 @@ export default {
     PageTitle,
     Countdown
   },
+  pageTitle: 'NATEČAJI',
   data () {
-    return {
-      pageTitle: 'NATEČAJI'
-    }
+    return { pageTitle: 'NATEČAJI' }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

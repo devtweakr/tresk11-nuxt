@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle page-title="LINEUP" />
+    <PageTitle :page-title="pageTitle" />
     <b-row>
       <b-col
         :key="band._jv.id"
@@ -43,12 +43,18 @@ export default {
     })
 
     return store.dispatch('drupal/get', ['node/band', { params: query }])
+  },
+  data () {
+    return { pageTitle: 'LINEUP' }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>
 
 <style scoped>
-.logo img{
+.logo img {
   max-height: 250px;
 }
 </style>

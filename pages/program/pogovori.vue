@@ -41,6 +41,9 @@ export default {
     }
 
     return store.dispatch('drupal/get', ['node/koncert', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>
