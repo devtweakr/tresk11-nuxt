@@ -36,6 +36,12 @@
         </p>
       </b-col>
       <b-col lg="4" sm="6">
+        <b-img fluid class="mb-3" src="/img/zirija/primoz-z.jpg" />
+        <p>
+          tekst
+        </p>
+      </b-col>
+      <b-col lg="4" sm="6">
         <b-img fluid class="mb-3" src="/img/zirija/hanna-juta.jpg" />
         <p>
           Hanna Juta Kozar se je med študijem arhitekture prepisala na program grafičnega oblikovanja in ilustracije na ALUO. Deluje na področju vizualnih komunikacij. Je lanskoletna zmagovalka kategorije za najboljšo podobo albuma.
