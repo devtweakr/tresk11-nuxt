@@ -136,7 +136,7 @@ export default {
   position: absolute;
   top: 0;
   right: -13px;
-  font-size: 32px;
+  font-size: 2em;
 }
 .vuejs-countdown li:first-of-type {
   margin-left: 0;
@@ -148,7 +148,7 @@ export default {
   content: "";
 }
 .vuejs-countdown .digit {
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 0;
@@ -156,6 +156,6 @@ export default {
 .vuejs-countdown .text {
   text-transform: uppercase;
   margin-bottom: 0;
-  font-size: 10px;
+  font-size: 0.7em;
 }
 </style>
