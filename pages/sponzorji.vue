@@ -50,7 +50,9 @@ export default {
         }
 
         kat[kategorija].sponzorji.push(sponzor)
-        console.log('push', kategorija, sponzor.title)
+        /* eslint-disable */
+        console.log('push', kategorija, sponzor.title);
+        /* eslint-enable */
 
         return kat
       }, {})

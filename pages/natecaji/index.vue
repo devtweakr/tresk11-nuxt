@@ -3,6 +3,9 @@
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
       <b-col>
+        <div class="count mb-5 text-center">
+          <Countdown deadline="March 8, 2020" />
+        </div>
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
           natečaj, ki se je ob jubilejni izvedbi leta 2019 razširil v pet
@@ -82,10 +85,12 @@
 
 <script>
 import PageTitle from '@/components/PageTitle'
+import Countdown from '@/components/Countdown'
 
 export default {
   components: {
-    PageTitle
+    PageTitle,
+    Countdown
   },
   data () {
     return {
@@ -96,5 +101,8 @@ export default {
 </script>
 
 <style scoped>
+ul.vuejs-countdown li p.text {
+  content: "DNI" !important;
+}
 
 </style>
