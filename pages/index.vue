@@ -44,7 +44,7 @@
           <b-link to="/o-tresku">
             O Tresku
           </b-link>
-          <b-link to="/arhiv" disabled>
+          <b-link to="/arhiv">
             Arhiv
           </b-link>
           <b-link to="/kontakt">

@@ -3,7 +3,8 @@
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
       <b-col>
-        Še Pride
+        {{ $log(page) }}
+        <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
       </b-col>
     </b-row>
   </div>
@@ -20,10 +21,34 @@ export default {
     return {
       pageTitle: 'ARHIV'
     }
+  },
+  computed: {
+    page () {
+      // Basic page arhiv
+      const pageId = '39915467-0a85-4d5c-a14c-ac37962be3cf'
+
+      return this.$store.getters['drupal/get']('node--page')[pageId]
+    }
+  },
+  fetch ({ store, params }) {
+    // Basic page arhiv
+    const pageId = '39915467-0a85-4d5c-a14c-ac37962be3cf'
+
+    const query = {}
+    return store.dispatch('drupal/get', [`node/page/${pageId}`, {
+      params: query
+    }])
   }
 }
 </script>
 
-<style scoped>
+<style>
+  h2 {
+    display: none;
+  }
+
+  li {
+    font-size: 1.2rem;
+  }
 
 </style>
