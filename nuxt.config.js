@@ -70,7 +70,9 @@ export default {
     templateTitle: '%title% | %name%',
     description: 'Obračun glasbe in založništva',
     lang: 'si',
-    image: 'https://tresk.si/img/tresk_social.jpg'
+    image: 'https://tresk.si/img/tresk_social.jpg',
+    'og-title': 'Tresk #11',
+    'og-image': 'https://tresk.si/img/tresk_social.jpg'
   },
   /*
    ** Build configuration
