@@ -109,12 +109,25 @@ export default {
   height: 100vh;
 }
 
-/* logo, date */
+/* logo, date, social */
+
 .rs-link {
   position: fixed;
   left: 2rem;
   bottom: 2rem;
+
   z-index: 1;
+}
+
+.rs-link img {
+  width: 110px;
+  height: 110px;
+}
+
+.datum {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
 }
 
 .fb-link,
@@ -122,12 +135,12 @@ export default {
   position: fixed;
   z-index: 1;
   right: 14rem;
-  bottom: 1.8rem;
+  bottom: 4.5rem;
   opacity: 0.6;
 }
 
 .ig-link {
-  right: 10.5rem;
+  right: 10.6rem;
 }
 
 .fb-link svg,
@@ -136,16 +149,6 @@ export default {
   height: 40px;
 
   color: white;
-}
-.rs-link img {
-  width: 70px;
-  height: 70px;
-}
-
-.datum {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
 }
 
 /* tabla styles */
