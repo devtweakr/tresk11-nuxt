@@ -1,5 +1,5 @@
 <template>
-  <ul class="vuejs-countdown">
+  <ul v-show="seconds + minutes + hours + days > 0" class="vuejs-countdown">
     <li v-if="days > 0">
       <p class="digit">
         {{ days | twoDigits }}
@@ -21,7 +21,7 @@
         {{ minutes | twoDigits }}
       </p>
       <p class="text">
-        {{ minutes === 2 ? 'minuti' : minutes === 1 ? 'minuta' : 'minut' }}
+        {{ minutes = 'min' }}
       </p>
     </li>
     <li>
@@ -29,7 +29,7 @@
         {{ seconds | twoDigits }}
       </p>
       <p class="text">
-        {{ seconds === 2 ? 'sekundi' : seconds === 1 ? 'sekunda' : 'sekund' }}
+        {{ seconds = 'sek' }}
       </p>
     </li>
   </ul>
