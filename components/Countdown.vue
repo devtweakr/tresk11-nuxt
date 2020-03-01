@@ -21,7 +21,7 @@
         {{ minutes | twoDigits }}
       </p>
       <p class="text">
-        {{ minutes = 'min' }}
+        min
       </p>
     </li>
     <li>
@@ -29,7 +29,7 @@
         {{ seconds | twoDigits }}
       </p>
       <p class="text">
-        {{ seconds = 'sek' }}
+        sek
       </p>
     </li>
   </ul>
@@ -84,12 +84,11 @@ export default {
       throw new Error("Invalid props value, correct the 'deadline'")
     }
 
-    const that = this
-    const updateDiff = function () {
+    const updateDiff = () => {
       const zdaj = new Date().getTime()
-      that.diff = Math.trunc((that.date - zdaj) / 1000)
+      this.diff = Math.trunc((this.date - zdaj) / 1000)
 
-      if (that.diff > 0) {
+      if (this.diff > 0) {
         setTimeout(updateDiff, 1000)
       }
     }
