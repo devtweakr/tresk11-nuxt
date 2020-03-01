@@ -1,5 +1,5 @@
 <template>
-  <ul v-show="seconds + minutes + hours + days > 0" class="vuejs-countdown">
+  <ul v-show="seconds + minutes + hours + days > 0" :v-bind:style="{ visibility: (diff > 0) ? 'visible' : 'hidden' }" class="vuejs-countdown">
     <li v-if="days > 0">
       <p class="digit">
         {{ days | twoDigits }}
@@ -36,8 +36,6 @@
 </template>
 
 <script>
-let interval = null
-
 export default {
   name: 'VuejsCountDown',
   filters: {
@@ -52,19 +50,10 @@ export default {
     deadline: {
       type: String,
       default: ''
-    },
-    end: {
-      type: String,
-      default: ''
-    },
-    stop: {
-      type: Boolean,
-      default: false
     }
   },
   data () {
     return {
-      now: Math.trunc(new Date().getTime() / 1000),
       date: null,
       diff: 0
     }
@@ -86,34 +75,26 @@ export default {
       return Math.trunc(this.diff / 60 / 60 / 24)
     }
   },
-  watch: {
-    now (value) {
-      this.diff = this.date - this.now
-      if (this.diff <= 0 || this.stop) {
-        this.diff = 0
-        // Remove interval
-        clearInterval(interval)
+  created () {
+    if (!this.deadline) {
+      throw new Error("Missing prop 'deadline'")
+    }
+    this.date = Date.parse(this.deadline.replace(/-/g, '/'))
+    if (!this.date) {
+      throw new Error("Invalid props value, correct the 'deadline'")
+    }
+
+    const that = this
+    const updateDiff = function () {
+      const zdaj = new Date().getTime()
+      that.diff = Math.trunc((that.date - zdaj) / 1000)
+
+      if (that.diff > 0) {
+        setTimeout(updateDiff, 1000)
       }
     }
-  },
-  created () {
-    if (!this.deadline && !this.end) {
-      throw new Error("Missing props 'deadline' or 'end'")
-    }
 
-    const endTime = this.deadline ? this.deadline : this.end
-    this.date = Math.trunc(Date.parse(endTime.replace(/-/g, '/')) / 1000)
-
-    if (!this.date) {
-      throw new Error("Invalid props value, correct the 'deadline' or 'end'")
-    }
-
-    interval = setInterval(() => {
-      this.now = Math.trunc(new Date().getTime() / 1000)
-    }, 1000)
-  },
-  destroyed () {
-    clearInterval(interval)
+    updateDiff()
   }
 }
 </script>
