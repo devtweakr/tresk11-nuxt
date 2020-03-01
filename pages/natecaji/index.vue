@@ -4,7 +4,7 @@
     <b-row>
       <b-col>
         <div class="count mb-5 text-center">
-          <Countdown deadline="March 2, 2020 06:01" />
+          <Countdown deadline="March 8, 2020" />
         </div>
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
