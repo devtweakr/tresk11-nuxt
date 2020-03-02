@@ -4,7 +4,7 @@
       <b-button id="treskNewsBtn" v-b-modal.treskNews variant="primary" class="btn-news position-absolute">
         <i class="fa fa-bullhorn" />
       </b-button>
-      <b-tooltip target="treskNewsBtn" placement="left">
+      <b-tooltip target="treskNewsBtn" placement="left" show triggers="hover blur">
         Tresk 11# Novice!
       </b-tooltip>
 
@@ -312,6 +312,11 @@ export default {
 /* @media screens */
 
 @media (max-width: 576px) {
+
+  .btn-news{
+    right: 1.3rem;
+  }
+
   .rs-link {
     left: 1.1rem;
     bottom: 1.1rem;
