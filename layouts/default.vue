@@ -143,7 +143,7 @@ export default {
 }
 
 .btn-drop:focus {
-box-shadow: none;
+  box-shadow: none;
 }
 .dropdown-content {
   position: absolute;

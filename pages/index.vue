@@ -1,5 +1,37 @@
 <template>
   <div class="container-fluid">
+    <div>
+      <b-button id="treskNewsBtn" v-b-modal.treskNews variant="primary" class="btn-news position-absolute">
+        <i class="fa fa-bullhorn" />
+      </b-button>
+      <b-tooltip target="treskNewsBtn" placement="left">
+        Tresk 11# Novice!
+      </b-tooltip>
+
+      <b-modal
+        id="treskNews"
+        :key="'novica'"
+        v-for="novica in novice"
+        size="lg"
+        hide-footer
+        scrollable
+        title="Tresk #11 Novice"
+        hide-backdrop
+        content-class="shadow"
+        centered
+        class="novica mb-5"
+        sm="6"
+      >
+        <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+        <h4>
+          {{ novica.title }}
+        </h4>
+        <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+        <!-- </nuxt-link> -->
+        <h5>{{ novica.field_datum | dateFormat }}</h5>
+        <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+      </b-modal>
+    </div>
     <div class="dropdown ml-auto">
       <button @click="dropShow=!dropShow" class="btn btn-drop" />
       <div v-show="dropShow" class="dropdown-content">
@@ -89,8 +121,28 @@ export default {
   data () {
     return {
       dropShow: false,
-      pageTitle: 'Tresk #11'
+      pageTitle: 'Tresk #11',
+      modalNews: false
     }
+  },
+  computed: {
+    novice () {
+      return this.$store.state.drupal['node--novica']
+    }
+  },
+  fetch ({ store, params }) {
+    const zdaj = new Date()
+
+    const query = {
+      sort: '-field_datum',
+      'filter[field_leto.name][value]': '2020',
+      'filter[datefilter][condition][path]': 'field_datum',
+      'filter[datefilter][condition][operator]': '<',
+      'filter[datefilter][condition][value]': zdaj,
+      include: 'field_slika'
+    }
+
+    return store.dispatch('drupal/get', ['node/novica', { params: query }])
   },
   head () {
     return { title: this._data.pageTitle }
@@ -109,13 +161,35 @@ export default {
   height: 100vh;
 }
 
+/* news modal */
+
+#treskNews{
+  background-color: #ffffff99
+}
+
+.btn-news{
+  position: absolute;
+  top: 45%;
+  right: 2rem;
+  z-index: 3;
+  border-radius: 0;
+}
+.btn-news i{
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  100% {
+    opacity: 0.5;
+  }
+}
+
 /* logo, date, social */
 
 .rs-link {
   position: fixed;
   left: 2rem;
   bottom: 2rem;
-
   z-index: 1;
 }
 
@@ -188,7 +262,7 @@ export default {
 }
 
 .btn-drop:focus {
-box-shadow: none;
+  box-shadow: none;
 }
 
 .dropdown-content {
