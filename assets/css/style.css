@@ -45,7 +45,7 @@ svg a {
 /* home news modal */
 
 #tresk-news.modal{
-  left: 10%;
+  left: 9%;
 }
 
 #tresk-news___BV_modal_content_ {
@@ -163,7 +163,7 @@ a.disabled {
     max-width: 25%;
   }
   #tresk-news.modal{
-    left: 5%;
+    left: 9%;
   }  
 }
 
@@ -172,7 +172,7 @@ a.disabled {
     max-width: 25%;
   }
   #tresk-news.modal{
-    left: 7%;
+    left: 15%;
   }
 }
 
