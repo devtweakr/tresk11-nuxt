@@ -1,35 +1,43 @@
 <template>
   <div class="container-fluid">
     <div>
-      <b-button id="treskNewsBtn" v-b-modal.treskNews variant="primary" class="btn-news position-absolute">
+      <b-button id="tresk-news-btn" v-b-modal.tresk-news variant="primary" class="btn-news position-absolute">
         <i class="fa fa-bullhorn" />
       </b-button>
-      <b-tooltip target="treskNewsBtn" placement="left" show triggers="hover blur">
+      <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
         Tresk 11# Novice!
       </b-tooltip>
 
       <b-modal
-        id="treskNews"
+        id="tresk-news"
         :key="'novica'"
         v-for="novica in novice"
         size="lg"
         hide-footer
         scrollable
-        title="Tresk #11 Novice"
         hide-backdrop
         content-class="shadow"
         centered
-        class="novica mb-5"
-        sm="6"
       >
+        <template v-slot:modal-title>
+          <b-link
+            to="/novice"
+          >
+            Tresk #11 Novice
+          </b-link>
+        </template>
+
         <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
         <h4>
           {{ novica.title }}
         </h4>
         <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
         <!-- </nuxt-link> -->
-        <h5>{{ novica.field_datum | dateFormat }}</h5>
+        <h5 class="mb-4">
+          {{ novica.field_datum | dateFormat }}
+        </h5>
         <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+        </modal-title>
       </b-modal>
     </div>
     <div class="dropdown ml-auto">
@@ -163,8 +171,8 @@ export default {
 
 /* news modal */
 
-#treskNews{
-  background-color: #ffffff99
+.modal-content {
+  background-color: #ffffff80 !important ;
 }
 
 .btn-news{
