@@ -258,26 +258,24 @@ export default {
   border-radius: 0;
 }
 .btn-news i{
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
   animation: blinker 5s linear infinite;
-
 }
 
 @keyframes blinker {
-  0% { transform: translate(0 , 0); }
-  3% { transform: translate(0 , -8px); }
-  6% { transform: translate(0 , 0); }
-  9% { transform: translate(0 , -6px); }
-  12% { transform: translate(0 , 0); }
-  15% { transform: translate(0 , -4px); }
-  18% { transform: translate(0 , 0); }
-  21% { transform: translate(0 , -3px); }
-  24% { transform: translate(0 , 0); }
-  27% { transform: translate(0 , -2px); }
-  30% { transform: translate(0 , 0); }
-  33% { transform: translate(0 , -1px); }
-  100% { transform: translate(0 , 0); }
+  0%    { transform: scaleX(-1) translate(0 , 0); }
+  3%    { transform: scaleX(-1) translate(0 , -8px); }
+  6%    { transform: scaleX(-1) translate(0 , 0); }
+  9%    { transform: scaleX(-1) translate(0 , -6px); }
+  12%   { transform: scaleX(-1) translate(0 , 0); }
+  15%   { transform: scaleX(-1) translate(0 , -4px); }
+  18%   { transform: scaleX(-1) translate(0 , 0); }
+  21%   { transform: scaleX(-1) translate(0 , -3px); }
+  24%   { transform: scaleX(-1) translate(0 , 0); }
+  27%   { transform: scaleX(-1) translate(0 , -2px); }
+  30%   { transform: scaleX(-1) translate(0 , 0); }
+  33%   { transform: scaleX(-1) translate(0 , -1px); }
+  100%  { transform: scaleX(-1) translate(0 , 0); }
+
 }
 
 /* logo, date, social */
