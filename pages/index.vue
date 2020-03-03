@@ -267,15 +267,12 @@ export default {
   0%    { transform: scaleX(-1) translate(0 , 0); }
   3%    { transform: scaleX(-1) translate(0 , -8px); }
   6%    { transform: scaleX(-1) translate(0 , 0); }
-  9%    { transform: scaleX(-1) translate(0 , -6px); }
+  9%    { transform: scaleX(-1) translate(0 , -5px); }
   12%   { transform: scaleX(-1) translate(0 , 0); }
-  15%   { transform: scaleX(-1) translate(0 , -4px); }
+  15%   { transform: scaleX(-1) translate(0 , -3px); }
   18%   { transform: scaleX(-1) translate(0 , 0); }
-  21%   { transform: scaleX(-1) translate(0 , -3px); }
+  21%   { transform: scaleX(-1) translate(0 , -2px); }
   24%   { transform: scaleX(-1) translate(0 , 0); }
-  27%   { transform: scaleX(-1) translate(0 , -2px); }
-  30%   { transform: scaleX(-1) translate(0 , 0); }
-  33%   { transform: scaleX(-1) translate(0 , -1px); }
   100%  { transform: scaleX(-1) translate(0 , 0); }
 }
 
