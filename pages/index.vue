@@ -7,7 +7,6 @@
       <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
         Tresk 11# Novice!
       </b-tooltip>
-
       <b-modal
         id="tresk-news"
         size="lg"
@@ -202,14 +201,17 @@ import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
 import IgLogo from '@/static/img/icons/instagram-brands.svg'
 
 export default {
-  components: { FbLogo, IgLogo, TablaLinki },
+  components: {
+    FbLogo,
+    IgLogo,
+    TablaLinki
+  },
   transition: 'default',
   layout: 'home',
   data () {
     return {
       dropShow: false,
-      pageTitle: 'Tresk #11',
-      modalNews: false
+      pageTitle: 'Tresk #11'
     }
   },
   computed: {
@@ -228,7 +230,6 @@ export default {
       'filter[datefilter][condition][value]': zdaj,
       include: 'field_slika'
     }
-
     return store.dispatch('drupal/get', ['node/novica', { params: query }])
   },
   head () {
@@ -257,6 +258,7 @@ export default {
   z-index: 3;
   border-radius: 0;
 }
+
 .btn-news i{
   animation: blinker 5s linear infinite;
 }
@@ -275,7 +277,6 @@ export default {
   30%   { transform: scaleX(-1) translate(0 , 0); }
   33%   { transform: scaleX(-1) translate(0 , -1px); }
   100%  { transform: scaleX(-1) translate(0 , 0); }
-
 }
 
 /* logo, date, social */
@@ -398,10 +399,6 @@ export default {
   background-color: #1e2b37b0;
   color: #e5332a;
 }
-
-/* .dropdown:hover .dropdown-content {
-  display: block;
-} */
 
 /* @media screens */
 
