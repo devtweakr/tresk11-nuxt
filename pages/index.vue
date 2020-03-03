@@ -10,8 +10,6 @@
 
       <b-modal
         id="tresk-news"
-        :key="'novica'"
-        v-for="novica in novice"
         size="lg"
         hide-footer
         scrollable
@@ -27,17 +25,98 @@
           </b-link>
         </template>
 
-        <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
-        <h4>
-          {{ novica.title }}
-        </h4>
-        <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
-        <!-- </nuxt-link> -->
-        <h5 class="mb-4">
-          {{ novica.field_datum | dateFormat }}
-        </h5>
-        <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
-        </modal-title>
+        <b-row>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 1
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 2
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 3
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 4
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 5
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            lg="6"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }} 6
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
+          </b-col>
+        </b-row>
       </b-modal>
     </div>
     <div class="dropdown ml-auto">
@@ -179,13 +258,26 @@ export default {
   border-radius: 0;
 }
 .btn-news i{
-  animation: blinker 2s linear infinite;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  animation: blinker 5s linear infinite;
+
 }
 
 @keyframes blinker {
-  100% {
-    opacity: 0.5;
-  }
+  0% { transform: translate(0 , 0); }
+  3% { transform: translate(0 , -8px); }
+  6% { transform: translate(0 , 0); }
+  9% { transform: translate(0 , -6px); }
+  12% { transform: translate(0 , 0); }
+  15% { transform: translate(0 , -4px); }
+  18% { transform: translate(0 , 0); }
+  21% { transform: translate(0 , -3px); }
+  24% { transform: translate(0 , 0); }
+  27% { transform: translate(0 , -2px); }
+  30% { transform: translate(0 , 0); }
+  33% { transform: translate(0 , -1px); }
+  100% { transform: translate(0 , 0); }
 }
 
 /* logo, date, social */
