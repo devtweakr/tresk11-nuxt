@@ -169,11 +169,7 @@ export default {
   height: 100vh;
 }
 
-/* news modal */
-
-.modal-content {
-  background-color: #ffffff80 !important ;
-}
+/* home news button */
 
 .btn-news{
   position: absolute;
