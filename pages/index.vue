@@ -42,51 +42,6 @@
             <h5>{{ novica.field_datum | dateFormat }}</h5>
             <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
           </b-col>
-          <b-col
-            :key="'novica'"
-            v-for="novica in novice"
-            class="novica"
-            cols="12"
-          >
-            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
-            <h4>
-              {{ novica.title }}
-            </h4>
-            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
-            <!-- </nuxt-link> -->
-            <h5>{{ novica.field_datum | dateFormat }}</h5>
-            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
-          </b-col>
-          <b-col
-            :key="'novica'"
-            v-for="novica in novice"
-            class="novica"
-            cols="12"
-          >
-            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
-            <h4>
-              {{ novica.title }}
-            </h4>
-            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
-            <!-- </nuxt-link> -->
-            <h5>{{ novica.field_datum | dateFormat }}</h5>
-            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
-          </b-col>
-          <b-col
-            :key="'novica'"
-            v-for="novica in novice"
-            class="novica"
-            cols="12"
-          >
-            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
-            <h4>
-              {{ novica.title }}
-            </h4>
-            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
-            <!-- </nuxt-link> -->
-            <h5>{{ novica.field_datum | dateFormat }}</h5>
-            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
-          </b-col>
         </b-row>
       </b-modal>
     </div>
