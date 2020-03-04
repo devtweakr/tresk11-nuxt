@@ -203,8 +203,8 @@ export default {
 .btn-news {
   display: none;
   position: absolute;
-  bottom: 7rem;
-  right: 2rem;
+  bottom: 11rem;
+  right: 4.5rem;
   z-index: 3;
   border-radius: 0;
 }
@@ -377,13 +377,18 @@ export default {
   }
 
   .ig-link,
-  .fb-link {
+  .fb-link,
+  .yt-link {
     right: 6.1rem;
     bottom: 1.6rem;
   }
 
   .fb-link {
-    right: 9.5rem;
+    right: 12.9rem;
+  }
+
+  .ig-link {
+    right: 9.5rem
   }
 
   .datum {
@@ -394,6 +399,11 @@ export default {
   .datum img {
     width: 70px;
     height: 70px;
+  }
+
+  .btn-news {
+    bottom: 7rem;
+    right: 2rem;
   }
 }
 </style>
