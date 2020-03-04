@@ -44,13 +44,23 @@ svg a {
 
 /* home news modal */
 
+#tresk-news___BV_modal_header_{
+  display: none;
+}
+
+#tresk-news___BV_modal_header_.modal-header button.close {
+  margin: -1rem auto -1rem -0.5rem !important;
+}
+
 #tresk-news.modal{
+  top: 4%;
   left: 9%;
 }
 
 #tresk-news___BV_modal_content_ {
   background-color: #ffffffdd;
   border-radius: 0.2rem;
+  max-height: 45%;
 }
 
 /* splosno za podstrani */
@@ -152,6 +162,12 @@ a.disabled {
 
 /* @media screens */
 
+@media (min-height: 1200px) {
+  #tresk-news___BV_modal_header_{
+    display: flex;
+  }
+}
+
 @media (max-width: 400px) {
   .img-tabla {
     margin-left: -9%;
@@ -181,8 +197,16 @@ a.disabled {
     max-width: 33.3%;
   }
   #tresk-news.modal{
+    top: 0;
     left: 0;
   }
+  #tresk-news___BV_modal_header_{
+    display: flex;
+  }
+  #tresk-news___BV_modal_content_ {
+    max-height: unset;
+  }
+  
 }
 @media (max-width: 576px) {
   .pogovorContainer figure {

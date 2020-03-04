@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div>
-      <b-button v-on:click="toggleModal()" id="tresk-news-btn" variant="primary" class="btn-news position-absolute">
+      <b-button id="tresk-news-btn" v-on:click="toggleModal()" variant="primary" class="btn-news position-absolute">
         <i class="fa fa-bullhorn" />
       </b-button>
       <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
@@ -10,14 +10,13 @@
       <b-modal
         id="tresk-news"
         ref="tresk-news"
+        :no-close-on-backdrop="true"
         size="lg"
-        hide-header
         hide-footer
         scrollable
         hide-backdrop
         content-class="shadow"
         centered
-        :no-close-on-backdrop="true"
       >
         <!-- <template v-slot:modal-title>
           <b-link
@@ -28,6 +27,51 @@
         </template> -->
 
         <b-row>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            cols="12"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }}
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            cols="12"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }}
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
+          </b-col>
+          <b-col
+            :key="'novica'"
+            v-for="novica in novice"
+            class="novica"
+            cols="12"
+          >
+            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+            <h4>
+              {{ novica.title }}
+            </h4>
+            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+            <!-- </nuxt-link> -->
+            <h5>{{ novica.field_datum | dateFormat }}</h5>
+            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
+          </b-col>
           <b-col
             :key="'novica'"
             v-for="novica in novice"
@@ -105,15 +149,18 @@
     <a href="https://radiostudent.si" target="_blank" class="rs-link">
       <img src="/img/home/rs_logo_black.svg?inline"></img>
     </a>
-    <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
-      <IgLogo />
-    </a>
-    <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
-      <FbLogo />
-    </a>
-    <a href="https://www.youtube.com/watch?v=sPgr_XWa2VE&list=PLoMK-mIEi8qTg9svcy5U-SLUOOhWgcokZ" target="_blank" class="yt-link">
-      <YtLogo />
-    </a>
+    <div class="home-social">
+      <a href="https://www.youtube.com/watch?v=sPgr_XWa2VE&list=PLoMK-mIEi8qTg9svcy5U-SLUOOhWgcokZ" target="_blank" class="yt-link">
+        <YtLogo />
+      </a>
+      <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
+        <IgLogo />
+      </a>
+      <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
+        <FbLogo />
+      </a>
+    </div>
+
     <a class="datum">
       <img src="/img/home/datum.svg"></img>
     </a>
@@ -246,22 +293,20 @@ export default {
   right: 1.8rem;
 }
 
-.fb-link,
-.ig-link,
-.yt-link {
+/* home social */
+
+.home-social{
   position: fixed;
   z-index: 1;
-  right: 17.4rem;
-  bottom: 4.5rem;
+  right: 10rem;
+  bottom: 4.2rem;
   opacity: 0.6;
 }
 
-.ig-link {
-  right: 14rem;
-}
-
+.fb-link,
+.ig-link,
 .yt-link {
-  right: 10.6rem;
+  margin-right: 1rem;
 }
 
 .fb-link svg,
@@ -269,8 +314,7 @@ export default {
 .yt-link svg {
   width: 40px;
   height: 40px;
-
-  color: white;
+  color: #ffffff99
 }
 
 /* tabla styles */
@@ -358,10 +402,12 @@ export default {
 }
 
 /* @media screens */
+
 @media (max-width: 768px) {
   .btn-news{
     display: block;
   }
+
 }
 
 @media (max-width: 576px) {
@@ -374,21 +420,6 @@ export default {
   .rs-link img {
     width: 60px;
     height: 60px;
-  }
-
-  .ig-link,
-  .fb-link,
-  .yt-link {
-    right: 6.1rem;
-    bottom: 1.6rem;
-  }
-
-  .fb-link {
-    right: 12.9rem;
-  }
-
-  .ig-link {
-    right: 9.5rem
   }
 
   .datum {
@@ -405,5 +436,29 @@ export default {
     bottom: 7rem;
     right: 2rem;
   }
+  /* home social */
+
+  .home-social{
+    position: fixed;
+    z-index: 1;
+    right: 5.7rem;
+    bottom: 2.4rem;
+    opacity: 0.6;
+  }
+
+  .fb-link,
+  .ig-link,
+  .yt-link {
+    margin-right: 0.6rem;
+  }
+
+  .fb-link svg,
+  .ig-link svg,
+  .yt-link svg {
+    width: 25px;
+    height: 25px;
+    color: #ffffff99
+  }
+
 }
 </style>
