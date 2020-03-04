@@ -118,6 +118,9 @@ export default {
     return {
       pageTitle: '1. NAJBOLJŠI VIDEOSPOT'
     }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

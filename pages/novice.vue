@@ -43,6 +43,7 @@ export default {
     const query = {
       sort: '-field_datum',
       'filter[field_leto.name][value]': '2020',
+      'filter[field_tip_novice.name][value]': 'novica',
       'filter[datefilter][condition][path]': 'field_datum',
       'filter[datefilter][condition][operator]': '<',
       'filter[datefilter][condition][value]': zdaj,

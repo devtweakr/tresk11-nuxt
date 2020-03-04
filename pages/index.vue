@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div>
-      <b-button id="tresk-news-btn" v-b-modal.tresk-news variant="primary" class="btn-news position-absolute">
+      <b-button v-on:click="toggleModal()" id="tresk-news-btn" variant="primary" class="btn-news position-absolute">
         <i class="fa fa-bullhorn" />
       </b-button>
       <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
@@ -17,6 +17,7 @@
         hide-backdrop
         content-class="shadow"
         centered
+        :no-close-on-backdrop="true"
       >
         <!-- <template v-slot:modal-title>
           <b-link
@@ -71,7 +72,7 @@
             <b-link to="/program/lokacije">
               Lokacije
             </b-link>
-            <b-link to="/program/extras" disabled>
+            <b-link to="/program/extras">
               Extras
             </b-link>
           </div>
@@ -152,6 +153,7 @@ export default {
     const query = {
       sort: '-field_datum',
       'filter[field_leto.name][value]': '2020',
+      'filter[field_tip_novice.name][value]': 'novica',
       'filter[datefilter][condition][path]': 'field_datum',
       'filter[datefilter][condition][operator]': '<',
       'filter[datefilter][condition][value]': zdaj,
@@ -164,20 +166,23 @@ export default {
   },
   mounted () {
     if (window.innerWidth >= 768) {
-      this.showModal()
-    } else {
-
+      this.toggleModal()
     }
   },
   methods: {
-    showModal () {
-      this.$refs['tresk-news'].show()
+    toggleModal () {
+      const novice = this.$refs['tresk-news']
+      if (novice.isVisible) {
+        novice.hide()
+      } else {
+        novice.show()
+      }
     }
   }
 }
 </script>
 
-<style scoped>
+<style>
 
 .container {
   margin: 0 auto;
@@ -335,6 +340,10 @@ export default {
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
+}
+
+#tresk-news {
+  pointer-events: none;
 }
 
 /* @media screens */

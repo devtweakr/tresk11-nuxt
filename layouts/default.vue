@@ -49,7 +49,7 @@
                       <b-link to="/program/lokacije">
                         Lokacije
                       </b-link>
-                      <b-link to="/program/extras" disabled>
+                      <b-link to="/program/extras">
                         Extras
                       </b-link>
                     </div>

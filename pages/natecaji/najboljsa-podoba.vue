@@ -74,6 +74,9 @@ export default {
     return {
       pageTitle: '4. NAJBOLJŠA PODOBA ALBUMA'
     }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

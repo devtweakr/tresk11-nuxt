@@ -69,6 +69,9 @@ export default {
     return {
       pageTitle: '2. NAJBOLJŠA FOTOGRAFIJA GLASBENEGA DOGODKA'
     }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

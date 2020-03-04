@@ -1,9 +1,22 @@
 <template>
   <div>
-    <PageTitle page-title="EXTRAS" />
+    <PageTitle :pageTitle="pageTitle" />
+
     <b-row>
-      <b-col>
-        <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
+      <b-col
+        :key="'novica'"
+        v-for="novica in novice"
+        class="novica mb-5"
+        sm="6"
+      >
+        <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
+        <h4>
+          {{ novica.title }}
+        </h4>
+        <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
+        <!-- </nuxt-link> -->
+        <h5>{{ novica.field_datum | dateFormat }}</h5>
+        <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify" />
       </b-col>
     </b-row>
   </div>
@@ -16,22 +29,31 @@ export default {
   components: {
     PageTitle
   },
+  data () {
+    return { pageTitle: 'EXTRAS' }
+  },
   computed: {
-    page () {
-      // Basic page extras
-      const pageId = '27f572f8-feb8-4a3f-b0d5-e98c9c784a2e'
-
-      return this.$store.getters['drupal/get']('node--page')[pageId]
+    novice () {
+      return this.$store.state.drupal['node--novica']
     }
   },
   fetch ({ store, params }) {
-    // Basic page extras
-    const pageId = '27f572f8-feb8-4a3f-b0d5-e98c9c784a2e'
+    const zdaj = new Date()
 
-    const query = {}
-    return store.dispatch('drupal/get', [`node/page/${pageId}`, {
-      params: query
-    }])
+    const query = {
+      sort: '-field_datum',
+      'filter[field_leto.name][value]': '2020',
+      'filter[field_tip_novice.name][value]': 'extras',
+      'filter[datefilter][condition][path]': 'field_datum',
+      'filter[datefilter][condition][operator]': '<',
+      'filter[datefilter][condition][value]': zdaj,
+      include: 'field_slika'
+    }
+
+    return store.dispatch('drupal/get', ['node/novica', { params: query }])
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

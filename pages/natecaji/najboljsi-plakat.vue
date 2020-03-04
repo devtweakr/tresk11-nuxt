@@ -76,6 +76,9 @@ export default {
     return {
       pageTitle: '3. NAJBOLJŠI PLAKAT GLASBENEGA DOGODKA'
     }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>

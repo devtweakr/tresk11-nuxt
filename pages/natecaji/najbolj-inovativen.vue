@@ -73,6 +73,9 @@ export default {
     return {
       pageTitle: '5. INOVATIVEN PRISTOP K OBLIKOVANJU IN OGLAŠEVANJU DOGODKA'
     }
+  },
+  head () {
+    return { title: this._data.pageTitle }
   }
 }
 </script>
