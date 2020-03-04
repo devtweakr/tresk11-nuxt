@@ -195,16 +195,16 @@ export default {
 
 /* home news button */
 
-.btn-news{
+.btn-news {
   display: none;
   position: absolute;
-  top: 45%;
+  bottom: 7rem;
   right: 2rem;
   z-index: 3;
   border-radius: 0;
 }
 
-.btn-news i{
+.btn-news i {
   animation: blinker 5s linear infinite;
 }
 
@@ -354,10 +354,6 @@ export default {
 }
 
 @media (max-width: 576px) {
-
-  .btn-news{
-    right: 1.3rem;
-  }
 
   .rs-link {
     left: 1.1rem;
