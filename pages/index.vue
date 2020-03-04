@@ -36,7 +36,7 @@
           >
             <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
             <h4>
-              {{ novica.title }} 1
+              {{ novica.title }}
             </h4>
             <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
             <!-- </nuxt-link> -->
@@ -111,6 +111,9 @@
     <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
       <FbLogo />
     </a>
+    <a href="https://www.youtube.com/watch?v=sPgr_XWa2VE&list=PLoMK-mIEi8qTg9svcy5U-SLUOOhWgcokZ" target="_blank" class="yt-link">
+      <YtLogo />
+    </a>
     <a class="datum">
       <img src="/img/home/datum.svg"></img>
     </a>
@@ -127,11 +130,13 @@
 import TablaLinki from '@/static/img/home/signs-link.svg'
 import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
 import IgLogo from '@/static/img/icons/instagram-brands.svg'
+import YtLogo from '@/static/img/icons/note.svg'
 
 export default {
   components: {
     FbLogo,
     IgLogo,
+    YtLogo,
     TablaLinki
   },
   transition: 'default',
@@ -242,20 +247,26 @@ export default {
 }
 
 .fb-link,
-.ig-link {
+.ig-link,
+.yt-link {
   position: fixed;
   z-index: 1;
-  right: 14rem;
+  right: 17.4rem;
   bottom: 4.5rem;
   opacity: 0.6;
 }
 
 .ig-link {
+  right: 14rem;
+}
+
+.yt-link {
   right: 10.6rem;
 }
 
 .fb-link svg,
-.ig-link svg {
+.ig-link svg,
+.yt-link svg {
   width: 40px;
   height: 40px;
 
@@ -282,7 +293,7 @@ export default {
 
 .dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 10000;
   right: 1rem;
   top: 1rem;
 }
