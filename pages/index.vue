@@ -1,12 +1,6 @@
 <template>
   <div class="container-fluid">
     <div>
-      <b-button id="tresk-news-btn" v-on:click="toggleModal()" variant="primary" class="btn-news position-absolute">
-        <i class="fa fa-bullhorn" />
-      </b-button>
-      <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
-        Tresk 11# Novice!
-      </b-tooltip>
       <b-modal
         id="tresk-news"
         ref="tresk-news"
@@ -105,6 +99,12 @@
       <img src="/img/home/rs_logo_black.svg?inline"></img>
     </a>
     <div class="home-social">
+      <a id="tresk-news-btn" v-on:click="toggleModal()" class="news-btn">
+        <!-- <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
+          Novice!
+        </b-tooltip> -->
+        <NewsBtn />
+      </a>
       <a href="https://www.youtube.com/watch?v=sPgr_XWa2VE&list=PLoMK-mIEi8qTg9svcy5U-SLUOOhWgcokZ" target="_blank" class="yt-link">
         <YtLogo />
       </a>
@@ -130,12 +130,14 @@
 
 <script>
 import TablaLinki from '@/static/img/home/signs-link.svg'
+import NewsBtn from '@/static/img/icons/exclamation-triangle-solid.svg'
 import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
 import IgLogo from '@/static/img/icons/instagram-brands.svg'
 import YtLogo from '@/static/img/icons/note.svg'
 
 export default {
   components: {
+    NewsBtn,
     FbLogo,
     IgLogo,
     YtLogo,
@@ -202,17 +204,13 @@ export default {
 
 /* home news button */
 
-.btn-news {
-  display: none;
-  position: absolute;
-  bottom: 11rem;
-  right: 4.5rem;
-  z-index: 3;
-  border-radius: 0;
+.news-btn {
+  /* display: none; */
 }
 
-.btn-news i {
+.news-btn svg{
   animation: blinker 5s linear infinite;
+  color: white;
 }
 
 @keyframes blinker {
@@ -258,12 +256,14 @@ export default {
   opacity: 0.6;
 }
 
+.news-btn,
 .fb-link,
 .ig-link,
 .yt-link {
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
+.news-btn svg,
 .fb-link svg,
 .ig-link svg,
 .yt-link svg {
@@ -355,9 +355,9 @@ export default {
 /* @media screens */
 
 @media (max-width: 768px) {
-  .btn-news{
-    display: block;
-  }
+  /* .news-btn{
+    display: flex;
+  } */
 
 }
 
@@ -383,32 +383,28 @@ export default {
     height: 70px;
   }
 
-  .btn-news {
-    bottom: 7rem;
-    right: 2rem;
-  }
   /* home social */
 
   .home-social{
     position: fixed;
     z-index: 1;
-    right: 5.7rem;
+    right: 5.5rem;
     bottom: 2.4rem;
     opacity: 0.6;
   }
 
+  .news-btn,
   .fb-link,
   .ig-link,
   .yt-link {
     margin-right: 0.6rem;
   }
-
+  .news-btn svg,
   .fb-link svg,
   .ig-link svg,
   .yt-link svg {
     width: 25px;
     height: 25px;
-    color: #ffffff99
   }
 
 }
