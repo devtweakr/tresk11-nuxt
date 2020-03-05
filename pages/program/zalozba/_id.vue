@@ -15,7 +15,7 @@
           />
         </div>
       </b-col>
-      {{$log(zalozba)}}
+      {{ $log(zalozba ) }}
       <b-col md="8" sm="9">
         <p v-html="$options.filters.drupalLinks(zalozba.body.processed)" v-if="zalozba.body" />
       </b-col>
