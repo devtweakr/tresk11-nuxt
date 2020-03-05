@@ -140,7 +140,7 @@ a.disabled {
 .artistLink.imgLink {
   order: -10;
   clear: none;
-  width: 50px;
+  width: 35px;
   margin-bottom: 1em;
 }
 .ikoneContainer {
@@ -181,7 +181,7 @@ a.disabled {
   }
   #tresk-news.modal{
     left: 9%;
-  }  
+  }
 }
 
 @media (max-width: 992px) {
@@ -207,7 +207,7 @@ a.disabled {
   #tresk-news___BV_modal_content_ {
     max-height: unset;
   }
-  
+
 }
 @media (max-width: 576px) {
   .pogovorContainer figure {

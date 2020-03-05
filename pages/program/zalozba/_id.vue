@@ -4,7 +4,18 @@
     <b-row>
       <b-col md="4" sm="3">
         <b-img :src="zalozba.field_zalozba_logo | treskSlika" fluid class="mb-3" />
+        <div class="ikoneContainer">
+          <a
+            v-for="link in zalozba.field_link"
+            v-html="$options.filters.logoPick(link)"
+            :class="($options.filters.logoPick(link).indexOf('<img') > -1) ? 'imgLink' : ''"
+            :href="link.uri"
+            class="artistLink"
+            target="_blank"
+          />
+        </div>
       </b-col>
+      {{$log(zalozba)}}
       <b-col md="8" sm="9">
         <p v-html="$options.filters.drupalLinks(zalozba.body.processed)" v-if="zalozba.body" />
       </b-col>
