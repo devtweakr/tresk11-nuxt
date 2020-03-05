@@ -274,10 +274,6 @@ export default {
 
 /* tabla styles */
 
-svg.signs-link_svg__img-tabla.img-tabla{
-  z-index: 1100;
-}
-
 .tabla {
   height: 100vh;
 }
@@ -354,10 +350,6 @@ svg.signs-link_svg__img-tabla.img-tabla{
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
-}
-
-#tresk-news {
-  pointer-events: none;
 }
 
 /* @media screens */

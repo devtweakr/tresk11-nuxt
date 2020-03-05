@@ -55,6 +55,7 @@ svg a {
 #tresk-news.modal{
   top: 4%;
   left: 9%;
+  pointer-events: none;
 }
 
 #tresk-news___BV_modal_content_ {
