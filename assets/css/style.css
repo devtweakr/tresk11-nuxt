@@ -198,7 +198,7 @@ a.disabled {
     max-height: 53%;
   }
   #tresk-news___BV_modal_outer_ div.modal-dialog{
-    top: 5%
+    top: 5.5%
   }
 }
 
@@ -222,7 +222,9 @@ a.disabled {
     bottom: unset;
     top: unset;
   }
-
+  #tresk-news___BV_modal_content_ {
+    max-height: 70%;
+  }
 }
 @media (max-width: 576px) {
   .pogovorContainer figure {
