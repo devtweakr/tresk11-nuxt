@@ -205,12 +205,11 @@ export default {
 /* home news button */
 
 .news-btn {
-  /* display: none; */
+  cursor: pointer;
 }
 
 .news-btn svg{
   animation: blinker 5s linear infinite;
-  color: white;
 }
 
 @keyframes blinker {
