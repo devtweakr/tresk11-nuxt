@@ -271,6 +271,10 @@ export default {
   color: #ffffff99
 }
 
+  .news-btn{
+    display: none;
+  }
+
 /* tabla styles */
 
 .tabla {
@@ -280,7 +284,6 @@ export default {
 .img-tabla {
   position: absolute;
   height: 140vh;
-
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -354,9 +357,9 @@ export default {
 /* @media screens */
 
 @media (max-width: 768px) {
-  /* .news-btn{
-    display: flex;
-  } */
+  .news-btn{
+    display: inline;
+  }
 
 }
 

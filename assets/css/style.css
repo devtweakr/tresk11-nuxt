@@ -242,6 +242,10 @@ a.disabled {
 }
 
 @media (max-width: 576px) {
+  .img-tabla {
+    margin-left: -50px;
+  }
+
   .pogovorContainer figure {
     max-width: 50%;
   }
@@ -253,10 +257,6 @@ a.disabled {
 }
 
 @media (max-width: 360px) {
-  .img-tabla {
-    margin-left: -10%;
-  }
-
   .pogovorContainer figure {
     max-width: 100%;
   }
