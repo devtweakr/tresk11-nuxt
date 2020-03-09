@@ -8,9 +8,9 @@
 
         <br>
 
-        <p><a href="https://tresk.si/d/natecaji/plakat" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
+        <!--p><a href="https://tresk.si/d/natecaji/plakat" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
 
-        <br>
+        <br-->
 
         <p>
           Avtori_ica zmagovalnega plakata prejme bon za 20 plakatnih mest, vključno s tiskom, ki ga podeljuje TAM-TAM Inštitut.
