@@ -8,9 +8,9 @@
 
         <br>
 
-        <p><a href="https://tresk.si/d/natecaji/album" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
+        <!--p><a href="https://tresk.si/d/natecaji/album" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
 
-        <br>
+        <br-->
 
         <p>
           Avtori_ica zmagovalne podobe albuma se bo predstavil_a s samostojno razstavo v galeriji DobraVaga.

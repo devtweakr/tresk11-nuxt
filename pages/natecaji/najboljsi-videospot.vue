@@ -24,7 +24,7 @@
 
         <br>
 
-        <p>
+        <!--p>
           <a
             href="https://tresk.si/d/natecaji/video"
             target="_blank"
@@ -33,7 +33,7 @@
           /></a>
         </p>
 
-        <br>
+        <br-->
 
         <p>
           S strani strokovne žirije izbrani finalisti bodo predvajani na javni

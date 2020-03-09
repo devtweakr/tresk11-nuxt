@@ -6,8 +6,8 @@
         <p>Kategorija, ki razširjeno vključuje še vse “obplakatne” segmente dogodka, npr. celostno grafično podobo glasbenega dogodka, spletno podobo, promocijo prek družabnih omrežij, letake, promocijsko gradivo, vizualije, scenografijo ipd.</p>
         <p>Posameznik oz. posameznica lahko prijavi največ tri objave glasbenih dogodkov, ki so bile objavljene oz. so se zgodile med 18. marcem 2019 ter 3. aprilom 2020. Snovalcev oz. snovalk dogodka je lahko tudi več. Prijavljeno delo je lahko predstavljeno v obliki fotografij, PDF prezentacije ali videa.</p>
         <br>
-        <p><a href="https://tresk.si/d/natecaji/inovativno" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
-        <br>
+        <!--p><a href="https://tresk.si/d/natecaji/inovativno" target="_blank"><strong>PRIJAVNI OBRAZEC </strong><i class="fa fa-external-link-square" /></a></p>
+        <br-->
         <p>
           Avtor_ica najbolj inovativnega pristopa k oblikovanju in oglaševanju glasbenega dogodka prejme polno VIP prijavnino na 27. Zlati boben, ki se bo odvil med 7. in 9. oktobrom v Portorožu.
         </p>
