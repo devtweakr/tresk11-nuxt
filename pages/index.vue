@@ -145,44 +145,43 @@
               stroke-opacity="1"
             />
           </nuxt-link>
-          <a xlink:href="https://www.facebook.com/festivaltresk" target="_blank">
-            <path
-              id="tresk-fb-link"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-              d="M286.29999
+
+          <path
+            id="tresk-fb-link"
+            opacity="1"
+            vector-effect="none"
+            fill="white"
+            fill-opacity="0"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="4"
+            stroke-dasharray="none"
+            stroke-dashoffset="0"
+            stroke-opacity="1"
+            d="M286.29999
               256.39999H672v112.4H286.29999z"
-            />
-          </a>
-          <a xlink:href="https://www.instagram.com/festivaltresk" target="_blank">
-            <path
-              id="festival-instagram-link"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-              d="M130.39999
+          />
+
+          <path
+            id="festival-instagram-link"
+            opacity="1"
+            vector-effect="none"
+            fill="white"
+            fill-opacity="0"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="4"
+            stroke-dasharray="none"
+            stroke-dashoffset="0"
+            stroke-opacity="1"
+            d="M130.39999
               96.5h209.7v129.7h-209.7z"
-            />
-          </a>
+          />
+
           <nuxt-link tag="a" to="/program/urnik">
             <path
               id="program-link"
@@ -234,11 +233,11 @@ import YtLogo from '@/static/img/icons/note.svg'
 
 export default {
   components: {
+    // TablaLinki,
     NewsBtn,
     FbLogo,
     IgLogo,
     YtLogo
-  //  TablaLinki
   },
   transition: 'default',
   layout: 'home',
