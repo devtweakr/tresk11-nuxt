@@ -5,6 +5,7 @@
       <b-col>
         <div class="count mb-5 text-center">
           <Countdown deadline="March 9, 2020" />
+          <h4 class="text-left">Rok za prijave je potekel</h4>
         </div>
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
@@ -39,7 +40,8 @@
             </nuxt-link>
           </li>
         </ul>
-        <p>
+
+        <!--p>
           Prijavite se tako, da izpolnite spletni obrazec za določeno
           kategorijo. Če so vaše datoteke prevelike, nam pošljite spletno
           povezavo do njih oz. nas kontaktirajte.
@@ -62,7 +64,11 @@
           <a href="https://tresk.si/doc/tresk_11_pravila_sodelovanja.pdf">
             <strong>PRAVILA SODELOVANJA </strong><i class="fa fa-external-link-square" />
           </a>
+        </p-->
+        <p>
+          Vabljeni v petek, 3. 4., v DobroVago na otvoritev Treska #11, v okviru katere bo potekala razglasitev zmagovalcev vizualnih natečajev in razstava izbranih del. Še prej se nam lahko pridružite 28. 3. v Slovenski kinoteki na predvajanju <a href="https://www.facebook.com/events/341459913455874/" target="_blank">izbora najboljših videospotov</a>.
         </p>
+
         <br>
         <div class="sponzorji">
           <img src="/img/korpo/rs.svg">

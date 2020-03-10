@@ -24,7 +24,7 @@
 
         <br>
 
-        <p>
+        <!--p>
           <a
             href="https://tresk.si/d/natecaji/video"
             target="_blank"
@@ -33,7 +33,7 @@
           /></a>
         </p>
 
-        <br>
+        <br-->
 
         <p>
           S strani strokovne žirije izbrani finalisti bodo predvajani na javni
@@ -70,7 +70,6 @@
           Barbara Borčić se aktivno ukvarja z video umetnostjo kot kuratorka, publicistka, raziskovalka in urednica. Kot direktorica Zavoda za sodobno umetnost SCCA v Ljubljani je iniciirala in vodila številne projekte s področja video umetnosti, vse od arhiva video umetnosti
           <a href="http://www.e-arhiv.org/diva/" target="blank">Postaja DIVA</a> do
           <a href="http://www.videodokument.org/ " target="blank">Videodokumenta</a>.
-          medija Koridor – križišča umetnosti.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
@@ -80,21 +79,18 @@
           <a href="https://www.viennashorts.com/nc/en/" target="blank">VIS</a> na Dunaju, ter kustos programa glasbenih videospotov na mednarodnem festivalu plesa ImPuls Tanz in Rathausplatz.
 
           Avtorica fotografije: Hanna Pribitzer
-          medija Koridor – križišča umetnosti.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
         <b-img fluid class="mb-3" src="/img/zirija/matic-majcen.jpg" />
         <p>
           Matic Majcen je filmski kritik, novinar, urednik in akademik s področja filma. V sklopu Ljubljanskega mednarodnega filmskega festivala organizira in vodi mednarodni tekmovalni program glasbenega videa.
-          medija Koridor – križišča umetnosti.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
         <b-img fluid class="mb-3" src="/img/zirija/robert-kuret.jpg" />
         <p>
-          Robert Kuret je literarni in filmski kritik ter soselektor tekmovalnega programa slovenskih filmov na FeKK-u. Nekajkrat je predaval tudi o fenomenu filmskega trasha.
-          medija Koridor – križišča umetnosti.
+          Robert Kuret je literarni in filmski kritik. Je somentor na delavnici filmske kritike Ostrenje pogleda, soselektor tekmovalnega programa slovenskih filmov na FeKK-u ter urednik festivalskih katalogov na FeKK-u in Kinu Otok. Nekajkrat je predaval tudi o fenomenu filmskega trasha.
         </p>
       </b-col>
       <b-col lg="4" sm="6">
