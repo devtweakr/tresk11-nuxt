@@ -3,10 +3,10 @@
     <PageTitle :pageTitle="pageTitle" />
     <b-row>
       <b-col>
-        <div class="count mb-5 text-center">
+        <!-- <div class="count mb-5 text-center">
           <Countdown deadline="March 9, 2020" />
           <h4 class="text-left">Rok za prijave je potekel</h4>
-        </div>
+        </div> -->
         <p>
           Poleg glasbenega sejmišča festival Tresk vsako leto razpiše vizualni
           natečaj, ki se je ob jubilejni izvedbi leta 2019 razširil v pet
@@ -91,12 +91,12 @@
 
 <script>
 import PageTitle from '@/components/PageTitle'
-import Countdown from '@/components/Countdown'
+// import Countdown from '@/components/Countdown'
 
 export default {
   components: {
-    PageTitle,
-    Countdown
+    PageTitle
+    // Countdown
   },
   pageTitle: 'NATEČAJI',
   data () {
