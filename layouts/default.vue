@@ -31,49 +31,49 @@
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
                     <div @click="dropShow=!dropShow" class="program-content">
-                      <b-link to="/program/urnik">
+                      <b-link disabled to="/program/urnik">
                         Urnik
                       </b-link>
-                      <b-link to="/program/lineup">
+                      <b-link disabled to="/program/lineup">
                         Lineup
                       </b-link>
-                      <b-link to="/program/sejmisce">
+                      <b-link disabled to="/program/sejmisce">
                         Sejmišče
                       </b-link>
-                      <b-link to="/program/zalozbe">
+                      <b-link disabled to="/program/zalozbe">
                         Založbe
                       </b-link>
-                      <b-link to="/program/pogovori">
+                      <b-link disabled to="/program/pogovori">
                         Pogovori
                       </b-link>
-                      <b-link to="/program/lokacije">
+                      <b-link disabled to="/program/lokacije">
                         Lokacije
                       </b-link>
-                      <b-link to="/program/extras">
+                      <b-link disabled to="/program/extras">
                         Extras
                       </b-link>
                     </div>
                   </div>
                   <div @click="dropShow=!dropShow" class="main-drop">
-                    <b-link to="/natecaji">
+                    <b-link disabled to="/natecaji">
                       Natečaji
                     </b-link>
-                    <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+                    <b-link disabled href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
                       Vstopnice
-                    </a>
-                    <b-link to="/novice">
+                    </b-link>
+                    <b-link disabled to="/novice">
                       Novice
                     </b-link>
-                    <b-link to="/o-tresku">
+                    <b-link disabled to="/o-tresku">
                       O Tresku
                     </b-link>
-                    <b-link to="/arhiv">
+                    <b-link disabled to="/arhiv">
                       Arhiv
                     </b-link>
                     <b-link to="/kontakt">
                       Kontakt
                     </b-link>
-                    <b-link to="/sponzorji">
+                    <b-link disabled to="/sponzorji">
                       Podporniki
                     </b-link>
                   </div>
