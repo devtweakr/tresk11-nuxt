@@ -17,12 +17,13 @@
               <i class="fa fa-arrow-left" />
             </b-link>
             <div class="ml-auto">
-              <!-- <b-link
+              <b-button
                 to="#"
                 class="btn btn-primary btn-lang"
-              >
-                EN
-              </b-link> -->
+                v-on:click="showLang = !showLang">
+                <div v-if="showLang">EN</div>
+                <div v-if="!showLang">SI</div>
+              </b-button>
               <div class="dropdown">
                 <button @click="dropShow=!dropShow" class="btn btn-drop" />
                 <div v-show="dropShow" class="dropdown-content">
@@ -110,7 +111,8 @@ export default {
   data () {
     return {
       dropShow: false,
-      siteTitle: 'Tresk #11'
+      siteTitle: 'Tresk #11',
+      showLang: true
     }
   },
   head () {
