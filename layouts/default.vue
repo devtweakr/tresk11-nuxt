@@ -18,11 +18,10 @@
             </b-link>
             <div class="ml-auto">
               <b-button
+                v-on:click="toggleLang"
                 to="#"
-                class="btn btn-primary btn-lang"
-                v-on:click="showLang = !showLang">
-                <div v-if="showLang">EN</div>
-                <div v-if="!showLang">SI</div>
+                class="btn btn-primary btn-lang">
+                <div>{{ jezik }}</div>
               </b-button>
               <div class="dropdown">
                 <button @click="dropShow=!dropShow" class="btn btn-drop" />
@@ -111,8 +110,12 @@ export default {
   data () {
     return {
       dropShow: false,
-      siteTitle: 'Tresk #11',
-      showLang: true
+      siteTitle: 'Tresk #11'
+    }
+  },
+  computed: {
+    jezik () {
+      return this.$store.state.app.language
     }
   },
   head () {
@@ -120,6 +123,11 @@ export default {
       titleTemplate (title) {
         return title ? `${title} | ${this.$store.state.app.siteTitle}` : this.$store.siteTitle
       }
+    }
+  },
+  methods: {
+    toggleLang () {
+      this.$store.commit('app/toggleLang')
     }
   }
 }
@@ -169,7 +177,7 @@ export default {
   position: absolute;
   margin-right: auto;
   display: none;
-  top:0;
+  top: 0;
   text-align: left;
 }
 
