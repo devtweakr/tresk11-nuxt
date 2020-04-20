@@ -36,9 +36,7 @@
         <br-->
 
         <p>
-          S strani strokovne žirije izbrani finalisti bodo predvajani na javni
-          projekciji v Slovenski kinoteki, 28. marca 2020 ob 19.00. Dogodek bo
-          pospremila debata z gosti o lokalni sceni video ustvarjanja.
+          S strani strokovne žirije izbrani finalisti bodo predvajani na javni projekciji v Slovenski kinoteki, ki jo bo pospremila debata z gosti o lokalni sceni video ustvarjanja. Dogodek je prestavljen na jesen 2020.
         </p>
 
         <p>

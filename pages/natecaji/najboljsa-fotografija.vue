@@ -27,7 +27,7 @@
       <b-col lg="4" sm="6">
         <b-img fluid class="mb-3" src="/img/zirija/barbara-ceferin.jpg" />
         <p>
-          Barbara Čeferin je svojo fotografsko pot začela kot fotoreporterka pri časopisih Delo in Mladina od leta 2003 pa je lastnica in vodja prve zasebne galerije za avtorsko fotografijo pri nas, to je Galerija Fotografija. Avtor fotografije: Miran Juršič
+          Barbara Čeferin je svojo fotografsko pot začela kot fotoreporterka pri časopisih Delo in Mladina. Med letoma 1996 in 2003 je bila urednica fotografije pri reviji Jana. Od leta 2003 je lastnica in vodja prve zasebne galerije za avtorsko fotografijo pri nas, to je Galerija Fotografija. Kot galeristka je kurirala ali sokurirala več kot 100 razstav slovenskih in mednarodnih umetnikov in uredila nekaj knjižnih izdaj. Že 30 let pa se posveča gledališki fotografiji, zadnje čase v Anton Podbevšek Teatru. Avtor fotografije: Miran Juršič
         </p>
       </b-col>
       <b-col lg="4" sm="6">
