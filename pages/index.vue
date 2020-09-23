@@ -74,9 +74,9 @@
           <b-link to="/natecaji">
             Natečaji
           </b-link>
-          <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+          <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
             Vstopnice
-          </b-link>
+          </a>
           <b-link to="/novice">
             Novice
           </b-link>
@@ -124,27 +124,27 @@
         <img class="img-tabla" src="/img/home/signs.svg">
         <!-- <TablaLinki class="img-tabla" /> -->
         <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
-          <!-- <nuxt-link tag="a" to="/natecaji"> -->
-          <ellipse
-            id="natecaji-link"
-            cx="245.6"
-            cy="747.9"
-            rx="121.9"
-            ry="123"
-            opacity="1"
-            vector-effect="none"
-            fill="white"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="3.5"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-          />
-          <!-- </nuxt-link> -->
+          <nuxt-link tag="a" to="/natecaji">
+            <ellipse
+              id="natecaji-link"
+              cx="245.6"
+              cy="747.9"
+              rx="121.9"
+              ry="123"
+              opacity="1"
+              vector-effect="none"
+              fill="white"
+              fill-opacity="0"
+              stroke="none"
+              stroke-width="3.5"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="4"
+              stroke-dasharray="none"
+              stroke-dashoffset="0"
+              stroke-opacity="1"
+            />
+          </nuxt-link>
 
           <path
             id="tresk-fb-link"
@@ -182,42 +182,42 @@
               96.5h209.7v129.7h-209.7z"
           />
 
-          <!-- <nuxt-link tag="a" to="/program/urnik"> -->
-          <path
-            id="program-link"
-            d="M235.932 373.22L108.814 603.05l263.703-5.902z"
-            opacity="1"
-            vector-effect="none"
-            fill="gray"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="7.559"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-          />
-          <!-- </nuxt-link> -->
-          <!-- <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank"> -->
-          <path
-            id="vstopnice-link"
-            d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
-            opacity="1"
-            vector-effect="none"
-            fill="gray"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="7.559"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-          />
-          <!-- </a> -->
+          <nuxt-link tag="a" to="/program/urnik">
+            <path
+              id="program-link"
+              d="M235.932 373.22L108.814 603.05l263.703-5.902z"
+              opacity="1"
+              vector-effect="none"
+              fill="gray"
+              fill-opacity="0"
+              stroke="none"
+              stroke-width="7.559"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="4"
+              stroke-dasharray="none"
+              stroke-dashoffset="0"
+              stroke-opacity="1"
+            />
+          </nuxt-link>
+          <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+            <path
+              id="vstopnice-link"
+              d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
+              opacity="1"
+              vector-effect="none"
+              fill="gray"
+              fill-opacity="0"
+              stroke="none"
+              stroke-width="7.559"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="4"
+              stroke-dasharray="none"
+              stroke-dashoffset="0"
+              stroke-opacity="1"
+            />
+          </a>
         </svg>
       </div>
     </div>

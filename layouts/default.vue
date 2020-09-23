@@ -58,9 +58,9 @@
                     <b-link to="/natecaji">
                       Natečaji
                     </b-link>
-                    <b-link href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+                    <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
                       Vstopnice
-                    </b-link>
+                    </a>
                     <b-link to="/novice">
                       Novice
                     </b-link>
