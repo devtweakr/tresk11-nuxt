@@ -80,16 +80,16 @@
           <b-link disabled to="/novice">
             Novice
           </b-link>
-          <b-link disabled to="/o-tresku">
+          <b-link to="/o-tresku">
             O Tresku
           </b-link>
-          <b-link disabled to="/arhiv">
+          <b-link to="/arhiv">
             Arhiv
           </b-link>
           <b-link to="/kontakt">
             Kontakt
           </b-link>
-          <b-link disabled to="/sponzorji">
+          <b-link to="/sponzorji">
             Podporniki
           </b-link>
         </div>
