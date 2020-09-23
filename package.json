@@ -16,7 +16,7 @@
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0",
     "jsonapi-vuex": "^4.1.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.14.6",
     "nuxt-facebook-pixel-module": "^1.3.0",
     "nuxt-seo": "^1.2.2",
     "nuxt-svg-loader": "^1.2.0",
