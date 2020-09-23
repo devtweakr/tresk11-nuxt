@@ -265,3 +265,8 @@ a.disabled {
     min-height: 6em;
   }
 }
+
+.modal-dialog .novica img {
+  width: 100%;
+  height: auto;
+}

@@ -1,5 +1,5 @@
 export default {
-  state: {
+  state: () => ({
     siteTitle: 'Tresk #11'
-  }
+  })
 }

@@ -22,7 +22,7 @@
 
         <b-row>
           <b-col
-            :key="'novica'"
+            :key="novica.id"
             v-for="novica in novice"
             class="novica"
             cols="12"
@@ -47,37 +47,37 @@
             <i class="fa fa-caret-left pr-2" />Program
           </b-link>
           <div @click="dropShow=!dropShow" class="program-content">
-            <b-link disabled to="/program/urnik">
+            <b-link to="/program/urnik">
               Urnik
             </b-link>
-            <b-link disabled to="/program/lineup">
+            <b-link to="/program/lineup">
               Lineup
             </b-link>
-            <b-link disabled to="/program/sejmisce">
+            <b-link to="/program/sejmisce">
               Sejmišče
             </b-link>
-            <b-link disabled to="/program/zalozbe">
+            <b-link to="/program/zalozbe">
               Založbe
             </b-link>
-            <b-link disabled to="/program/pogovori">
+            <b-link to="/program/pogovori">
               Pogovori
             </b-link>
-            <b-link disabled to="/program/lokacije">
+            <b-link to="/program/lokacije">
               Lokacije
             </b-link>
-            <b-link disabled to="/program/extras">
+            <b-link to="/program/extras">
               Extras
             </b-link>
           </div>
         </div>
         <div @click="dropShow=!dropShow" class="main-drop">
-          <b-link disabled to="/natecaji">
+          <b-link to="/natecaji">
             Natečaji
           </b-link>
-          <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
+          <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank">
             Vstopnice
           </b-link>
-          <b-link disabled to="/novice">
+          <b-link to="/novice">
             Novice
           </b-link>
           <b-link to="/o-tresku">
