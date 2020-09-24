@@ -3,7 +3,6 @@
     <PageTitle :page-title="pageTitle" />
     <b-row>
       <b-col>
-        {{ $log($options.filters) }}
         <div v-html="$options.filters.drupalLinks(page.body.processed)" v-if="page" />
       </b-col>
     </b-row>

@@ -72,9 +72,9 @@
           <nuxt-link to="/natecaji">
             Natečaji
           </nuxt-link>
-          <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+          <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
             Vstopnice
-          </a>
+          </b-link>
           <nuxt-link to="/novice">
             Novice
           </nuxt-link>
@@ -198,7 +198,7 @@
               stroke-opacity="1"
             />
           </nuxt-link>
-          <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+          <!--a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank"-->
             <path
               id="vstopnice-link"
               d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
@@ -215,7 +215,7 @@
               stroke-dashoffset="0"
               stroke-opacity="1"
             />
-          </a>
+          <!--/a-->
         </svg>
       </div>
     </div>
@@ -323,7 +323,7 @@ export default {
 
 .rs-link {
   position: fixed;
-  left: 2rem;
+  right: 2rem;
   bottom: 2rem;
   z-index: 1;
 }
@@ -334,6 +334,7 @@ export default {
 }
 
 .datum {
+  display: none;
   position: fixed;
   bottom: 1.8rem;
   right: 1.8rem;

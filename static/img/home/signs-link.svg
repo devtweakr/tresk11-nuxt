@@ -87,10 +87,9 @@
     />
   </a>
 
-  <a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+  <!--a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank"-->
     <path
       id="vstopnice-link"
-      d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
       opacity="1"
       vector-effect="none"
       fill="gray"
@@ -104,6 +103,6 @@
       stroke-dashoffset="0"
       stroke-opacity="1"
     />
-  </a>
+  <!--/a-->
 
 </svg>

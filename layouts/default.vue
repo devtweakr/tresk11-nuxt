@@ -58,9 +58,9 @@
                     <nuxt-link to="/natecaji">
                       Natečaji
                     </nuxt-link>
-                    <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
+                    <b-link disabled>
                       Vstopnice
-                    </a>
+                    </b-link>
                     <nuxt-link to="/novice">
                       Novice
                     </nuxt-link>
