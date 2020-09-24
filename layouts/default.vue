@@ -34,22 +34,22 @@
                       <nuxt-link to="/program/urnik">
                         Urnik
                       </nuxt-link>
-                      <nuxt-link to="/program/lineup" disabled>
+                      <b-link to="/program/lineup" disabled>
                         Lineup
                       </nuxt-link>
-                      <nuxt-link to="/program/sejmisce" disabled>
+                      <b-link to="/program/sejmisce" disabled>
                         Sejmišče
                       </nuxt-link>
-                      <nuxt-link to="/program/zalozbe" disabled>
+                      <b-link to="/program/zalozbe" disabled>
                         Založbe
                       </nuxt-link>
-                      <nuxt-link to="/program/pogovori" disabled>
+                      <b-link to="/program/pogovori" disabled>
                         Pogovori
                       </nuxt-link>
-                      <nuxt-link to="/program/lokacije" disabled>
+                      <b-link to="/program/lokacije" disabled>
                         Lokacije
                       </nuxt-link>
-                      <nuxt-link to="/program/extras" disabled>
+                      <b-link to="/program/extras" disabled>
                         Extras
                       </nuxt-link>
                     </div>
