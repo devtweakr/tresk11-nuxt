@@ -65,8 +65,11 @@
             <strong>PRAVILA SODELOVANJA </strong><i class="fa fa-external-link-square" />
           </a>
         </p-->
-        <p>
+        <!--p>
           Vabljeni v petek, 3. 4., v DobroVago na otvoritev Treska #11, v okviru katere bo potekala razglasitev zmagovalcev vizualnih natečajev in razstava izbranih del. Še prej se nam lahko pridružite 28. 3. v Slovenski kinoteki na predvajanju <a href="https://www.facebook.com/events/341459913455874/" target="_blank">izbora najboljših videospotov</a>.
+        </p-->
+        <p>
+          Vabljeni v petek, 25. 9. 2020, v DobroVago na otvoritev razstave natečajev Treska #11, v okviru katere bo potekala podelitev plaket zmagovalcem vizualnih natečajev. Razstava bo na brezplačen ogled postavljena do vključno sobote, 3. 10. 2020, ko se bo na Stritarjevi ulici odvilo tradicionalno sejmišče neodvisnih glasbenih založnikov. Več informacij: <a href="https://www.facebook.com/events/827449894663511/" target="_blank">https://www.facebook.com/events/827449894663511/</a>.
         </p>
 
         <br>

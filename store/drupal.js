@@ -12,4 +12,7 @@ const jsonapi = jsonapiModule(api, {
   clearOnUpdate: true
 })
 
-export const state = jsonapi.state
+const { mutations, actions, getters } = jsonapi
+const state = () => jsonapi.state
+
+export { state, mutations, actions, getters }
