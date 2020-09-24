@@ -1,5 +1,4 @@
 export default {
-  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -103,5 +102,6 @@ export default {
         name: 'program_index'
       })
     }
-  }
+  },
+  target: 'static'
 }
