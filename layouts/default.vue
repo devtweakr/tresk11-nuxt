@@ -4,12 +4,12 @@
       <b-container>
         <header>
           <b-navbar class="px-0 text-right">
-            <b-link
+            <nuxt-link
               to="/"
               class="btn btn-primary btn-home"
             >
               <i class="fa fa-home" />
-            </b-link>
+            </nuxt-link>
             <b-link
               onclick="history.go(-1)"
               class="btn btn-primary btn-back ml-1"
@@ -17,12 +17,12 @@
               <i class="fa fa-arrow-left" />
             </b-link>
             <div class="ml-auto">
-              <!-- <b-link
+              <!-- <nuxt-link
                 to="#"
                 class="btn btn-primary btn-lang"
               >
                 EN
-              </b-link> -->
+              </nuxt-link> -->
               <div class="dropdown">
                 <button @click="dropShow=!dropShow" class="btn btn-drop" />
                 <div v-show="dropShow" class="dropdown-content">
@@ -31,51 +31,51 @@
                       <i class="fa fa-caret-left pr-2" />Program
                     </b-link>
                     <div @click="dropShow=!dropShow" class="program-content">
-                      <b-link to="/program/urnik">
+                      <nuxt-link to="/program/urnik">
                         Urnik
-                      </b-link>
-                      <b-link to="/program/lineup">
+                      </nuxt-link>
+                      <nuxt-link to="/program/lineup">
                         Lineup
-                      </b-link>
-                      <b-link to="/program/sejmisce">
+                      </nuxt-link>
+                      <nuxt-link to="/program/sejmisce">
                         Sejmišče
-                      </b-link>
-                      <b-link to="/program/zalozbe">
+                      </nuxt-link>
+                      <nuxt-link to="/program/zalozbe">
                         Založbe
-                      </b-link>
-                      <b-link to="/program/pogovori">
+                      </nuxt-link>
+                      <nuxt-link to="/program/pogovori">
                         Pogovori
-                      </b-link>
-                      <b-link to="/program/lokacije">
+                      </nuxt-link>
+                      <nuxt-link to="/program/lokacije">
                         Lokacije
-                      </b-link>
-                      <b-link to="/program/extras">
+                      </nuxt-link>
+                      <nuxt-link to="/program/extras">
                         Extras
-                      </b-link>
+                      </nuxt-link>
                     </div>
                   </div>
                   <div @click="dropShow=!dropShow" class="main-drop">
-                    <b-link to="/natecaji">
+                    <nuxt-link to="/natecaji">
                       Natečaji
-                    </b-link>
+                    </nuxt-link>
                     <a href="https://olaii.com/event/865/festival-tresk-11" target="_blank">
                       Vstopnice
                     </a>
-                    <b-link to="/novice">
+                    <nuxt-link to="/novice">
                       Novice
-                    </b-link>
-                    <b-link to="/o-tresku">
+                    </nuxt-link>
+                    <nuxt-link to="/o-tresku">
                       O Tresku
-                    </b-link>
-                    <b-link to="/arhiv">
+                    </nuxt-link>
+                    <nuxt-link to="/arhiv">
                       Arhiv
-                    </b-link>
-                    <b-link to="/kontakt">
+                    </nuxt-link>
+                    <nuxt-link to="/kontakt">
                       Kontakt
-                    </b-link>
-                    <b-link to="/sponzorji">
+                    </nuxt-link>
+                    <nuxt-link to="/sponzorji">
                       Podporniki
-                    </b-link>
+                    </nuxt-link>
                   </div>
                 </div>
               </div>
@@ -87,14 +87,14 @@
           <footer class="pt-3 pb-5">
             <hr>
             <div class="float-left">
-              <b-link to="/o-tresku">
+              <nuxt-link to="/o-tresku">
                 Tresk #11
-              </b-link> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
+              </nuxt-link> &copy; <a href="https://radiostudent.si/" target="_blank">Radio Študent</a>
             </div>
             <div class="float-right">
-              <b-link to="/kontakt" class="mr-2">
+              <nuxt-link to="/kontakt" class="mr-2">
                 Kontakt
-              </b-link>
+              </nuxt-link>
               <a href="https://www.facebook.com/festivaltresk" target="_blank" class="mr-2"><i class="fa fa-facebook" /></a>
               <a href="https://www.instagram.com/festivaltresk/" target="_blank"><i class="fa fa-instagram" /></a>
             </div>
