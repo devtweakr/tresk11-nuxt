@@ -50,22 +50,22 @@
             </nuxt-link>
             <b-link to="/program/lineup" disabled>
               Lineup
-            </nuxt-link>
+            </b-link>
             <b-link to="/program/sejmisce" disabled>
               Sejmišče
-            </nuxt-link>
+            </b-link>
             <b-link to="/program/zalozbe" disabled>
               Založbe
-            </nuxt-link>
+            </b-link>
             <b-link to="/program/pogovori" disabled>
               Pogovori
-            </nuxt-link>
+            </b-link>
             <b-link to="/program/lokacije" disabled>
               Lokacije
-            </nuxt-link>
+            </b-link>
             <b-link to="/program/extras" disabled>
               Extras
-            </nuxt-link>
+            </b-link>
           </div>
         </div>
         <div @click="dropShow=!dropShow" class="main-drop">
