@@ -117,21 +117,7 @@
         <h2>Odpiramo natečaje festivala Tresk #12!</h2>
 
         <p>
-          Vizualni natečaji, ki nagrajujejo glasbeno založniško in promocijsko oblikovanje, letos z novo karantentsko kategorijo
-        </p>
-
-        <p>
-          Festival Tresk vsako leto razpiše vizualni natečaj, ki obsega pet kategorij, tako ali drugače povezanih z glasbenim založništvom. Kljub majhnosti trga, slovensko glasbeno založništvo z vsakim letom bolj skrbi za bogat nabor glasbenih izdaj, pestro koncertno dogajanje pa poskrbi, da poslušalci in poslušalke pridejo z novo glasbo v stik tudi v živo. Natečaj festivala Tresk tako prispeva k prepoznavanju pomembnosti kvalitetno oblikovanih fizičnih in digitalnih nosilcev glasbe, spremljevalnega promocijskega materiala in dokumentacije glasbenih dogodkov. Vsako leto natečaji izpostavljajo in nagrajujejo novosti, ki poganjajo in zaznamujejo delovanje domače glasbene scene. Izredno smo ponosni, da ob vse večji in kvalitetnejši produkciji domačih glasbenih videospotov kot edini v Sloveniji s tovrstno kategorijo uveljavljamo to panogo.
-        </p>
-
-        <h2>Karantenska kategorija, ki izpostavlja nove pristope</h2>
-
-        <p>
-          Izredne okoliščine so od vseh akterjev na glasbeni sceni zahtevale nove, manj uveljavljene pristope k organizaciji in oblikovanju glasbenih dogodkov. Kar naenkrat so se glasbeniki znašli pred praznimi dvoranami, občinstvo pa je njihove nastope spremljalo na ekranih iz udobja domačih naslanjačev. Z novimi oblikami koncertnih izkušenj je prišla tudi potreba po vizualni popestritvi nastopov in novih načinih povezovanja z občinstvom. Zato kategorije letošnjih natečajev dopolnjuje nova, karantenska kategorija, ki pripoznava vse nekonvencionalne načine oblikovanja in izvedbe dogodkov na spletnih platformah.
-        </p>
-
-        <p>
-          Festival Tresk #12 zato letos išče presežke in podeljuje nagrade v petih kategorijah:
+          Festival Tresk vsako leto razpiše vizualni natečaj, ki obsega 5 kategorij, tako ali drugače povezanih z glasbenim založništvom. Nagrade v sodelovanju s podporniki se podeljuje za:
         </p>
 
         <a href="https://tresk.si/natecaji/videospot" class="kategorija" target="_blank">
@@ -153,11 +139,15 @@
         <h2>
           Prijave odprte do 11. julija
         </h2>
-
-        <p>
-          Ustvarjalci in ustvarjalke lahko na natečaje prijavijo dela, ki so nastala med 9. marcem 2020 in 11. julijem 2021. Prijave potekajo preko spletnega obrazca, ki se nahaja na www.tresk.si. Opise posameznih natečajnih kategorij ter njihovih nagrad prav tako najdete na spletni strani festivala Tresk.
-        </p>
       </section>
+
+      <p>Podporniki natečajev Tresk #12:</p>
+      <div class="sponzorji">
+        <a v-for="sponzor in sponzorji" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
+          <span>{{ sponzor.field_display_title }}</span>
+          <img :src="sponzor.field_slika | treskSlika">
+        </a>
+      </div>
 
       <section class="roll">
         <span>VIZUALNI NATEČAJ</span>
@@ -192,40 +182,29 @@ export default {
     }
   },
   computed: {
-    novice () {
-      return this.$store.state.drupal['node--novica']
+    sponzorji () {
+      return this.$store.getters['drupal/get']('node--sponzor')
     }
   },
   fetch ({ store, params }) {
-    const zdaj = new Date()
-
     const query = {
-      sort: '-field_datum',
-      'filter[field_leto.name][value]': '2020',
-      'filter[field_tip_novice.name][value]': 'novica',
-      'filter[datefilter][condition][path]': 'field_datum',
-      'filter[datefilter][condition][operator]': '<',
-      'filter[datefilter][condition][value]': zdaj,
+      'filter[field_leto.name][value]': '2021',
       include: 'field_slika'
     }
-    return store.dispatch('drupal/get', ['node/novica', { params: query }])
+    return store.dispatch('drupal/get', ['node/sponzor', { params: query }])
   },
   head () {
     return { title: this._data.pageTitle }
-  },
-  mounted () {
   },
   methods: {
     scrollNatecaji () {
       const natecaji = document.querySelector('.natecaji')
       natecaji.scrollIntoView()
-      console.log('SKRIL')
-    },
-    mounted () {
-      console.log('scroll?', window.location.pathname)
-      if (window.location.pathname === '/natecaji') {
-        this.scrollNatecaji()
-      }
+    }
+  },
+  mounted () {
+    if (window.location.pathname === '/natecaji') {
+      this.scrollNatecaji()
     }
   }
 }
@@ -248,12 +227,13 @@ export default {
 }
 
 h1 {
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   font-size: 16rem;
   letter-spacing: -3px;
   transform: scaleX(0.3);
   transform-origin: left;
   white-space: nowrap;
+  margin-bottom: -1rem;
 }
 
 .h2 {
@@ -293,7 +273,7 @@ h2.prijava {
 }
 
 .h3 {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 h3.obracun {
   font-size: 11rem;
@@ -458,12 +438,34 @@ h3 span.zaloznistva {
   font-family: "Migra";
   color: var(--rdeca);
   white-space: nowrap;
+  clear: both;
 }
 .roll span {
   font-size: 1rem;
   transform: scale(1, 2);
   display: inline-block;
   margin-right: .5rem;
+}
+
+.sponzorji {
+  margin: 3rem 0;
+  overflow: auto;
+}
+.sponzorji a {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.sponzorji a span {
+  display: none;
+}
+.sponzorji img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
 }
 
 /* @media screens */
