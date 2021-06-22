@@ -219,6 +219,13 @@ export default {
     scrollNatecaji () {
       const natecaji = document.querySelector('.natecaji')
       natecaji.scrollIntoView()
+      console.log('SKRIL')
+    },
+    mounted () {
+      console.log('scroll?', window.location.pathname)
+      if (window.location.pathname === '/natecaji') {
+        this.scrollNatecaji()
+      }
     }
   }
 }
@@ -413,7 +420,8 @@ h3 span.zaloznistva {
 }
 
 .natecaji {
-  padding: 2rem 25px;
+  overflow: hidden;
+  padding: 2rem 25px 12rem 2rem;
 
   background-color: var(--modra);
   min-height: 100vh;
@@ -449,6 +457,7 @@ h3 span.zaloznistva {
 .roll {
   font-family: "Migra";
   color: var(--rdeca);
+  white-space: nowrap;
 }
 .roll span {
   font-size: 1rem;
@@ -482,9 +491,10 @@ h3 span.zaloznistva {
   }
   h2.natecaj {
     font-size: 6rem;
+    margin-bottom: -1.5rem;
   }
-  h2.puscicaa {
-    font-size: 0.67rem;
+  h2.puscica {
+    transform: scaleX(1.5);
   }
   h2.prijava {
     font-size: 2rem;
@@ -508,7 +518,7 @@ h3 span.zaloznistva {
 
 @media (max-width: 576px) {
   .rs-link {
-    left: 1.1rem;
+    right: 1.1rem;
     bottom: 1.1rem;
   }
 
@@ -518,12 +528,25 @@ h3 span.zaloznistva {
   }
 
   /* home social */
-
-  .home-social{
+  .home-social {
     position: fixed;
     z-index: 1;
-    right: 5.5rem;
-    bottom: 2.4rem;
+    left: 1.5rem;
+    bottom: .8rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 490px) {
+  h3 span.glasbe {
+    transform: scale(1.4, 0.3);
+  }
+  h3 span.zaloznistva {
+    transform: scale(2, 2);
+  }
+  h2.natecaj {
+    font-size: 5rem;
   }
 }
 </style>

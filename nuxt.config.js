@@ -101,6 +101,10 @@ export default {
         path: '/program',
         component: 'pages/program/urnik.vue',
         name: 'program_index'
+      }, {
+        path: '/natecaji',
+        component: 'pages/index.vue',
+        name: 'natecaji_index'
       })
     }
   },
