@@ -227,13 +227,13 @@ export default {
 }
 
 h1 {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
   font-size: 16rem;
   letter-spacing: -3px;
   transform: scaleX(0.3);
   transform-origin: left;
   white-space: nowrap;
-  margin-bottom: -1rem;
+  margin-bottom: -2rem;
 }
 
 .h2 {
