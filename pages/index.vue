@@ -189,7 +189,9 @@ export default {
   fetch ({ store, params }) {
     const query = {
       'filter[field_leto.name][value]': '2021',
-      include: 'field_slika'
+      'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
+      include: 'field_slika',
+      sort: 'field_weight'
     }
     return store.dispatch('drupal/get', ['node/sponzor', { params: query }])
   },
@@ -462,8 +464,8 @@ h3 span.zaloznistva {
   display: none;
 }
 .sponzorji img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 70px;
+  max-height: 70px;
   width: auto;
   height: auto;
 }
@@ -484,6 +486,10 @@ h3 span.zaloznistva {
   }
   .natecaji .kategorija {
     font-size: 2rem;
+  }
+  .sponzorji img {
+    max-width: 50px;
+    max-height: 50px;
   }
 }
 
