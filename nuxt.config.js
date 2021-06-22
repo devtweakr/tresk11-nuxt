@@ -65,16 +65,16 @@ export default {
   },
   */
   seo: {
-    name: 'Tresk #11',
+    name: 'Tresk #12',
     hostname: 'tresk.si',
     templateTitle: '%title% | %name%',
     description: 'Obračun glasbe in založništva',
     lang: 'si',
-    image: 'https://tresk.si/img/tresk_social.jpg',
+    image: 'https://tresk.si/img/tresk12fav.jpg',
     openGraph: {
-      title: 'Tresk #11',
+      title: 'Tresk #12',
       type: 'website',
-      image: 'https://tresk.si/img/tresk_social.jpg'
+      image: 'https://tresk.si/img/tresk12fav.jpg'
     }
   },
   /*

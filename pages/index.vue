@@ -1,248 +1,194 @@
 <template>
   <div class="container-fluid">
-    <div>
-      <b-modal
-        id="tresk-news"
-        ref="tresk-news"
-        :no-close-on-backdrop="true"
-        size="lg"
-        hide-footer
-        scrollable
-        hide-backdrop
-        content-class="shadow"
-        centered
-      >
-        <!-- <template v-slot:modal-title>
-          <nuxt-link to="/novice">
-            Tresk #11 Novice
-          </nuxt-link>
-        </template> -->
-
-        <b-row>
-          <b-col
-            :key="novica.id"
-            v-for="novica in novice"
-            class="novica"
-            cols="12"
-          >
-            <!-- <nuxt-link v-if="novica.title" :to="$options.filters.getAlias(novica, 'pogovor')"> -->
-            <h4>
-              {{ novica.title }}
-            </h4>
-            <b-img v-if="novica.field_slika" :src="novica.field_slika | treskSlika" fluid />
-            <!-- </nuxt-link> -->
-            <h5>{{ novica.field_datum | dateFormat }}</h5>
-            <p v-html="$options.filters.drupalLinks(novica.body.processed)" class="text-justify mt-4" />
-          </b-col>
-        </b-row>
-      </b-modal>
-    </div>
-    <div class="dropdown ml-auto">
-      <button @click="dropShow=!dropShow" class="btn btn-drop" />
-      <div v-show="dropShow" class="dropdown-content">
-        <div class="program-sub">
-          <b-link class="program-link">
-            <i class="fa fa-caret-left pr-2" />Program
-          </b-link>
-          <div @click="dropShow=!dropShow" class="program-content">
-            <nuxt-link to="/program/urnik">
-              Urnik
+    <div class="home">
+      <!--div class="dropdown ml-auto">
+        <button @click="dropShow=!dropShow" class="btn btn-drop">
+          <span class="burger" />
+          <span class="burger" />
+          <span class="burger" />
+        </button>
+        <div v-show="dropShow" class="dropdown-content">
+          <div class="program-sub">
+            <b-link class="program-link">
+              <i class="fa fa-caret-left pr-2" />Program
+            </b-link>
+            <div @click="dropShow=!dropShow" class="program-content">
+              <b-link to="/natecaji" disabled>
+                Natečaji
+              </b-link>
+              <b-link to="/program/sejmisce" disabled>
+                Sejmišče
+              </b-link>
+              <b-link to="/program/zalozbe" disabled>
+                Založbe
+              </b-link>
+              <b-link to="/program/pogovori" disabled>
+                Pogovori
+              </b-link>
+              <b-link to="/program/lokacije" disabled>
+                Lokacije
+              </b-link>
+              <b-link to="/program/extras" disabled>
+                Extras
+              </b-link>
+            </div>
+          </div>
+          <div @click="dropShow=!dropShow" class="main-drop">
+            <nuxt-link to="/natecaji">
+              Natečaji
             </nuxt-link>
-            <b-link to="/program/lineup" disabled>
-              Lineup
+            <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
+              Vstopnice
             </b-link>
-            <b-link to="/program/sejmisce" disabled>
-              Sejmišče
-            </b-link>
-            <b-link to="/program/zalozbe" disabled>
-              Založbe
-            </b-link>
-            <b-link to="/program/pogovori" disabled>
-              Pogovori
-            </b-link>
-            <b-link to="/program/lokacije" disabled>
-              Lokacije
-            </b-link>
-            <b-link to="/program/extras" disabled>
-              Extras
-            </b-link>
+            <nuxt-link to="/novice">
+              Novice
+            </nuxt-link>
+            <nuxt-link to="/o-tresku">
+              O Tresku
+            </nuxt-link>
+            <nuxt-link to="/arhiv">
+              Arhiv
+            </nuxt-link>
+            <nuxt-link to="/kontakt">
+              Kontakt
+            </nuxt-link>
+            <nuxt-link to="/sponzorji">
+              Podporniki
+            </nuxt-link>
           </div>
         </div>
-        <div @click="dropShow=!dropShow" class="main-drop">
-          <nuxt-link to="/natecaji">
-            Natečaji
-          </nuxt-link>
-          <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
-            Vstopnice
-          </b-link>
-          <nuxt-link to="/novice">
-            Novice
-          </nuxt-link>
-          <nuxt-link to="/o-tresku">
-            O Tresku
-          </nuxt-link>
-          <nuxt-link to="/arhiv">
-            Arhiv
-          </nuxt-link>
-          <nuxt-link to="/kontakt">
-            Kontakt
-          </nuxt-link>
-          <nuxt-link to="/sponzorji">
-            Podporniki
-          </nuxt-link>
-        </div>
+      </div-->
+
+      <section class="h1">
+        <h1>TRESK #12</h1>
+      </section>
+
+      <section class="h2">
+        <h2 class="natecaj">
+          VIZUALNI NATEČAJ
+        </h2>
+        <h2 class="puscica">
+          ↓
+        </h2>
+        <a href="/natecaji">
+          <h2 @click.prevent="scrollNatecaji" class="prijava">PRIJAVI SE!</h2>
+        </a>
+      </section>
+
+      <section class="h3">
+        <h3 class="obracun">
+          <span>OBRAČUN</span>
+          <span class="glasbe">GLASBE</span>
+        </h3>
+        <h3>
+          <span class="in">IN</span>
+          <span class="zaloznistva">ZALOŽNIŠTVA</span>
+        </h3>
+      </section>
+
+      <a href="https://radiostudent.si" target="_blank" class="rs-link">
+        <img src="/img/global/rs_zelen.svg?inline"></img>
+      </a>
+      <div class="home-social">
+        <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
+          FACEBOOK
+        </a>
+        <img src="/img/home/zvezdica12.svg?inline"></img>
+        <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
+          INSTAGRAM
+        </a>
       </div>
     </div>
-    <a href="https://radiostudent.si" target="_blank" class="rs-link">
-      <img src="/img/home/rs_logo_black.svg?inline"></img>
-    </a>
-    <div class="home-social">
-      <a id="tresk-news-btn" v-on:click="toggleModal()" class="news-btn">
-        <!-- <b-tooltip target="tresk-news-btn" placement="left" show triggers="hover blur">
-          Novice!
-        </b-tooltip> -->
-        <NewsBtn />
-      </a>
-      <a href="https://www.youtube.com/watch?v=sPgr_XWa2VE&list=PLoMK-mIEi8qTg9svcy5U-SLUOOhWgcokZ" target="_blank" class="yt-link">
-        <YtLogo />
-      </a>
-      <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
-        <IgLogo />
-      </a>
-      <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
-        <FbLogo />
-      </a>
-    </div>
 
-    <a class="datum">
-      <img src="/img/home/datum.svg"></img>
-    </a>
-    <div class="home-content row">
-      <div class="tabla overflow-hidden col">
-        <img class="img-tabla" src="/img/home/signs.svg">
-        <!-- <TablaLinki class="img-tabla" /> -->
-        <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
-          <nuxt-link tag="a" to="/natecaji">
-            <ellipse
-              id="natecaji-link"
-              cx="245.6"
-              cy="747.9"
-              rx="121.9"
-              ry="123"
-              opacity="1"
-              vector-effect="none"
-              fill="white"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="3.5"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </nuxt-link>
+    <div class="natecaji">
+      <section class="roll">
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+      </section>
 
-          <path
-            id="tresk-fb-link"
-            opacity="1"
-            vector-effect="none"
-            fill="white"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="1"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-            d="M286.29999
-              256.39999H672v112.4H286.29999z"
-          />
+      <section class="tekst">
+        <h2>Odpiramo natečaje festivala Tresk #12!</h2>
 
-          <path
-            id="festival-instagram-link"
-            opacity="1"
-            vector-effect="none"
-            fill="white"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="1"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-            d="M130.39999
-              96.5h209.7v129.7h-209.7z"
-          />
+        <p>
+          Vizualni natečaji, ki nagrajujejo glasbeno založniško in promocijsko oblikovanje, letos z novo karantentsko kategorijo
+        </p>
 
-          <nuxt-link tag="a" to="/program/urnik">
-            <path
-              id="program-link"
-              d="M235.932 373.22L108.814 603.05l263.703-5.902z"
-              opacity="1"
-              vector-effect="none"
-              fill="gray"
-              fill-opacity="0"
-              stroke="none"
-              stroke-width="7.559"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="4"
-              stroke-dasharray="none"
-              stroke-dashoffset="0"
-              stroke-opacity="1"
-            />
-          </nuxt-link>
-          <!--a xlink:href="https://olaii.com/event/865/festival-tresk-11" target="_blank"-->
-          <path
-            id="vstopnice-link"
-            d="M131.186 893.898l252.204-8.135 2.034 81.356-253.22 9.152z"
-            opacity="1"
-            vector-effect="none"
-            fill="gray"
-            fill-opacity="0"
-            stroke="none"
-            stroke-width="7.559"
-            stroke-linecap="butt"
-            stroke-linejoin="miter"
-            stroke-miterlimit="4"
-            stroke-dasharray="none"
-            stroke-dashoffset="0"
-            stroke-opacity="1"
-          />
-          <!--/a-->
-        </svg>
-      </div>
+        <p>
+          Festival Tresk vsako leto razpiše vizualni natečaj, ki obsega pet kategorij, tako ali drugače povezanih z glasbenim založništvom. Kljub majhnosti trga, slovensko glasbeno založništvo z vsakim letom bolj skrbi za bogat nabor glasbenih izdaj, pestro koncertno dogajanje pa poskrbi, da poslušalci in poslušalke pridejo z novo glasbo v stik tudi v živo. Natečaj festivala Tresk tako prispeva k prepoznavanju pomembnosti kvalitetno oblikovanih fizičnih in digitalnih nosilcev glasbe, spremljevalnega promocijskega materiala in dokumentacije glasbenih dogodkov. Vsako leto natečaji izpostavljajo in nagrajujejo novosti, ki poganjajo in zaznamujejo delovanje domače glasbene scene. Izredno smo ponosni, da ob vse večji in kvalitetnejši produkciji domačih glasbenih videospotov kot edini v Sloveniji s tovrstno kategorijo uveljavljamo to panogo.
+        </p>
+
+        <h2>Karantenska kategorija, ki izpostavlja nove pristope</h2>
+
+        <p>
+          Izredne okoliščine so od vseh akterjev na glasbeni sceni zahtevale nove, manj uveljavljene pristope k organizaciji in oblikovanju glasbenih dogodkov. Kar naenkrat so se glasbeniki znašli pred praznimi dvoranami, občinstvo pa je njihove nastope spremljalo na ekranih iz udobja domačih naslanjačev. Z novimi oblikami koncertnih izkušenj je prišla tudi potreba po vizualni popestritvi nastopov in novih načinih povezovanja z občinstvom. Zato kategorije letošnjih natečajev dopolnjuje nova, karantenska kategorija, ki pripoznava vse nekonvencionalne načine oblikovanja in izvedbe dogodkov na spletnih platformah.
+        </p>
+
+        <p>
+          Festival Tresk #12 zato letos išče presežke in podeljuje nagrade v petih kategorijah:
+        </p>
+
+        <a href="https://tresk.si/natecaji/videospot" class="kategorija" target="_blank">
+          Najboljši videospot
+        </a>
+        <a href="https://tresk.si/natecaji/album" class="kategorija" target="_blank">
+          Najboljša podoba albuma
+        </a>
+        <a href="https://tresk.si/natecaji/podoba" class="kategorija" target="_blank">
+          Najboljša podoba glasbenega dogodka
+        </a>
+        <a href="https://tresk.si/natecaji/dokumentacija" class="kategorija" target="_blank">
+          Najboljša dokumentacija glasbenega dogodka
+        </a>
+        <a href="https://tresk.si/natecaji/karantena" class="kategorija" target="_blank">
+          Karantenska kategorija
+        </a>
+
+        <h2>
+          Prijave odprte do 11. julija
+        </h2>
+
+        <p>
+          Ustvarjalci in ustvarjalke lahko na natečaje prijavijo dela, ki so nastala med 9. marcem 2020 in 11. julijem 2021. Prijave potekajo preko spletnega obrazca, ki se nahaja na www.tresk.si. Opise posameznih natečajnih kategorij ter njihovih nagrad prav tako najdete na spletni strani festivala Tresk.
+        </p>
+      </section>
+
+      <section class="roll">
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+        <span>VIZUALNI NATEČAJ</span>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
 // import TablaLinki from '@/static/img/home/signs-link.svg'
-import NewsBtn from '@/static/img/icons/exclamation-triangle-solid.svg'
-import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
-import IgLogo from '@/static/img/icons/instagram-brands.svg'
-import YtLogo from '@/static/img/icons/note.svg'
+// import NewsBtn from '@/static/img/icons/exclamation-triangle-solid.svg'
 
 export default {
   components: {
     // TablaLinki,
-    NewsBtn,
-    FbLogo,
-    IgLogo,
-    YtLogo
+    // NewsBtn,
   },
   transition: 'default',
   layout: 'home',
   data () {
     return {
       dropShow: false,
-      pageTitle: 'Tresk #11'
+      pageTitle: 'Tresk #12'
     }
   },
   computed: {
@@ -268,18 +214,11 @@ export default {
     return { title: this._data.pageTitle }
   },
   mounted () {
-    if (window.innerWidth >= 768) {
-      this.toggleModal()
-    }
   },
   methods: {
-    toggleModal () {
-      const novice = this.$refs['tresk-news']
-      if (novice.isVisible) {
-        novice.hide()
-      } else {
-        novice.show()
-      }
+    scrollNatecaji () {
+      const natecaji = document.querySelector('.natecaji')
+      natecaji.scrollIntoView()
     }
   }
 }
@@ -287,44 +226,12 @@ export default {
 
 <style scoped>
 
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-.home-content {
-  height: 100vh;
-}
-
-/* home news button */
-
-.news-btn {
-  cursor: pointer;
-}
-
-.news-btn svg{
-  animation: blinker 5s linear infinite;
-}
-
-@keyframes blinker {
-  0%    { transform: scaleX(-1) translate(0 , 0); }
-  3%    { transform: scaleX(-1) translate(0 , -8px); }
-  6%    { transform: scaleX(-1) translate(0 , 0); }
-  9%    { transform: scaleX(-1) translate(0 , -5px); }
-  12%   { transform: scaleX(-1) translate(0 , 0); }
-  15%   { transform: scaleX(-1) translate(0 , -3px); }
-  18%   { transform: scaleX(-1) translate(0 , 0); }
-  21%   { transform: scaleX(-1) translate(0 , -2px); }
-  24%   { transform: scaleX(-1) translate(0 , 0); }
-  100%  { transform: scaleX(-1) translate(0 , 0); }
-}
-
 /* logo, date, social */
 
 .rs-link {
   position: fixed;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   z-index: 1;
 }
 
@@ -333,56 +240,15 @@ export default {
   height: 110px;
 }
 
-.datum {
-  display: none;
-  position: fixed;
-  bottom: 1.8rem;
-  right: 1.8rem;
-}
-
-/* home social */
-
-.home-social{
+.home-social {
   position: fixed;
   z-index: 1;
-  right: 10rem;
-  bottom: 4.2rem;
-  opacity: 0.6;
-}
-
-.news-btn,
-.fb-link,
-.ig-link,
-.yt-link {
-  margin-right: 0.8rem;
-}
-
-.news-btn svg,
-.fb-link svg,
-.ig-link svg,
-.yt-link svg {
-  width: 40px;
-  height: 40px;
-  color: #ffffff99
-}
-
-  .news-btn{
-    display: none;
-  }
-
-/* tabla styles */
-
-.tabla {
-  height: 100vh;
-}
-
-.img-tabla {
-  position: absolute;
-  height: 140vh;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  right: 8rem;
+  bottom: 2.3rem;
+  font-size: 2rem;
+  vertical-align: middle;
+  transform: scaleX(0.7);
+  display: inline-block;
 }
 
 /* dropdown menu */
@@ -396,13 +262,19 @@ export default {
 
 .btn-drop {
   border-radius: 0;
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 45px;
   overflow: visible;
-  background-image: url(/img/home/hamburger.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.btn-drop > .burger {
+  width: 100%;
+  height: 4px;
+  background-color: var(--zelena);
 }
 
 .btn-drop:focus {
@@ -449,17 +321,57 @@ export default {
   color: #e5332a;
 }
 
+.natecaji {
+  padding: 2rem 25px;
+
+  background-color: var(--modra);
+  min-height: 100vh;
+  margin-left: -15px;
+  margin-right: -15px;
+  color: var(--rumena);
+  font-family: "LexendGiga";
+}
+
+.natecaji .tekst {
+  margin-top: 3rem;
+}
+.natecaji .tekst h2 {
+  margin-top: 3rem;
+}
+.natecaji .tekst p {
+  letter-spacing: -1.5px;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.natecaji .kategorija {
+  display: block;
+  color: var(--temnomodra);
+  font-family: "Migra";
+  font-size: 3rem;
+}
+
+.natecaji .kategorija:before {
+  content: '→';
+}
+
+.roll {
+  font-family: "Migra";
+  color: var(--rdeca);
+}
+.roll span {
+  font-size: 1rem;
+  transform: scale(1, 2);
+  display: inline-block;
+  margin-right: .5rem;
+}
+
 /* @media screens */
 
 @media (max-width: 768px) {
-  .news-btn{
-    display: inline;
-  }
-
 }
 
 @media (max-width: 576px) {
-
   .rs-link {
     left: 1.1rem;
     bottom: 1.1rem;
@@ -470,16 +382,6 @@ export default {
     height: 60px;
   }
 
-  .datum {
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .datum img {
-    width: 70px;
-    height: 70px;
-  }
-
   /* home social */
 
   .home-social{
@@ -487,22 +389,6 @@ export default {
     z-index: 1;
     right: 5.5rem;
     bottom: 2.4rem;
-    opacity: 0.6;
   }
-
-  .news-btn,
-  .fb-link,
-  .ig-link,
-  .yt-link {
-    margin-right: 0.6rem;
-  }
-  .news-btn svg,
-  .fb-link svg,
-  .ig-link svg,
-  .yt-link svg {
-    width: 25px;
-    height: 25px;
-  }
-
 }
 </style>
