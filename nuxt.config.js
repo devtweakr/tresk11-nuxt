@@ -57,13 +57,11 @@ export default {
   axios: {
     baseURL: 'https://tresk.si/d/jsonapi'
   },
-  /*
   facebook: {
     track: 'PageView',
     pixelId: '199752654600647',
     disabled: false
   },
-  */
   seo: {
     name: 'Tresk #12',
     hostname: 'tresk.si',
