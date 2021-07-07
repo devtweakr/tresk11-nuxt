@@ -183,7 +183,15 @@ export default {
     }
   },
   head () {
-    return { title: this._data.pageTitle }
+    return {
+      title: this._data.pageTitle,
+      meta: [
+        {
+          name: 'facebook-domain-verification',
+          content: 'fwg2uhl3p0657qbuvlu3b407ivamqk'
+        }
+      ]
+    }
   },
   mounted () {
     // Kazem scroll footer?

@@ -47,6 +47,7 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-facebook-pixel-module',
     'nuxt-seo',
     'nuxt-svg-loader'
   ],
