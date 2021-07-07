@@ -24,7 +24,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/bootstrap.css', '@/assets/css/style.css'],
+  css: ['@/assets/css/bootstrap.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -98,13 +98,17 @@ export default {
   router: {
     extendRoutes (routes, resolve) {
       routes.push({
-        path: '/program',
-        component: 'pages/program/urnik.vue',
-        name: 'program_index'
+        path: '/11/program',
+        component: 'pages/11/program/urnik.vue',
+        name: 'program11_index'
       }, {
         path: '/natecaji',
         component: 'pages/index.vue',
-        name: 'natecaji_index'
+        name: 'natecaji12'
+      }, {
+        path: '/kontakt',
+        component: 'pages/index.vue',
+        name: 'kontakt12'
       })
     }
   },

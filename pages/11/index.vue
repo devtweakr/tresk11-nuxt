@@ -13,7 +13,7 @@
         centered
       >
         <!-- <template v-slot:modal-title>
-          <nuxt-link to="/novice">
+          <nuxt-link to="/11/novice">
             Tresk #11 Novice
           </nuxt-link>
         </template> -->
@@ -45,49 +45,49 @@
             <i class="fa fa-caret-left pr-2" />Program
           </b-link>
           <div @click="dropShow=!dropShow" class="program-content">
-            <nuxt-link to="/program/urnik">
+            <nuxt-link to="/11/program/urnik">
               Urnik
             </nuxt-link>
-            <b-link to="/program/lineup" disabled>
+            <b-link to="/11/program/lineup" disabled>
               Lineup
             </b-link>
-            <b-link to="/program/sejmisce" disabled>
+            <b-link to="/11/program/sejmisce" disabled>
               Sejmišče
             </b-link>
-            <b-link to="/program/zalozbe" disabled>
+            <b-link to="/11/program/zalozbe" disabled>
               Založbe
             </b-link>
-            <b-link to="/program/pogovori" disabled>
+            <b-link to="/11/program/pogovori" disabled>
               Pogovori
             </b-link>
-            <b-link to="/program/lokacije" disabled>
+            <b-link to="/11/program/lokacije" disabled>
               Lokacije
             </b-link>
-            <b-link to="/program/extras" disabled>
+            <b-link to="/11/program/extras" disabled>
               Extras
             </b-link>
           </div>
         </div>
         <div @click="dropShow=!dropShow" class="main-drop">
-          <nuxt-link to="/natecaji">
+          <nuxt-link to="/11/natecaji">
             Natečaji
           </nuxt-link>
           <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
             Vstopnice
           </b-link>
-          <nuxt-link to="/novice">
+          <nuxt-link to="/11/novice">
             Novice
           </nuxt-link>
-          <nuxt-link to="/o-tresku">
+          <nuxt-link to="/11/o-tresku">
             O Tresku
           </nuxt-link>
-          <nuxt-link to="/arhiv">
+          <nuxt-link to="/11/arhiv">
             Arhiv
           </nuxt-link>
-          <nuxt-link to="/kontakt">
+          <nuxt-link to="/11/kontakt">
             Kontakt
           </nuxt-link>
-          <nuxt-link to="/sponzorji">
+          <nuxt-link to="/11/sponzorji">
             Podporniki
           </nuxt-link>
         </div>
@@ -122,7 +122,7 @@
         <img class="img-tabla" src="/img/home/signs.svg">
         <!-- <TablaLinki class="img-tabla" /> -->
         <svg id="svg211" class="img-tabla" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" version="1.1">
-          <nuxt-link tag="a" to="/natecaji">
+          <nuxt-link tag="a" to="/11/natecaji">
             <ellipse
               id="natecaji-link"
               cx="245.6"
@@ -180,7 +180,7 @@
               96.5h209.7v129.7h-209.7z"
           />
 
-          <nuxt-link tag="a" to="/program/urnik">
+          <nuxt-link tag="a" to="/11/program/urnik">
             <path
               id="program-link"
               d="M235.932 373.22L108.814 603.05l263.703-5.902z"
@@ -228,6 +228,7 @@ import NewsBtn from '@/static/img/icons/exclamation-triangle-solid.svg'
 import FbLogo from '@/static/img/icons/facebook-square-brands.svg'
 import IgLogo from '@/static/img/icons/instagram-brands.svg'
 import YtLogo from '@/static/img/icons/note.svg'
+import '@/assets/css/style11.css'
 
 export default {
   components: {

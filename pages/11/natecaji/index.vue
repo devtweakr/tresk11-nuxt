@@ -15,27 +15,27 @@
         </p>
         <ul class="pl-4 mt-4 mb-4" style="list-style-type:decimal;">
           <li>
-            <nuxt-link to="/natecaji/najboljsi-videospot">
+            <nuxt-link to="/11/natecaji/najboljsi-videospot">
               najboljši videospot
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/natecaji/najboljsa-fotografija">
+            <nuxt-link to="/11/natecaji/najboljsa-fotografija">
               najboljšo fotografijo glasbenega dogodka
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/natecaji/najboljsi-plakat">
+            <nuxt-link to="/11/natecaji/najboljsi-plakat">
               najboljši plakat glasbenega dogodka
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/natecaji/najboljsa-podoba">
+            <nuxt-link to="/11/natecaji/najboljsa-podoba">
               najboljšo podobo albuma
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/natecaji/najbolj-inovativen">
+            <nuxt-link to="/11/natecaji/najbolj-inovativen">
               najbolj inovativen pristop k oglaševanju in oblikovanju dogodka
             </nuxt-link>
           </li>

@@ -71,7 +71,7 @@
           ↓
         </h2>
         <a href="/natecaji">
-          <h2 @click.prevent="scrollNatecaji" class="prijava">PRIJAVI SE!</h2>
+          <h2 @click.prevent="scrollNa('.natecaji')" class="prijava">PRIJAVI SE!</h2>
         </a>
       </section>
 
@@ -86,26 +86,58 @@
         </h3>
       </section>
 
-      <a href="https://radiostudent.si" target="_blank" class="rs-link">
-        <img src="/img/global/rs_zelen.svg?inline"></img>
-      </a>
-      <div class="home-social">
-        <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
-          FACEBOOK
+      <section v-if="!scrollFooter">
+        <a href="https://radiostudent.si" target="_blank" class="rs-link">
+          <img src="/img/global/rs_zelen.svg?inline"></img>
         </a>
-        <img src="/img/home/zvezdica12.svg?inline"></img>
-        <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
-          INSTAGRAM
-        </a>
-      </div>
+        <div class="home-social">
+          <a href="https://www.facebook.com/festivaltresk" target="_blank" class="fb-link">
+            FACEBOOK
+          </a>
+          <img src="/img/home/zvezdica12.svg?inline"></img>
+          <a href="https://www.instagram.com/festivaltresk" target="_blank" class="ig-link">
+            INSTAGRAM
+          </a>
+        </div>
+      </section>
     </div>
 
     <Natecaji />
+
+    <section v-if="scrollFooter" class="scrollFooter">
+      <span>Tresk #11 © Radio Študent</span>
+      <a href="/kontakt" @click.prevent="scrollNa('.kontakt')">KONTAKT</a>
+    </section>
+
+    <section class="otresku odsek">
+      <section class="roll">
+        <span v-for="n in 60" :key="n">TRESK #12</span>
+      </section>
+
+      <section v-if="oTresku" v-html="oTresku.body.processed" />
+
+      <section class="roll">
+        <span v-for="n in 60" :key="n">TRESK #12</span>
+      </section>
+    </section>
+
+    <section class="kontakt odsek">
+      <section class="roll">
+        <span v-for="n in 60" :key="n">KONTAKT</span>
+      </section>
+
+      <section v-if="kontakt" v-html="kontakt.body.processed" />
+
+      <section class="roll">
+        <span v-for="n in 60" :key="n">KONTAKT</span>
+      </section>
+    </section>
   </div>
 </template>
 
 <script>
 import Natecaji from './natecaji12'
+import '@/assets/css/style12.css'
 
 export default {
   components: {
@@ -116,35 +148,71 @@ export default {
   data () {
     return {
       dropShow: false,
-      pageTitle: 'Tresk #12'
+      pageTitle: 'Tresk #12',
+      scrollFooter: false
+    }
+  },
+  computed: {
+    oTresku () {
+      const id = '54920183-7838-4933-8e53-375daeb09743'
+      return this.$store.getters['drupal/get']('node--page')[id]
+    },
+    kontakt () {
+      const id = '9de39d84-71bc-4569-98ce-8a65f131c869'
+      return this.$store.getters['drupal/get']('node--page')[id]
     }
   },
   head () {
     return { title: this._data.pageTitle }
   },
   mounted () {
-    if (window.location.pathname === '/natecaji') {
-      this.scrollNatecaji()
-    }
-  },
-  fetch ({ store, params }) {
-    const query = {
-      'filter[field_leto.name][value]': '2021',
-      sort: 'field_weight'
+    // Kazem scroll footer?
+    window.addEventListener('scroll', () => this.kaziScrollFooter())
+    this.kaziScrollFooter()
+
+    // Event za prikaz bannerja spodaj
+    switch (window.location.pathname) {
+      case '/natecaji':
+        this.scrollNa('.natecaji')
+        break
+      case '/kontakt':
+        this.scrollNa('.kontakt')
+        break
     }
 
-    // Natecaji in sponzorji za page natecaji
-    store.dispatch('drupal/get', ['node/natecaj', { params: query }])
-    store.dispatch('drupal/get', ['node/sponzor', { params: {
-      ...query,
-      'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
-      include: 'field_slika'
-    } }])
+    this.fetch()
   },
   methods: {
-    scrollNatecaji () {
-      const natecaji = document.querySelector('.natecaji')
-      natecaji.scrollIntoView()
+    scrollNa (el) {
+      const predel = document.querySelector(el)
+      if (predel) {
+        predel.scrollIntoView()
+      }
+    },
+    kaziScrollFooter () {
+      if (document.scrollingElement.scrollTop > 200) {
+        this.scrollFooter = true
+      } else {
+        this.scrollFooter = false
+      }
+    },
+    fetch () {
+      const store = this.$store
+      const query = {
+        'filter[field_leto.name][value]': '2021',
+        sort: 'field_weight'
+      }
+
+      // Natecaji in sponzorji za page natecaji
+      store.dispatch('drupal/get', ['node/natecaj', { params: query }])
+      store.dispatch('drupal/get', ['node/sponzor', { params: {
+        ...query,
+        'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
+        include: 'field_slika'
+      } }])
+      store.dispatch('drupal/get', ['node/page', { params: {
+        'filter[field_leto.name][value]': '2021'
+      } }])
     }
   }
 }
@@ -258,6 +326,7 @@ h3 span.zaloznistva {
 }
 
 .home-social {
+  font-family: Migra;
   position: fixed;
   z-index: 1;
   right: 8rem;
@@ -336,6 +405,50 @@ h3 span.zaloznistva {
 .dropdown-content a:hover {
   background-color: #1e2b37b0;
   color: #e5332a;
+}
+
+/* Scroll footer */
+.scrollFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: "LexendGiga";
+  background-color: var(--rjava);
+  color: var(--zelena);
+  padding: 1rem 2rem;
+  margin: 0 -15px;
+  z-index: 100;
+}
+.scrollFooter a {
+  float: right;
+}
+
+.otresku {
+  background-color: var(--zelena);
+  color: var(--temnomodra);
+}
+.otresku section >>> a {
+  color: var(--temnomodra);
+}
+.otresku section >>> h2 {
+  color: var(--zlata);
+}
+.otresku .roll {
+  color: var(--oranzna);
+}
+
+.kontakt {
+  background-color: var(--temnozelena);
+  color: var(--zelena);
+}
+.kontakt section >>> a {
+  color: var(--zelena);
+}
+.kontakt section >>> h2 {
+  color: var(--temnomodra);
+}
+.kontakt .roll {
+  color: var(--modra);
 }
 
 /* @media screens */

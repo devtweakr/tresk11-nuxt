@@ -1,25 +1,11 @@
 <template>
-  <div class="natecaji">
+  <div class="natecaji odsek">
     <section class="roll">
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
+      <span v-for="n in 20" :key="n">VIZUALNI NATEČAJ</span>
     </section>
 
     <section class="tekst">
-      <h2>Odpiramo natečaje festivala Tresk #12!</h2>
-
-      <p>
-        Festival Tresk vsako leto razpiše vizualni natečaj, ki obsega 5 kategorij, tako ali drugače povezanih z glasbenim založništvom. Nagrade v sodelovanju s podporniki se podeljuje za:
-      </p>
-
+      <div v-if="intro" v-html="intro.body.processed" />
       <div v-for="natecaj in natecaji" :class="{ odprta: (natecaj._jv.id === odprtaKategorija) }" class="kategorija">
         <a @click.prevent="prikaziKategorijo(natecaj._jv.id)" class="naslov" href="#">{{ natecaj.field_display_title }}</a>
         <p v-if="natecaj.body" v-html="natecaj.body.processed" />
@@ -40,16 +26,7 @@
     </div>
 
     <section class="roll">
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
-      <span>VIZUALNI NATEČAJ</span>
+      <span v-for="n in 20" :key="n">VIZUALNI NATEČAJ</span>
     </section>
   </div>
 </template>
@@ -67,6 +44,10 @@ export default {
     },
     sponzorji () {
       return this.$store.getters['drupal/get']('node--sponzor')
+    },
+    intro () {
+      const id = 'ea8bb0df-cecc-40b6-a846-a05d22973880'
+      return this.$store.getters['drupal/get']('node--page')[id]
     }
   },
   methods: {
@@ -79,20 +60,10 @@ export default {
 
 <style scoped>
 .natecaji {
-  overflow: hidden;
-  padding: 2rem 25px 12rem 2rem;
-
   background-color: var(--modra);
-  min-height: 100vh;
-  margin-left: -15px;
-  margin-right: -15px;
   color: var(--rumena);
-  font-family: "LexendGiga";
 }
 
-.natecaji .tekst {
-  margin-top: 3rem;
-}
 .natecaji .tekst h2 {
   margin-top: 3rem;
 }
@@ -156,19 +127,6 @@ export default {
 
 .natecaji .kategorija > * {
   padding-left: 2.5rem;
-}
-
-.roll {
-  font-family: "Migra";
-  color: var(--rdeca);
-  white-space: nowrap;
-  clear: both;
-}
-.roll span {
-  font-size: 1rem;
-  transform: scale(1, 2);
-  display: inline-block;
-  margin-right: .5rem;
 }
 
 .sponzorji {

@@ -1,0 +1,71 @@
+/* Tresk 12 fonti */
+@font-face {
+  font-family: "LexendGiga";
+  src: local("LexendGiga Regular"), url(/font/LexendGiga-Regular.ttf);
+}
+@font-face {
+  font-family: "Migra";
+  src: local("Migra Extrabold"), url(/font/Migra-Extrabold.otf);
+}
+
+:root {
+  /* Tresk 12 barve */
+  --zelena: #b4d9b9;
+  --rumena: #fae993;
+  --zlata: #d0c200;
+  --modra: #6cabd1;
+  --temnomodra: #0074b0;
+  --rdeca: #e50051;
+  --rjava: #4b1a14;
+  --temnozelena: #149934;
+  --oranzna: #ea5b0c;
+}
+
+body {
+  font-family: LexendGiga;
+}
+
+a, a:hover {
+  color: var(--zelena);
+}
+
+h1, h2, h3 {
+  font-family: "Migra";
+  color: var(--zelena);
+}
+h2,
+.h2 a, .h2 a:hover {
+  color: var(--rumena);
+}
+
+.roll {
+  font-family: "Migra";
+  color: var(--rdeca);
+  white-space: nowrap;
+  clear: both;
+  padding-top: .5rem;
+  overflow: hidden;
+}
+.roll span {
+  font-size: .7rem;
+  transform: scale(1, 3);
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.odsek {
+  overflow: hidden;
+  padding: 2rem 25px 5.5rem 2rem;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.odsek h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.odsek > .roll:first-child {
+  margin-bottom: 3rem;
+}
+.odsek > .roll:last-child {
+  margin-top: 3rem;
+}
