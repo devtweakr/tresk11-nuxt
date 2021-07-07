@@ -100,78 +100,16 @@
       </div>
     </div>
 
-    <div class="natecaji">
-      <section class="roll">
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-      </section>
-
-      <section class="tekst">
-        <h2>Odpiramo natečaje festivala Tresk #12!</h2>
-
-        <p>
-          Festival Tresk vsako leto razpiše vizualni natečaj, ki obsega 5 kategorij, tako ali drugače povezanih z glasbenim založništvom. Nagrade v sodelovanju s podporniki se podeljuje za:
-        </p>
-
-        <a href="https://tresk.si/natecaji/videospot" class="kategorija" target="_blank">
-          Najboljši videospot
-        </a>
-        <a href="https://tresk.si/natecaji/album" class="kategorija" target="_blank">
-          Najboljša podoba albuma
-        </a>
-        <a href="https://tresk.si/natecaji/podoba" class="kategorija" target="_blank">
-          Najboljša podoba glasbenega dogodka
-        </a>
-        <a href="https://tresk.si/natecaji/dokumentacija" class="kategorija" target="_blank">
-          Najboljša dokumentacija glasbenega dogodka
-        </a>
-        <a href="https://tresk.si/natecaji/karantena" class="kategorija" target="_blank">
-          Karantenska kategorija
-        </a>
-
-        <h2>
-          Prijave odprte do 11. julija
-        </h2>
-      </section>
-
-      <p>Podporniki natečajev Tresk #12:</p>
-      <div class="sponzorji">
-        <a v-for="sponzor in sponzorji" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
-          <span>{{ sponzor.field_display_title }}</span>
-          <img :src="sponzor.field_slika | treskSlika">
-        </a>
-      </div>
-
-      <section class="roll">
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-        <span>VIZUALNI NATEČAJ</span>
-      </section>
-    </div>
+    <Natecaji />
   </div>
 </template>
 
 <script>
-// import TablaLinki from '@/static/img/home/signs-link.svg'
-// import NewsBtn from '@/static/img/icons/exclamation-triangle-solid.svg'
+import Natecaji from './natecaji12'
 
 export default {
   components: {
-    // TablaLinki,
-    // NewsBtn,
+    Natecaji
   },
   transition: 'default',
   layout: 'home',
@@ -181,32 +119,32 @@ export default {
       pageTitle: 'Tresk #12'
     }
   },
-  computed: {
-    sponzorji () {
-      return this.$store.getters['drupal/get']('node--sponzor')
+  head () {
+    return { title: this._data.pageTitle }
+  },
+  mounted () {
+    if (window.location.pathname === '/natecaji') {
+      this.scrollNatecaji()
     }
   },
   fetch ({ store, params }) {
     const query = {
       'filter[field_leto.name][value]': '2021',
-      'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
-      include: 'field_slika',
       sort: 'field_weight'
     }
-    return store.dispatch('drupal/get', ['node/sponzor', { params: query }])
-  },
-  head () {
-    return { title: this._data.pageTitle }
+
+    // Natecaji in sponzorji za page natecaji
+    store.dispatch('drupal/get', ['node/natecaj', { params: query }])
+    store.dispatch('drupal/get', ['node/sponzor', { params: {
+      ...query,
+      'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
+      include: 'field_slika'
+    } }])
   },
   methods: {
     scrollNatecaji () {
       const natecaji = document.querySelector('.natecaji')
       natecaji.scrollIntoView()
-    }
-  },
-  mounted () {
-    if (window.location.pathname === '/natecaji') {
-      this.scrollNatecaji()
     }
   }
 }
@@ -224,8 +162,8 @@ export default {
   background-attachment: fixed;
   margin-left: -15px;
   margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 h1 {
@@ -237,7 +175,6 @@ h1 {
   white-space: nowrap;
   margin-bottom: -2rem;
 }
-
 .h2 {
   text-align: center;
   overflow: hidden;
@@ -401,77 +338,11 @@ h3 span.zaloznistva {
   color: #e5332a;
 }
 
-.natecaji {
-  overflow: hidden;
-  padding: 2rem 25px 12rem 2rem;
-
-  background-color: var(--modra);
-  min-height: 100vh;
-  margin-left: -15px;
-  margin-right: -15px;
-  color: var(--rumena);
-  font-family: "LexendGiga";
-}
-
-.natecaji .tekst {
-  margin-top: 3rem;
-}
-.natecaji .tekst h2 {
-  margin-top: 3rem;
-}
-.natecaji .tekst p {
-  letter-spacing: -1.5px;
-  max-width: 900px;
-  margin-bottom: 2rem;
-}
-
-.natecaji .kategorija {
-  display: block;
-  color: var(--temnomodra);
-  font-family: "Migra";
-  font-size: 3rem;
-}
-
-.natecaji .kategorija:before {
-  content: '→';
-}
-
-.roll {
-  font-family: "Migra";
-  color: var(--rdeca);
-  white-space: nowrap;
-  clear: both;
-}
-.roll span {
-  font-size: 1rem;
-  transform: scale(1, 2);
-  display: inline-block;
-  margin-right: .5rem;
-}
-
-.sponzorji {
-  margin: 3rem 0;
-  overflow: auto;
-}
-.sponzorji a {
-  float: left;
-  display: flex;
-  flex-direction: column;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-}
-.sponzorji a span {
-  display: none;
-}
-.sponzorji img {
-  max-width: 70px;
-  max-height: 70px;
-  width: auto;
-  height: auto;
-}
-
 /* @media screens */
 @media (max-width: 960px) {
+  body {
+    font-size: 14px;
+  }
   h3.obracun {
     font-size: 8rem;
   }
@@ -483,13 +354,6 @@ h3 span.zaloznistva {
   }
   h3 span.zaloznistva {
     font-size: 1.45rem;
-  }
-  .natecaji .kategorija {
-    font-size: 2rem;
-  }
-  .sponzorji img {
-    max-width: 50px;
-    max-height: 50px;
   }
 }
 
@@ -518,9 +382,6 @@ h3 span.zaloznistva {
   }
   h3 span.zaloznistva {
     font-size: 1rem;
-  }
-  .natecaji .kategorija {
-    font-size: 1.5rem;
   }
 }
 
