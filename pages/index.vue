@@ -555,6 +555,11 @@ h3 span.zaloznistva {
   h3 span.zaloznistva {
     font-size: 1rem;
   }
+
+  .btn-drop {
+    border-radius: 0;
+    width: 80px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -588,6 +593,9 @@ h3 span.zaloznistva {
   }
   h2.natecaj {
     font-size: 5rem;
+  }
+  .scrollFooter {
+    font-size: .7rem;
   }
 }
 </style>

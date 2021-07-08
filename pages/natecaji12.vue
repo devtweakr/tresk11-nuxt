@@ -6,10 +6,14 @@
 
     <section class="tekst">
       <div v-if="intro" v-html="intro.body.processed" />
-      <div v-for="natecaj in natecaji" :class="{ odprta: (natecaj._jv.id === odprtaKategorija) }" class="kategorija">
-        <a @click.prevent="prikaziKategorijo(natecaj._jv.id)" class="naslov" href="#">{{ natecaj.field_display_title }}</a>
-        <p v-if="natecaj.body" v-html="natecaj.body.processed" />
-        <a v-if="natecaj.field_link.length > 0" :href="natecaj.field_link[0].uri" target="_blank" class="prijava">Prijavni obrazec</a>
+      <div v-for="natecaj in natecaji" class="kategorija">
+        <a v-b-toggle="natecaj._jv.id" class="naslov">
+          {{ natecaj.field_display_title }}
+        </a>
+        <b-collapse :id="natecaj._jv.id">
+          <p v-if="natecaj.body" v-html="natecaj.body.processed" />
+          <a v-if="natecaj.field_link.length > 0" :href="natecaj.field_link[0].uri" target="_blank" class="prijava">Prijavni obrazec</a>
+        </b-collapse>
       </div>
 
       <h2>
@@ -19,7 +23,9 @@
       <p>Za vsa vprašanja smo na voljo na info@tresk.si</p>
     </section>
 
-    <h4 style="margin-top: 3rem">Podporniki natečajev Tresk #12:</h4>
+    <h4 style="margin-top: 3rem">
+      Podporniki natečajev Tresk #12:
+    </h4>
     <div class="sponzorji">
       <a v-for="sponzor in sponzorjiNatecajev" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
         <span>{{ sponzor.field_display_title }}</span>
@@ -80,6 +86,7 @@ export default {
 
 .natecaji .kategorija a.naslov {
   display: block;
+  cursor: pointer;
   color: var(--temnomodra);
   font-family: "Migra";
   font-size: 3rem;
@@ -95,30 +102,19 @@ export default {
   left: 0rem;
   transition: transform .35s;
 }
-.natecaji .kategorija.odprta a.naslov:before {
+.natecaji .kategorija.not-collapsed + div a.naslov:before {
   transform: rotate(90deg);
 }
 
-.natecaji .kategorija a.naslov:hover {
-  text-decoration: none !important;
-}
-.natecaji .kategorija p,
 .natecaji .kategorija a.prijava {
-  display: none;
-}
-.natecaji .kategorija.odprta p,
-.natecaji .kategorija.odprta a.prijava {
   display: block;
-}
-
-.natecaji .kategorija a.prijava {
   font-family: "Migra";
   color: var(--rdeca);
   font-size: 2rem;
   text-transform: uppercase;
   transform: scaleX(0.8);
   transform-origin: left;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .natecaji .kategorija a.prijava:hover {
   text-decoration: none;
@@ -167,6 +163,12 @@ export default {
 
   .natecaji .kategorija a.naslov {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .natecaji .kategorija > * {
+    padding-left: 0;
   }
 }
 </style>
