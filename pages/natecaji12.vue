@@ -19,7 +19,7 @@
 
     <p>Podporniki natečajev Tresk #12:</p>
     <div class="sponzorji">
-      <a v-for="sponzor in sponzorji" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
+      <a v-for="sponzor in sponzorjiNatecajev" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
         <span>{{ sponzor.field_display_title }}</span>
         <img :src="sponzor.field_slika | treskSlika">
       </a>
@@ -42,8 +42,11 @@ export default {
     natecaji () {
       return this.$store.getters['drupal/get']('node--natecaj')
     },
-    sponzorji () {
-      return this.$store.getters['drupal/get']('node--sponzor')
+    sponzorjiNatecajev () {
+      const sponzorji = this.$store.getters['drupal/get']('node--sponzor')
+      return Object.values(sponzorji).filter((sponzor) => {
+        return sponzor.field_tip_podpornika.name === 'Sponzorji natečajev'
+      })
     },
     intro () {
       const id = 'ea8bb0df-cecc-40b6-a846-a05d22973880'
@@ -88,6 +91,10 @@ export default {
   position: absolute;
   top: -.25rem;
   left: 0rem;
+  transition: transform .35s;
+}
+.natecaji .kategorija.odprta a.naslov:before {
+  transform: rotate(90deg);
 }
 
 .natecaji .kategorija a.naslov:hover {

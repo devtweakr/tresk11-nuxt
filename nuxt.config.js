@@ -104,11 +104,23 @@ export default {
       }, {
         path: '/natecaji',
         component: 'pages/index.vue',
-        name: 'natecaji12'
+        name: 'natecaji_12'
       }, {
         path: '/kontakt',
         component: 'pages/index.vue',
-        name: 'kontakt12'
+        name: 'kontakt_12'
+      }, {
+        path: '/otresku',
+        component: 'pages/index.vue',
+        name: 'otresku_12'
+      }, {
+        path: '/podporniki',
+        component: 'pages/index.vue',
+        name: 'podporniki_12'
+      }, {
+        path: '/arhiv',
+        component: 'pages/index.vue',
+        name: 'arhiv_12'
       })
     }
   },

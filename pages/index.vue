@@ -1,14 +1,14 @@
 <template>
   <div class="container-fluid">
     <div class="home">
-      <!--div class="dropdown ml-auto">
+      <div class="dropdown ml-auto">
         <button @click="dropShow=!dropShow" class="btn btn-drop">
           <span class="burger" />
           <span class="burger" />
           <span class="burger" />
         </button>
         <div v-show="dropShow" class="dropdown-content">
-          <div class="program-sub">
+          <!--div class="program-sub">
             <b-link class="program-link">
               <i class="fa fa-caret-left pr-2" />Program
             </b-link>
@@ -32,32 +32,32 @@
                 Extras
               </b-link>
             </div>
-          </div>
+          </div-->
           <div @click="dropShow=!dropShow" class="main-drop">
-            <nuxt-link to="/natecaji">
+            <a @click.prevent="navigiraj('/natecaji')" href="#">
               Natečaji
-            </nuxt-link>
-            <b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
+            </a>
+            <!--b-link to="https://olaii.com/event/865/festival-tresk-11" target="_blank" disabled>
               Vstopnice
-            </b-link>
-            <nuxt-link to="/novice">
+            </b-link-->
+            <!--nuxt-link to="/novice">
               Novice
-            </nuxt-link>
-            <nuxt-link to="/o-tresku">
+            </nuxt-link!-->
+            <a @click.prevent="navigiraj('/otresku')" href="#">
               O Tresku
-            </nuxt-link>
-            <nuxt-link to="/arhiv">
-              Arhiv
-            </nuxt-link>
-            <nuxt-link to="/kontakt">
+            </a>
+            <a @click.prevent="navigiraj('/kontakt')" href="#">
               Kontakt
-            </nuxt-link>
-            <nuxt-link to="/sponzorji">
+            </a>
+            <a @click.prevent="navigiraj('/podporniki')" href="#">
               Podporniki
-            </nuxt-link>
+            </a>
+            <a @click.prevent="navigiraj('/arhiv')" href="#">
+              Arhiv
+            </a>
           </div>
         </div>
-      </div-->
+      </div>
 
       <section class="h1">
         <h1>TRESK #12</h1>
@@ -70,8 +70,8 @@
         <h2 class="puscica">
           ↓
         </h2>
-        <a href="/natecaji">
-          <h2 @click.prevent="scrollNa('.natecaji')" class="prijava">PRIJAVI SE!</h2>
+        <a @click.prevent="navigiraj('/natecaji')" href="#">
+          <h2 class="prijava">PRIJAVI SE!</h2>
         </a>
       </section>
 
@@ -105,8 +105,8 @@
     <Natecaji />
 
     <section v-if="scrollFooter" class="scrollFooter">
-      <span>Tresk #11 © Radio Študent</span>
-      <a href="/kontakt" @click.prevent="scrollNa('.kontakt')">KONTAKT</a>
+      <span>Tresk #12 © Radio Študent</span>
+      <a @click.prevent="navigiraj('/kontakt')">KONTAKT</a>
     </section>
 
     <section class="otresku odsek">
@@ -132,16 +132,32 @@
         <span v-for="n in 60" :key="n">KONTAKT</span>
       </section>
     </section>
+
+    <Podporniki />
+
+    <section class="arhiv odsek">
+      <section class="roll">
+        <span v-for="n in 60" :key="n">ARHIV</span>
+      </section>
+
+      <section v-if="arhiv" v-html="arhiv.body.processed" />
+
+      <section class="roll">
+        <span v-for="n in 60" :key="n">ARHIV</span>
+      </section>
+    </section>
   </div>
 </template>
 
 <script>
 import Natecaji from './natecaji12'
+import Podporniki from './podporniki12'
 import '@/assets/css/style12.css'
 
 export default {
   components: {
-    Natecaji
+    Natecaji,
+    Podporniki
   },
   transition: 'default',
   layout: 'home',
@@ -160,6 +176,10 @@ export default {
     kontakt () {
       const id = '9de39d84-71bc-4569-98ce-8a65f131c869'
       return this.$store.getters['drupal/get']('node--page')[id]
+    },
+    arhiv () {
+      const id = '39915467-0a85-4d5c-a14c-ac37962be3cf'
+      return this.$store.getters['drupal/get']('node--page')[id]
     }
   },
   head () {
@@ -171,22 +191,34 @@ export default {
     this.kaziScrollFooter()
 
     // Event za prikaz bannerja spodaj
-    switch (window.location.pathname) {
-      case '/natecaji':
-        this.scrollNa('.natecaji')
-        break
-      case '/kontakt':
-        this.scrollNa('.kontakt')
-        break
-    }
+    this.navigiraj(window.location.pathname)
 
     this.fetch()
   },
   methods: {
+    navigiraj (pot) {
+      const nav = {
+        '/natecaji': ['.natecaji', 'Natečaji'],
+        '/otresku': ['.otresku', 'O Tresku'],
+        '/kontakt': ['.kontakt', 'Kontakt'],
+        '/podporniki': ['.podporniki', 'Podporniki'],
+        '/arhiv': ['.arhiv', 'Arhiv']
+      }
+      if (!pot || !nav[pot]) {
+        return
+      }
+      const title = nav[pot][1] + ' | Tresk #12'
+      window.history.replaceState({}, title, pot)
+      document.title = title
+      this.scrollNa(nav[pot][0])
+    },
     scrollNa (el) {
       const predel = document.querySelector(el)
       if (predel) {
-        predel.scrollIntoView()
+        window.scrollTo({
+          top: predel.offsetTop,
+          behavior: 'smooth'
+        })
       }
     },
     kaziScrollFooter () {
@@ -207,8 +239,7 @@ export default {
       store.dispatch('drupal/get', ['node/natecaj', { params: query }])
       store.dispatch('drupal/get', ['node/sponzor', { params: {
         ...query,
-        'filter[field_tip_podpornika.name][value]': 'Sponzorji natečajev',
-        include: 'field_slika'
+        include: 'field_slika,field_tip_podpornika'
       } }])
       store.dispatch('drupal/get', ['node/page', { params: {
         'filter[field_leto.name][value]': '2021'
@@ -340,10 +371,12 @@ h3 span.zaloznistva {
 /* dropdown menu */
 
 .dropdown {
-  position: absolute;
+  position: fixed;
   z-index: 10000;
   right: 1rem;
   top: 1rem;
+  padding: 1rem;
+  background: radial-gradient(closest-side, var(--rjava), transparent);
 }
 
 .btn-drop {
@@ -370,20 +403,22 @@ h3 span.zaloznistva {
 .dropdown-content {
   position: absolute;
   text-align: right;
-  background-color: #2c3e50b0;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  background-color: var(--rjava);
   z-index: 1;
-  right: 0;
-  width: 200px;
+  right: 1.7rem;
+  top: 4.5rem;
 }
 
 .dropdown-content a {
-  color: white;
-  padding: 8px 10px;
+  color: var(--rumena);
+  padding: .5rem 1rem;
   text-decoration: none;
   font-size: 1.2em;
   display: block;
   white-space: nowrap;
+}
+.dropdown-content a:hover {
+  color: var(--oranzna);
 }
 
 .program-content{
@@ -400,11 +435,6 @@ h3 span.zaloznistva {
 
 .program-content:hover, .program-content:active + .program-content{
   display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #1e2b37b0;
-  color: #e5332a;
 }
 
 /* Scroll footer */
@@ -449,6 +479,27 @@ h3 span.zaloznistva {
 }
 .kontakt .roll {
   color: var(--modra);
+}
+
+.arhiv {
+  background-color: var(--zlata);
+  color: var(--temnomodra);
+}
+.arhiv section >>> a {
+  color: var(--temnomodra);
+}
+.arhiv section >>> h2 {
+  color: var(--rjava);
+}
+.arhiv .roll {
+  color: var(--oranzna);
+}
+.arhiv section >>> ul {
+  list-style: none;
+  padding-left: 0;
+}
+.arhiv section >>> ul li {
+  font-size: 1.2rem;
 }
 
 /* @media screens */
