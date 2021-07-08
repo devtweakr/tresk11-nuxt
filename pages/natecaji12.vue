@@ -15,9 +15,11 @@
       <h2>
         Prijave odprte do 11. julija
       </h2>
+
+      <p>Za vsa vprašanja smo na voljo na info@tresk.si</p>
     </section>
 
-    <p>Podporniki natečajev Tresk #12:</p>
+    <h4 style="margin-top: 3rem">Podporniki natečajev Tresk #12:</h4>
     <div class="sponzorji">
       <a v-for="sponzor in sponzorjiNatecajev" :href="sponzor.field_link.length > 0 ? sponzor.field_link[0].uri : ''" target="_blank">
         <span>{{ sponzor.field_display_title }}</span>
