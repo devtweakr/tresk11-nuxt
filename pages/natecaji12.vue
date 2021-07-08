@@ -94,6 +94,7 @@ export default {
   position: relative;
   transform: scaleX(0.8);
   transform-origin: left;
+  padding-left: 2.5rem;
 }
 .natecaji .kategorija a.naslov:before {
   content: '→ ';
@@ -102,7 +103,7 @@ export default {
   left: 0rem;
   transition: transform .35s;
 }
-.natecaji .kategorija.not-collapsed + div a.naslov:before {
+.natecaji .kategorija .naslov.not-collapsed:before {
   transform: rotate(90deg);
 }
 
@@ -115,6 +116,7 @@ export default {
   transform: scaleX(0.8);
   transform-origin: left;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 .natecaji .kategorija a.prijava:hover {
   text-decoration: none;
@@ -130,7 +132,7 @@ export default {
   top: -.25rem;
 }
 
-.natecaji .kategorija > * {
+.natecaji .kategorija > div {
   padding-left: 2.5rem;
 }
 
@@ -163,11 +165,15 @@ export default {
 
   .natecaji .kategorija a.naslov {
     font-size: 2rem;
+    padding-left: 1.7rem;
+  }
+  .natecaji .kategorija > div {
+    padding-left: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  .natecaji .kategorija > * {
+  .natecaji .kategorija > div {
     padding-left: 0;
   }
 }
